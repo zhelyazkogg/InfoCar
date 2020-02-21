@@ -1,10 +1,14 @@
 package com.example.infocar
 
+import android.app.ProgressDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ProgressBar
 import android.widget.TextView
+import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
 
@@ -13,11 +17,32 @@ class LoginActivity : AppCompatActivity() {
     lateinit var loginBtn : Button
     lateinit var registerBtn : Button
     lateinit var forgottenPass : TextView
+    lateinit var mProgressBar: ProgressDialog
+
+    lateinit var mAuth : FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        
+        mAuth = FirebaseAuth.getInstance();
+
+        emailLogin = findViewById(R.id.emailLogin)
+        passwordLogin = findViewById(R.id.passwordLogin)
+        loginBtn = findViewById(R.id.loginBtn)
+        registerBtn = findViewById(R.id.registerBtn)
+        forgottenPass = findViewById(R.id.forgottenPass)
+        mProgressBar = ProgressDialog(this)
+
+        loginBtn.setOnClickListener {
+            val email = emailLogin.text.toString().trim()
+            val password = passwordLogin.text.toString().trim()
+
+            if (TextUtils.isEmpty(email)){
+                emailLogin.error = ""
+            }
+        }
+
+
     }
 }
