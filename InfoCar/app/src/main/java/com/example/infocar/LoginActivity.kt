@@ -54,6 +54,10 @@ class LoginActivity : AppCompatActivity() {
             startActivity(RegisterActivity)
             finish()
         }
+
+        forgottenPass.setOnClickListener {
+            
+        }
     }
 
     private fun validateForm(email : String, password : String){
