@@ -25,6 +25,9 @@ class RegisterActivity : AppCompatActivity() {
 
         emailRegister = findViewById(R.id.emailRegister)
         passwordRegister = findViewById(R.id.passwordRegister)
+        confPasswordRegister = findViewById(R.id.confPasswordRegister)
+        buttonRegister = findViewById(R.id.buttonRegister)
+        buttonBack = findViewById(R.id.buttonBack)
 
     }
 }
