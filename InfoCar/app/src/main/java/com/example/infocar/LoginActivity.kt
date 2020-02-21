@@ -5,10 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ProgressBar
-import android.widget.TextView
+import android.widget.*
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
@@ -60,6 +57,19 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun validateForm(email : String, password : String){
+        mProgressBar.setMessage("Please wait")
+        mProgressBar.show()
 
+        mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this){task ->
+        if (task.isSuccessful){
+            mProgressBar.dismiss()
+            val startIntent = Intent(applicationContext, ProfileActivity::class.java)
+            startActivity(startIntent)
+            finish()
+        } else {
+            Toast.makeText(this, "Error is SignUp.${task.exception}", Toast.LENGTH_SHORT).show()
+        }
+            mProgressBar.dismiss()
+        }
     }
 }
