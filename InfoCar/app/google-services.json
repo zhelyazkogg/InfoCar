@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "382945454735",
+    "firebase_url": "https://infocar-2237f.firebaseio.com",
+    "project_id": "infocar-2237f",
+    "storage_bucket": "infocar-2237f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382945454735:android:c064b36b5036402ae45efa",
+        "android_client_info": {
+          "package_name": "com.example.infocar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "382945454735-kfimcav5snt397bd2gmgsovtt9ou28km.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.infocar",
+            "certificate_hash": "366ba41efeac6b9c520332bd85d8942c9521be7f"
+          }
+        },
+        {
+          "client_id": "382945454735-cg7rp75p0pp36jn6kibkmv7og7rc90ve.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdwcgkf8vXkKcraZWfqKTPipb163Bh2ns"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "382945454735-cg7rp75p0pp36jn6kibkmv7og7rc90ve.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
