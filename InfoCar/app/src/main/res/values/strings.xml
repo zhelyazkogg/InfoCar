@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">InfoCar</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="confPassword">Confirm Password</string>
+    <string name="email">Email</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="forgottenPass">Forgotten Password?</string>
+    <string name="modelCar">Model</string>
+    <string name="typeCar">Type</string>
+    <string name="fuelType">Fuel Type</string>
+    <string name="insurance">Insurance</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="safetyInspection">Safety Inspection</string>
+    <string name="tires">Tires</string>
+    <string name="type">Type</string>
+    <string name="expiration">Expiration</string>
+    <string name="fuel">Fuel</string>
+    <string name="consumption">Consumption</string>
+    <string name="fuelExpense">Fuel Expense</string>
+    <string name="liters">Liters</string>
+    <string name="back">Back</string>
 </resources>
