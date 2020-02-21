@@ -1,6 +1,7 @@
 package com.example.infocar
 
 import android.app.ProgressDialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
@@ -40,9 +41,25 @@ class LoginActivity : AppCompatActivity() {
 
             if (TextUtils.isEmpty(email)){
                 emailLogin.error = "Enter Email"
+                return@setOnClickListener
             }
+
+            if (TextUtils.isEmpty(password)){
+                passwordLogin.error = "Enter Password"
+                return@setOnClickListener
+            }
+
+            validateForm(email, password)
         }
 
+        registerBtn.setOnClickListener {
+            val RegisterActivity = Intent(applicationContext,ProfileActivity::class.java)
+            startActivity(RegisterActivity)
+            finish()
+        }
+    }
+
+    private fun validateForm(email : String, password : String){
 
     }
 }
