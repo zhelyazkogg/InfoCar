@@ -1,9 +1,11 @@
 package com.example.infocar
 
+import android.app.ProgressDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ProgressBar
 import com.google.firebase.auth.FirebaseAuth
 
 class RegisterActivity : AppCompatActivity() {
@@ -13,7 +15,7 @@ class RegisterActivity : AppCompatActivity() {
     lateinit var confPasswordRegister : EditText
     lateinit var buttonRegister : Button
     lateinit var buttonBack : Button
-
+    lateinit var mProgressBar: ProgressDialog
     lateinit var mAuth : FirebaseAuth
 
 
@@ -22,6 +24,7 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(R.layout.activity_register)
 
         mAuth = FirebaseAuth.getInstance()
+        mProgressBar = ProgressDialog(this)
 
         emailRegister = findViewById(R.id.emailRegister)
         passwordRegister = findViewById(R.id.passwordRegister)
@@ -29,5 +32,7 @@ class RegisterActivity : AppCompatActivity() {
         buttonRegister = findViewById(R.id.buttonRegister)
         buttonBack = findViewById(R.id.buttonBack)
 
+
+        
     }
 }
