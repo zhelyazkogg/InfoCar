@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
+import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 
 class RegisterActivity : AppCompatActivity() {
@@ -53,12 +54,30 @@ class RegisterActivity : AppCompatActivity() {
                 confPasswordRegister.error = "Please confirm password"
                 return@setOnClickListener
             }
+
+            validateForm(email, password)
         }
 
         buttonBack.setOnClickListener {
             val LoginActivity = Intent(applicationContext, LoginActivity::class.java)
             startActivity(LoginActivity)
             finish()
+        }
+    }
+
+    private fun validateForm(email : String, password : String){
+        mProgressBar.setMessage("Please wait")
+        mProgressBar.show()
+
+        mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this){task ->
+            if (task.isSuccessful){
+                val intent = Intent(applicationContext, ProfileActivity::class.java)
+                startActivity(intent)
+                finish()
+                mProgressBar.dismiss()
+            } else {
+                Toast.makeText(this, "Error in SignUp${task.exception}", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }
