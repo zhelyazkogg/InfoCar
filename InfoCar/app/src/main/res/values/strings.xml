@@ -8,7 +8,7 @@
     <string name="register">Register</string>
     <string name="forgottenPass">Forgotten Password?</string>
     <string name="modelCar">Model</string>
-    <string name="typeCar">Type</string>
+    <string name="brandCar">Brand</string>
     <string name="fuelType">Fuel Type</string>
     <string name="insurance">Insurance</string>
     <string name="from">From</string>
@@ -22,4 +22,6 @@
     <string name="fuelExpense">Fuel Expense</string>
     <string name="liters">Liters</string>
     <string name="back">Back</string>
+    <string name="yourVehicle">Your Vehicle</string>
+
 </resources>
