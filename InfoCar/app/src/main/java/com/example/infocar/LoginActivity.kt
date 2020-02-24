@@ -71,7 +71,7 @@ class LoginActivity : AppCompatActivity() {
             startActivity(startIntent)
             finish()
         } else {
-            Toast.makeText(this, "Error is SignUp.${task.exception}", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Error in Sign In.", Toast.LENGTH_SHORT).show()
         }
             mProgressBar.dismiss()
         }

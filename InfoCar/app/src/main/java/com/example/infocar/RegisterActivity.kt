@@ -16,7 +16,7 @@ class RegisterActivity : AppCompatActivity() {
 
     lateinit var emailRegister : EditText
     lateinit var passwordRegister : EditText
-    lateinit var confPasswordRegister : EditText
+//    lateinit var confPasswordRegister : EditText
     lateinit var buttonRegister : Button
     lateinit var buttonBack : Button
     lateinit var mProgressBar: ProgressDialog
@@ -32,7 +32,7 @@ class RegisterActivity : AppCompatActivity() {
 
         emailRegister = findViewById(R.id.emailRegister)
         passwordRegister = findViewById(R.id.passwordRegister)
-        confPasswordRegister = findViewById(R.id.confPasswordRegister)
+//        confPasswordRegister = findViewById(R.id.confPasswordRegister)
         buttonRegister = findViewById(R.id.buttonRegister)
         buttonBack = findViewById(R.id.buttonBack)
 
@@ -40,7 +40,7 @@ class RegisterActivity : AppCompatActivity() {
         buttonRegister.setOnClickListener {
             val email = emailRegister.text.toString().trim()
             val password = passwordRegister.text.toString().trim()
-            val confirmPassword = confPasswordRegister.text.toString().trim()
+        //    val confirmPassword = confPasswordRegister.text.toString().trim()
 
             if (TextUtils.isEmpty(email)){
                 emailRegister.error = "Required."
@@ -50,16 +50,14 @@ class RegisterActivity : AppCompatActivity() {
                 passwordRegister.error = "Required."
                 return@setOnClickListener
             }
-            if (TextUtils.isEmpty(confirmPassword)){
+           /* if (TextUtils.isEmpty(confirmPassword)){
                 confPasswordRegister.error = "Required."
                 return@setOnClickListener
             }
 
             if (!confirmPassword.equals(password)){
                 confPasswordRegister.error = "Password doesn't match."
-            } else {
-                confPasswordRegister.error = null
-            }
+            }*/
 
             validateForm(email, password)
         }
@@ -80,10 +78,10 @@ class RegisterActivity : AppCompatActivity() {
                 val intent = Intent(applicationContext, ProfileActivity::class.java)
                 startActivity(intent)
                 finish()
-                mProgressBar.dismiss()
             } else {
-                Toast.makeText(this, "Error in SignUp${task.exception}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Error in Sign up", Toast.LENGTH_SHORT).show()
             }
+            mProgressBar.dismiss()
         }
     }
 }
