@@ -16,7 +16,7 @@ class RegisterActivity : AppCompatActivity() {
 
     lateinit var emailRegister : EditText
     lateinit var passwordRegister : EditText
-//    lateinit var confPasswordRegister : EditText
+//  lateinit var confPasswordRegister : EditText
     lateinit var buttonRegister : Button
     lateinit var buttonBack : Button
     lateinit var mProgressBar: ProgressDialog
@@ -32,7 +32,7 @@ class RegisterActivity : AppCompatActivity() {
 
         emailRegister = findViewById(R.id.emailRegister)
         passwordRegister = findViewById(R.id.passwordRegister)
-//        confPasswordRegister = findViewById(R.id.confPasswordRegister)
+//      confPasswordRegister = findViewById(R.id.confPasswordRegister)
         buttonRegister = findViewById(R.id.buttonRegister)
         buttonBack = findViewById(R.id.buttonBack)
 
