@@ -43,16 +43,22 @@ class RegisterActivity : AppCompatActivity() {
             val confirmPassword = confPasswordRegister.text.toString().trim()
 
             if (TextUtils.isEmpty(email)){
-                emailRegister.error = "Please enter e-mail"
+                emailRegister.error = "Required."
                 return@setOnClickListener
             }
             if (TextUtils.isEmpty(password)){
-                passwordRegister.error = "Please enter password"
+                passwordRegister.error = "Required."
                 return@setOnClickListener
             }
             if (TextUtils.isEmpty(confirmPassword)){
-                confPasswordRegister.error = "Please confirm password"
+                confPasswordRegister.error = "Required."
                 return@setOnClickListener
+            }
+
+            if (!confirmPassword.equals(password)){
+                confPasswordRegister.error = "Password doesn't match."
+            } else {
+                confPasswordRegister.error = null
             }
 
             validateForm(email, password)
@@ -65,7 +71,7 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 
-    private fun validateForm(email : String, password : String){
+    private fun  validateForm(email : String, password : String){
         mProgressBar.setMessage("Please wait")
         mProgressBar.show()
 
