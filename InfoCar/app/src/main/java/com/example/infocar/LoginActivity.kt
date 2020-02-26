@@ -37,12 +37,12 @@ class LoginActivity : AppCompatActivity() {
             val password = passwordLogin.text.toString().trim()
 
             if (TextUtils.isEmpty(email)){
-                emailLogin.error = "Enter Email"
+                emailLogin.error = "Required."
                 return@setOnClickListener
             }
 
             if (TextUtils.isEmpty(password)){
-                passwordLogin.error = "Enter Password"
+                passwordLogin.error = "Required."
                 return@setOnClickListener
             }
 
