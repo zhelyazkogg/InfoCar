@@ -49,7 +49,7 @@
         android:backgroundTint="@color/colorYellow"
         android:textColorHint="@color/colorWhite" />
 
-       <EditText
+    <!--   <EditText
         android:id="@+id/confPasswordRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
         android:inputType="textPassword"
         android:textColor="@color/colorWhite"
         android:backgroundTint="@color/colorYellow"
-        android:textColorHint="@color/colorWhite" />
+        android:textColorHint="@color/colorWhite" />-->
 
     <Button
         android:id="@+id/buttonRegister"
