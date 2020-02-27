@@ -1,4 +1,4 @@
-    package com.example.infocar
+package com.example.infocar
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
