@@ -25,5 +25,6 @@
     <string name="yourVehicle">Your Vehicle</string>
     <string name="forgottenPassText">Write down the email with which you registered, so we can send you an email with a new password.</string>
     <string name="send">Send</string>
+    <string name="RegisterVehicle">Register Vehicle</string>
 
 </resources>
