@@ -76,7 +76,7 @@ class RegisterActivity : AppCompatActivity() {
 
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this){task ->
             if (task.isSuccessful){
-                val intent = Intent(applicationContext, ProfileActivity::class.java)
+                val intent = Intent(applicationContext, AddCarActivity::class.java)
                 startActivity(intent)
                 finish()
             } else {
