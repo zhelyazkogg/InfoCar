@@ -48,8 +48,21 @@
         android:textColor="@color/colorWhite"
         android:backgroundTint="@color/colorYellow"
         android:textColorHint="@color/colorWhite" />
+    <EditText
+        android:id="@+id/vehicleTypeRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:inputType="text"
+        android:hint="@string/vehicleType"
+        android:textColor="@color/colorWhite"
+        android:backgroundTint="@color/colorYellow"
+        android:textColorHint="@color/colorWhite"
+        />
 
-    <Spinner
+    <!--<Spinner
         android:id="@+id/vehicleTypeRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -61,21 +74,7 @@
         android:textColor="@color/colorWhite"
         android:backgroundTint="@color/colorYellow"
         android:textColorHint="@color/colorWhite"
-        />
-
-    <EditText
-        android:id="@+id/vehicleYearRegister"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:hint="@string/vehicleYear"
-        android:inputType="text"
-        android:textColor="@color/colorWhite"
-        android:backgroundTint="@color/colorYellow"
-        android:textColorHint="@color/colorWhite" />
+        />-->
 
     <EditText
         android:id="@+id/hpRegister"
@@ -100,7 +99,7 @@
         android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="@string/yoursSince"
-        android:inputType="text"
+        android:inputType="datetime"
         android:textColor="@color/colorWhite"
         android:backgroundTint="@color/colorYellow"
         android:textColorHint="@color/colorWhite" />

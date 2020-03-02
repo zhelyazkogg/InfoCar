@@ -15,8 +15,11 @@ class AddCarActivity : AppCompatActivity() {
     lateinit var yoursSinceRegister : EditText
     lateinit var kmRegister : EditText
     lateinit var registerNumberVehicle : EditText
-    internal lateinit var vehicleTypeRegister : Spinner
-    lateinit var fuelTypeRegister : Spinner // TODO
+    lateinit var vehicleTypeRegister : EditText
+    lateinit var fuelTypeRegister : EditText
+
+/*    internal lateinit var vehicleTypeRegister : Spinner
+    lateinit var fuelTypeRegister : Spinner // TODO*/
 
     // TODO Buttons for Back and Confirm
 
@@ -33,8 +36,11 @@ class AddCarActivity : AppCompatActivity() {
         yoursSinceRegister = findViewById(R.id.yoursSinceRegister)
         kmRegister = findViewById(R.id.kmRegister)
         registerNumberVehicle = findViewById(R.id.registerNumberVehicle)
-        vehicleTypeRegister = findViewById<Spinner>(R.id.vehicleTypeRegister)
+        vehicleTypeRegister = findViewById(R.id.vehicleTypeRegister)
+        fuelTypeRegister = findViewById(R.id.fuelTypeRegister)
+
+       /* vehicleTypeRegister = findViewById<Spinner>(R.id.vehicleTypeRegister)
             val vehicleType = arrayOf("Sedan", "Coupe", "Cabriolet", "Hatchback", "Wagon", "Van", "SUV", "Other")
-            vehicleTypeRegister.adapter
+            vehicleTypeRegister.adapter*/
     }
 }
