@@ -10,7 +10,7 @@ class AddCarActivity : AppCompatActivity() {
 
     lateinit var brandRegister : EditText
     lateinit var modelRegister : EditText
-    lateinit var vehicleYearRegister : EditText
+
     lateinit var hpRegister : EditText
     lateinit var yoursSinceRegister : EditText
     lateinit var kmRegister : EditText
@@ -31,7 +31,7 @@ class AddCarActivity : AppCompatActivity() {
 
         brandRegister = findViewById(R.id.brandRegister)
         modelRegister = findViewById(R.id.modelRegister)
-        vehicleYearRegister = findViewById(R.id.vehicleYearRegister)
+
         hpRegister = findViewById(R.id.hpRegister)
         yoursSinceRegister = findViewById(R.id.yoursSinceRegister)
         kmRegister = findViewById(R.id.kmRegister)
