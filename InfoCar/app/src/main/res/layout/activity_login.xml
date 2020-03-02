@@ -28,11 +28,11 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
+        android:backgroundTint="@color/colorYellow"
         android:ems="10"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
         android:textColor="@color/colorWhite"
-        android:backgroundTint="@color/colorYellow"
         android:textColorHint="@color/colorWhite" />
 
     <EditText

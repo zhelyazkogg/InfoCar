@@ -9,6 +9,12 @@
     <string name="forgottenPass">Forgotten Password?</string>
     <string name="modelCar">Model</string>
     <string name="brandCar">Brand</string>
+    <string name="vehicleType">Vehicle Type</string>
+    <string name="vehicleYear">Vehicle Year</string>
+    <string name="hpRegister">horsepower</string>
+    <string name="yoursSince">Yours Since</string>
+    <string name="kmVehicle">Kilometers on Vehicle</string>
+    <string name="registerNumber">Register Number</string>
     <string name="fuelType">Fuel Type</string>
     <string name="insurance">Insurance</string>
     <string name="from">From</string>

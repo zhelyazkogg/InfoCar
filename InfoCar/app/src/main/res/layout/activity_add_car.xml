@@ -22,88 +22,130 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/emailLogin"
+        android:id="@+id/brandRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="@string/email"
-        android:inputType="textEmailAddress"
+        android:hint="@string/brandCar"
+        android:inputType="text"
         android:textColor="@color/colorWhite"
         android:backgroundTint="@color/colorYellow"
         android:textColorHint="@color/colorWhite" />
+
     <EditText
-        android:id="@+id/emailLogin"
+        android:id="@+id/modelRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="@string/email"
-        android:inputType="textEmailAddress"
+        android:hint="@string/modelCar"
+        android:inputType="text"
         android:textColor="@color/colorWhite"
         android:backgroundTint="@color/colorYellow"
         android:textColorHint="@color/colorWhite" />
+
     <EditText
-        android:id="@+id/emailLogin"
+        android:id="@+id/vehicleTypeRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="@string/email"
-        android:inputType="textEmailAddress"
+        android:hint="@string/vehicleType"
+        android:inputType="text"
         android:textColor="@color/colorWhite"
         android:backgroundTint="@color/colorYellow"
         android:textColorHint="@color/colorWhite" />
+
     <EditText
-        android:id="@+id/emailLogin"
+        android:id="@+id/vehicleYearRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="@string/email"
-        android:inputType="textEmailAddress"
+        android:hint="@string/vehicleYear"
+        android:inputType="text"
         android:textColor="@color/colorWhite"
         android:backgroundTint="@color/colorYellow"
         android:textColorHint="@color/colorWhite" />
+
     <EditText
-        android:id="@+id/emailLogin"
+        android:id="@+id/hpRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="@string/email"
-        android:inputType="textEmailAddress"
+        android:hint="@string/hpRegister"
+        android:inputType="text"
         android:textColor="@color/colorWhite"
         android:backgroundTint="@color/colorYellow"
         android:textColorHint="@color/colorWhite" />
+
     <EditText
-        android:id="@+id/emailLogin"
+        android:id="@+id/yoursSinceRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="@string/email"
-        android:inputType="textEmailAddress"
+        android:hint="@string/yoursSince"
+        android:inputType="text"
         android:textColor="@color/colorWhite"
         android:backgroundTint="@color/colorYellow"
         android:textColorHint="@color/colorWhite" />
+
     <EditText
-        android:id="@+id/emailLogin"
+        android:id="@+id/fuelTypeRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="@string/email"
-        android:inputType="textEmailAddress"
+        android:hint="@string/fuelType"
+        android:inputType="text"
         android:textColor="@color/colorWhite"
         android:backgroundTint="@color/colorYellow"
         android:textColorHint="@color/colorWhite" />
+
+    <EditText
+        android:id="@+id/kmRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/kmVehicle"
+        android:inputType="text"
+        android:textColor="@color/colorWhite"
+        android:backgroundTint="@color/colorYellow"
+        android:textColorHint="@color/colorWhite" />
+
+    <EditText
+        android:id="@+id/registerNumberVehicle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/registerNumber"
+        android:inputType="text"
+        android:textColor="@color/colorWhite"
+        android:backgroundTint="@color/colorYellow"
+        android:textColorHint="@color/colorWhite" />
+
 
 </LinearLayout>
