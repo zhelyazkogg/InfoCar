@@ -6,6 +6,7 @@
     <string name="email">Email</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
+    <string name="continueRegister">Continue</string>
     <string name="forgottenPass">Forgotten Password?</string>
     <string name="modelCar">Model</string>
     <string name="brandCar">Brand</string>

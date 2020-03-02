@@ -3,6 +3,7 @@ package com.example.infocar
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.EditText
 import android.widget.Spinner
 
@@ -17,7 +18,8 @@ class AddCarActivity : AppCompatActivity() {
     lateinit var registerNumberVehicle : EditText
     lateinit var vehicleTypeRegister : EditText
     lateinit var fuelTypeRegister : EditText
-
+    lateinit var buttonRegister : Button
+    lateinit var buttonBack : Button
 /*    internal lateinit var vehicleTypeRegister : Spinner
     lateinit var fuelTypeRegister : Spinner // TODO*/
 
@@ -38,6 +40,8 @@ class AddCarActivity : AppCompatActivity() {
         registerNumberVehicle = findViewById(R.id.registerNumberVehicle)
         vehicleTypeRegister = findViewById(R.id.vehicleTypeRegister)
         fuelTypeRegister = findViewById(R.id.fuelTypeRegister)
+        buttonRegister = findViewById(R.id.buttonRegister)
+        buttonBack = findViewById(R.id.buttonBack)
 
        /* vehicleTypeRegister = findViewById<Spinner>(R.id.vehicleTypeRegister)
             val vehicleType = arrayOf("Sedan", "Coupe", "Cabriolet", "Hatchback", "Wagon", "Van", "SUV", "Other")
