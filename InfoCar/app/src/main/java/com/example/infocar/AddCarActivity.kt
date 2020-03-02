@@ -13,7 +13,10 @@ class AddCarActivity : AppCompatActivity() {
     lateinit var yoursSinceRegister : EditText
     lateinit var kmRegister : EditText
     lateinit var registerNumberVehicle : EditText
-    lateinit var 
+  /*  lateinit var vehicleTypeRegister
+    lateinit var fuelTypeRegister*/ // TODO
+
+    // TODO Buttons for Back and Confirm
 
 
 
