@@ -1,5 +1,6 @@
 package com.example.infocar
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
@@ -46,5 +47,11 @@ class AddCarActivity : AppCompatActivity() {
        /* vehicleTypeRegister = findViewById<Spinner>(R.id.vehicleTypeRegister)
             val vehicleType = arrayOf("Sedan", "Coupe", "Cabriolet", "Hatchback", "Wagon", "Van", "SUV", "Other")
             vehicleTypeRegister.adapter*/
+
+        buttonBack.setOnClickListener {
+            val LoginActivity = Intent(applicationContext, LoginActivity::class.java)
+            startActivity(LoginActivity)
+            finish()
+        }
     }
 }
