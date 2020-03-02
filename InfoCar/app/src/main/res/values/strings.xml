@@ -32,5 +32,15 @@
     <string name="forgottenPassText">Write down the email with which you registered, so we can send you an email with a new password.</string>
     <string name="send">Send</string>
     <string name="RegisterVehicle">Register Vehicle</string>
+    <string-array name="vehicleTypeMenu">
+        <item>Sedan</item>
+        <item>Coupe</item>
+        <item>Cabriolet</item>
+        <item>Hatchback</item>
+        <item>Wagon</item>
+        <item>Van</item>
+        <item>SUV</item>
+        <item>Other</item>
+    </string-array>
 
 </resources>
