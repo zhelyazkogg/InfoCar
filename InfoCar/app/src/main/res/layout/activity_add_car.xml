@@ -86,7 +86,7 @@
         android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="@string/hpRegister"
-        android:inputType="text"
+        android:inputType="number"
         android:textColor="@color/colorWhite"
         android:backgroundTint="@color/colorYellow"
         android:textColorHint="@color/colorWhite" />
