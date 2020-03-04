@@ -48,7 +48,7 @@
         android:textColor="@color/colorWhite"
         android:backgroundTint="@color/colorYellow"
         android:textColorHint="@color/colorWhite" />
-    <EditText
+   <!-- <EditText
         android:id="@+id/vehicleTypeRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -60,21 +60,19 @@
         android:textColor="@color/colorWhite"
         android:backgroundTint="@color/colorYellow"
         android:textColorHint="@color/colorWhite"
-        />
+        />-->
 
-    <!--<Spinner
+    <AutoCompleteTextView
         android:id="@+id/vehicleTypeRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginTop="10dp"
-        android:entries="@array/vehicleTypeMenu"
-        android:hint="@string/vehicleType"
         android:textColor="@color/colorWhite"
         android:backgroundTint="@color/colorYellow"
         android:textColorHint="@color/colorWhite"
-        />-->
+        android:hint="@string/vehicleType"/>
 
     <EditText
         android:id="@+id/hpRegister"
