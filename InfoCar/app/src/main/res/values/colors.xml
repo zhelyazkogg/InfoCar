@@ -19,4 +19,10 @@
     <color name="colorEggShell">#F0EBD8</color>
     <color name="colorDarkBlue">#06182B</color>
     <color name="colorYellow">#F0CE00</color>
+
+<!--colors for a new design maybe-->
+    <color name="coolRed"> #e83d61  </color>
+    <color name="coolDarkGreen">#102b3e</color>
+    <color name="coolGray">#ced8e1</color>
+    <color name="coolGreen">#1cc8a0</color>
 </resources>
