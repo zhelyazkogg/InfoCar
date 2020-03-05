@@ -51,6 +51,12 @@ class AddCarActivity : AppCompatActivity() {
             }
         }*/
 
+        buttonRegister.setOnClickListener {
+            val ProfileActivity = Intent(applicationContext, ProfileActivity::class.java)
+            startActivity(ProfileActivity)
+            finish()
+        }
+
         buttonBack.setOnClickListener {
             val LoginActivity = Intent(applicationContext, LoginActivity::class.java)
             startActivity(LoginActivity)
