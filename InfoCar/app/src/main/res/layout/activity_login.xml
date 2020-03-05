@@ -66,9 +66,10 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="100dp"
         android:layout_marginRight="30dp"
-        android:backgroundTint="@color/colorYellow"
-        android:textColor="@color/colorDarkBlue"
+        android:background="@drawable/rounded_button"
         android:text="@string/login" />
+
+
 
     <Button
         android:id="@+id/registerBtn"
@@ -78,7 +79,6 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="30dp"
-        android:backgroundTint="@color/colorYellow"
-        android:textColor="@color/colorDarkBlue"
+        android:background="@drawable/rounded_button"
         android:text="@string/register" />
 </LinearLayout>
