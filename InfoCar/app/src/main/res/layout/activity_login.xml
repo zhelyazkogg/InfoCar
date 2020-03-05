@@ -28,12 +28,12 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:backgroundTint="@color/coolRed"
+        android:backgroundTint="@color/colorYellow"
         android:ems="10"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
-        android:textColor="@color/colorYellow"
-        android:textColorHint="@color/colorYellow" />
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite" />
 
     <EditText
         android:id="@+id/passwordLogin"
@@ -45,9 +45,9 @@
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
-        android:backgroundTint="@color/coolRed"
-        android:textColor="@color/colorYellow"
-        android:textColorHint="@color/colorYellow" />
+        android:backgroundTint="@color/colorYellow"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite" />
 
     <TextView
         android:id="@+id/forgottenPass"
@@ -55,7 +55,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/forgottenPass"
-        android:textColor="@color/colorYellow"
+        android:textColor="@color/colorWhite"
         android:layout_marginTop="10dp"/>
 
     <Button
@@ -67,7 +67,7 @@
         android:layout_marginTop="100dp"
         android:layout_marginRight="30dp"
         android:backgroundTint="@color/colorYellow"
-        android:textColor="@color/coolGray"
+        android:textColor="@color/colorDarkBlue"
         android:text="@string/login" />
 
     <Button
@@ -79,6 +79,6 @@
         android:layout_marginTop="5dp"
         android:layout_marginRight="30dp"
         android:backgroundTint="@color/colorYellow"
-        android:textColor="@color/coolGray"
+        android:textColor="@color/colorDarkBlue"
         android:text="@string/register" />
 </LinearLayout>
