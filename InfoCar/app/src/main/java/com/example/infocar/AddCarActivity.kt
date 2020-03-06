@@ -20,7 +20,7 @@ class AddCarActivity : AppCompatActivity() {
     lateinit var buttonBack : Button
     // TODO Buttons for Confirm
 
-
+// TODO make fuelTypeRegister autocomplete Work!!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
