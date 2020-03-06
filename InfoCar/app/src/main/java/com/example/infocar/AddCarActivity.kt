@@ -14,8 +14,8 @@ class AddCarActivity : AppCompatActivity() {
     lateinit var yoursSinceRegister : EditText
     lateinit var kmRegister : EditText
     lateinit var registerNumberVehicle : EditText
-    lateinit var vehicleTypeRegister : EditText
-    lateinit var fuelTypeRegister : EditText
+    lateinit var vehicleTypeRegister : AutoCompleteTextView
+    lateinit var fuelTypeRegister : AutoCompleteTextView
     lateinit var buttonRegister : Button
     lateinit var buttonBack : Button
     // TODO Buttons for Confirm
@@ -35,8 +35,13 @@ class AddCarActivity : AppCompatActivity() {
         buttonBack = findViewById(R.id.buttonBack)
         buttonRegister = findViewById(R.id.buttonRegister)
 
-        fuelTypeRegister = findViewById<AutoCompleteTextView>(R.id.fuelTypeRegister)
-        vehicleTypeRegister = findViewById<AutoCompleteTextView>(R.id.vehicleTypeRegister)
+        fuelTypeRegister = findViewById(R.id.fuelTypeRegister)
+        vehicleTypeRegister = findViewById(R.id.vehicleTypeRegister)
+
+        var typeOfVehicle = arrayOf("Sedan", "Combi", "Hatchback", "Cabriolet")
+        var adapter = ArrayAdapter(this , android.R.layout.simple_list_item_1,typeOfVehicle)
+        vehicleTypeRegister.threshold=0
+        vehicleTypeRegister.setAdapter(adapter)
 
         buttonRegister.setOnClickListener {
             val ProfileActivity = Intent(applicationContext, ProfileActivity::class.java)
