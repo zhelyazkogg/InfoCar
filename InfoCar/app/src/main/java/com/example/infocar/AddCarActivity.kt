@@ -15,7 +15,6 @@ class AddCarActivity : AppCompatActivity() {
     lateinit var kmRegister : EditText
     lateinit var registerNumberVehicle : EditText
     lateinit var vehicleTypeRegister : EditText
-    //  lateinit var vehicleTypeRegister : AutoCompleteTextView
     lateinit var fuelTypeRegister : EditText
     lateinit var buttonRegister : Button
     lateinit var buttonBack : Button
@@ -33,23 +32,11 @@ class AddCarActivity : AppCompatActivity() {
         yoursSinceRegister = findViewById(R.id.yoursSinceRegister)
         kmRegister = findViewById(R.id.kmRegister)
         registerNumberVehicle = findViewById(R.id.registerNumberVehicle)
-        vehicleTypeRegister = findViewById(R.id.vehicleTypeRegister)
-        fuelTypeRegister = findViewById(R.id.fuelTypeRegister)
         buttonBack = findViewById(R.id.buttonBack)
         buttonRegister = findViewById(R.id.buttonRegister)
 
-       /* val vehicleTypeRegister = findViewById<AutoCompleteTextView>(R.id.vehicleTypeRegister)
-        val vehicleTypeMenuRegister = resources.getStringArray(R.array.vehicleTypeMenu)
-        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, vehicleTypeMenuRegister)
-        vehicleTypeRegister.setAdapter(adapter)
-
-        val button = findViewById<Button>(R.id.buttonRegister)
-        if (button != null) {
-            button ?.setOnClickListener { v ->
-                val enteredText = getString(R.string.submitted_lang) + "" + vehicleTypeRegister.getText()
-                Toast.makeText(this@AddCarActivity,enteredText, Toast.LENGTH_SHORT).show()
-            }
-        }*/
+        fuelTypeRegister = findViewById<AutoCompleteTextView>(R.id.fuelTypeRegister)
+        vehicleTypeRegister = findViewById<AutoCompleteTextView>(R.id.vehicleTypeRegister)
 
         buttonRegister.setOnClickListener {
             val ProfileActivity = Intent(applicationContext, ProfileActivity::class.java)
