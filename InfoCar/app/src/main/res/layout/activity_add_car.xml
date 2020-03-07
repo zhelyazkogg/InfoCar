@@ -104,7 +104,7 @@
         android:backgroundTint="@color/colorYellow"
         android:textColorHint="@color/colorWhite" />
 
-    <EditText
+    <!--<EditText
         android:id="@+id/fuelTypeRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -116,7 +116,19 @@
         android:inputType="textAutoComplete"
         android:textColor="@color/colorWhite"
         android:backgroundTint="@color/colorYellow"
-        android:textColorHint="@color/colorWhite" />
+        android:textColorHint="@color/colorWhite" />-->
+
+    <AutoCompleteTextView
+        android:id="@+id/fuelTypeRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorWhite"
+        android:backgroundTint="@color/colorYellow"
+        android:textColorHint="@color/colorWhite"
+        android:hint="@string/fuelType"/>
 
     <EditText
         android:id="@+id/kmRegister"
