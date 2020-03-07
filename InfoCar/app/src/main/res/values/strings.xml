@@ -35,34 +35,4 @@
     <string name="send">Send</string>
     <string name="RegisterVehicle">Register Vehicle</string>
 
-    <string-array name="vehicleTypeMenu">
-        <item>Sedan</item>
-        <item>Coupe</item>
-        <item>Cabriolet</item>
-        <item>Hatchback</item>
-        <item>Wagon</item>
-        <item>Van</item>
-        <item>SUV</item>
-        <item>Other</item>
-        <item>Седан</item>
-        <item>Купе</item>
-        <item>Кабриолет</item>
-        <item>Хечбек</item>
-        <item>Комби</item>
-        <item>Ван</item>
-        <item>СУВ</item>
-        <item>Друг</item>
-    </string-array>
-
-    <string-array name="fuelTypeMenu">
-        <item>Diesel</item>
-        <item>Petrol</item>
-        <item>Gas/Petrol</item>
-        <item>Methane</item>
-        <item>Дизел</item>
-        <item>Бензин</item>
-        <item>Газ/Бензин</item>
-        <item>Метан</item>
-    </string-array>
-
 </resources>

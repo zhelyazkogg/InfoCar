@@ -38,10 +38,15 @@ class AddCarActivity : AppCompatActivity() {
         fuelTypeRegister = findViewById(R.id.fuelTypeRegister)
         vehicleTypeRegister = findViewById(R.id.vehicleTypeRegister)
 
-        var typeOfVehicle = arrayOf("Sedan", "Combi", "Hatchback", "Cabriolet")
+        var typeOfVehicle = arrayOf("Sedan", "Combi", "Hatchback", "Coupe", "Седан", "Комби", "Хечбек", "Купе", "Друг", "Other")
         var adapter = ArrayAdapter(this , android.R.layout.simple_list_item_1,typeOfVehicle)
         vehicleTypeRegister.threshold=0
         vehicleTypeRegister.setAdapter(adapter)
+        
+        var typeOfFuel = arrayOf("Diesel", "Petrol", "Petrol/Gas", "Methane", "Дизел", "Бензин", "Бензин/Газ", "Метан")
+        var adapterFuel = ArrayAdapter(this, android.R.layout.simple_list_item_1, typeOfFuel)
+        fuelTypeRegister.threshold=1
+        fuelTypeRegister.setAdapter(adapterFuel)
 
         buttonRegister.setOnClickListener {
             val ProfileActivity = Intent(applicationContext, ProfileActivity::class.java)
