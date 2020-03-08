@@ -12,7 +12,7 @@
     <string name="brandCar">Brand</string>
     <string name="vehicleType">Vehicle Type</string>
     <string name="vehicleYear">Vehicle Year</string>
-    <string name="hpRegister">Horsepower</string>
+    <string name="engineRegister">Engine volume</string>
     <string name="yoursSince">Yours Since</string>
     <string name="kmVehicle">Kilometers on Vehicle</string>
     <string name="registerNumber">Register Number</string>
