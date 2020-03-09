@@ -21,8 +21,6 @@ class AddCarActivity : AppCompatActivity() {
     lateinit var buttonBack : Button
     // TODO Buttons for Confirm
 
-// TODO make fuelTypeRegister autocomplete Work!!!
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_car)
@@ -69,6 +67,11 @@ class AddCarActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
+            if (TextUtils.isEmpty(vehicleType)){
+                vehicleTypeRegister.error = "Please enter your vehicle's car type."
+                return@setOnClickListener
+            }
+
             if (TextUtils.isEmpty(engine)){
                 engineRegister.error = "Please enter your vehicle's engine volume, " +
                         "plus the horsepowers."
@@ -77,6 +80,11 @@ class AddCarActivity : AppCompatActivity() {
 
             if (TextUtils.isEmpty(yourSince)){
                 yoursSinceRegister.error = "Please enter the date when you registered your vehicle."
+                return@setOnClickListener
+            }
+
+            if (TextUtils.isEmpty(fuel)){
+                fuelTypeRegister.error = "Please enter your vehicle's fuel type."
                 return@setOnClickListener
             }
 
@@ -90,21 +98,11 @@ class AddCarActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            if (TextUtils.isEmpty(fuel)){
-                fuelTypeRegister.error = "Please enter your vehicle's fuel type."
-                return@setOnClickListener
-            }
-
-            if (TextUtils.isEmpty(vehicleType)){
-                vehicleTypeRegister.error = "Please enter your vehicle's car type."
-                return@setOnClickListener
-            }
 
 
-
-            val ProfileActivity = Intent(applicationContext, ProfileActivity::class.java)
+            /*val ProfileActivity = Intent(applicationContext, ProfileActivity::class.java)
             startActivity(ProfileActivity)
-            finish()
+            finish()*/
         }
 
         buttonBack.setOnClickListener {
