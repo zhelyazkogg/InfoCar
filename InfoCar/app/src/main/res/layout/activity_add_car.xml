@@ -85,7 +85,7 @@
         android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="@string/engineRegister"
-        android:inputType="numberDecimal"
+        android:inputType="text"
         android:textColor="@color/colorWhite"
         android:backgroundTint="@color/colorYellow"
         android:textColorHint="@color/colorWhite" />
@@ -139,21 +139,21 @@
         android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="@string/kmVehicle"
-        android:inputType="text"
+        android:inputType="number"
         android:textColor="@color/colorWhite"
         android:backgroundTint="@color/colorYellow"
         android:textColorHint="@color/colorWhite" />
 
     <EditText
-        android:id="@+id/registerNumberVehicle"
+        android:id="@+id/licensePlateRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="@string/registerNumber"
-        android:inputType="text"
+        android:hint="@string/licensePlate"
+        android:inputType="textCapCharacters"
         android:textColor="@color/colorWhite"
         android:backgroundTint="@color/colorYellow"
         android:textColorHint="@color/colorWhite" />

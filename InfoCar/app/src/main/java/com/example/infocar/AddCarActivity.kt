@@ -14,7 +14,7 @@ class AddCarActivity : AppCompatActivity() {
     lateinit var engineRegister : EditText
     lateinit var yoursSinceRegister : EditText
     lateinit var kmRegister : EditText
-    lateinit var registerNumberVehicle : EditText
+    lateinit var licensePlateRegister : EditText
     lateinit var vehicleTypeRegister : AutoCompleteTextView
     lateinit var fuelTypeRegister : AutoCompleteTextView
     lateinit var buttonRegister : Button
@@ -30,7 +30,7 @@ class AddCarActivity : AppCompatActivity() {
         engineRegister = findViewById(R.id.engineRegister)
         yoursSinceRegister = findViewById(R.id.yoursSinceRegister)
         kmRegister = findViewById(R.id.kmRegister)
-        registerNumberVehicle = findViewById(R.id.registerNumberVehicle)
+        licensePlateRegister = findViewById(R.id.licensePlateRegister)
         buttonBack = findViewById(R.id.buttonBack)
         buttonRegister = findViewById(R.id.buttonRegister)
 
@@ -53,7 +53,7 @@ class AddCarActivity : AppCompatActivity() {
             val engine = engineRegister.text.toString().trim()
             val yourSince = yoursSinceRegister.text.toString().trim()
             val kilometers = kmRegister.text.toString().trim()
-            val registerNumber = registerNumberVehicle.text.toString().trim()
+            val licensePlate = licensePlateRegister.text.toString().trim()
             val fuel = fuelTypeRegister.text.toString().trim()
             val vehicleType = vehicleTypeRegister.text.toString().trim()
 
@@ -93,8 +93,8 @@ class AddCarActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            if (TextUtils.isEmpty(registerNumber)){
-                registerNumberVehicle.error = "Please enter your vehicles licence plate."
+            if (TextUtils.isEmpty(licensePlate)){
+                licensePlateRegister.error = "Please enter your vehicles licence plate."
                 return@setOnClickListener
             }
 
