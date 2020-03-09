@@ -1,16 +1,17 @@
 package com.example.infocar
 
+import android.app.ProgressDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.*
+import com.google.firebase.auth.FirebaseAuth
 
 class AddCarActivity : AppCompatActivity() {
 
     lateinit var brandRegister : EditText
     lateinit var modelRegister : EditText
-
     lateinit var engineRegister : EditText
     lateinit var yoursSinceRegister : EditText
     lateinit var kmRegister : EditText
@@ -19,11 +20,17 @@ class AddCarActivity : AppCompatActivity() {
     lateinit var fuelTypeRegister : AutoCompleteTextView
     lateinit var buttonRegister : Button
     lateinit var buttonBack : Button
+
+    lateinit var mProgressBar: ProgressDialog
+    lateinit var mAuth : FirebaseAuth
     // TODO Buttons for Confirm
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_car)
+
+        mAuth = FirebaseAuth.getInstance()
+        mProgressBar = ProgressDialog(this)
 
         brandRegister = findViewById(R.id.brandRegister)
         modelRegister = findViewById(R.id.modelRegister)
@@ -110,5 +117,9 @@ class AddCarActivity : AppCompatActivity() {
             startActivity(LoginActivity)
             finish()
         }
+    }
+
+    private fun createVehicleLog(){
+
     }
 }
