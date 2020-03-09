@@ -44,11 +44,11 @@ class RegisterActivity : AppCompatActivity() {
 //            val confirmPassword = confPasswordRegister.text.toString().trim()
 
             if (TextUtils.isEmpty(email)){
-                emailRegister.error = "Required."
+                emailRegister.error = "Please enter a valid e-mail."
                 return@setOnClickListener
             }
             if (TextUtils.isEmpty(password)){
-                passwordRegister.error = "Required."
+                passwordRegister.error = "Password must be minimum 6 symbols"
                 return@setOnClickListener
             }
             /*if (TextUtils.isEmpty(confirmPassword)){

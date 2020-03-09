@@ -85,7 +85,7 @@
         android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="@string/engineRegister"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:textColor="@color/colorWhite"
         android:backgroundTint="@color/colorYellow"
         android:textColorHint="@color/colorWhite" />
