@@ -7,11 +7,8 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.widget.*
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.activity_add_car.*
 
 class AddCarActivity : AppCompatActivity() {
-
-
 
     lateinit var mProgressBar: ProgressDialog
     lateinit var mAuth : FirebaseAuth
@@ -24,25 +21,25 @@ class AddCarActivity : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
         mProgressBar = ProgressDialog(this)
 
-        var brandRegister = findViewById<EditText>(R.id.brandRegister)
-        var modelRegister = findViewById<EditText>(R.id.modelRegister)
-        var engineRegister = findViewById<EditText>(R.id.engineRegister)
-        var yoursSinceRegister = findViewById<EditText>(R.id.yoursSinceRegister)
-        var kmRegister = findViewById<EditText>(R.id.kmRegister)
-        var licensePlateRegister = findViewById<EditText>(R.id.licensePlateRegister)
-        var buttonBack = findViewById<Button>(R.id.buttonBack)
-        var buttonRegister = findViewById<Button>(R.id.buttonRegister)
+        val brandRegister = findViewById<EditText>(R.id.brandRegister)
+        val modelRegister = findViewById<EditText>(R.id.modelRegister)
+        val engineRegister = findViewById<EditText>(R.id.engineRegister)
+        val yoursSinceRegister = findViewById<EditText>(R.id.yoursSinceRegister)
+        val kmRegister = findViewById<EditText>(R.id.kmRegister)
+        val licensePlateRegister = findViewById<EditText>(R.id.licensePlateRegister)
+        val buttonBack = findViewById<Button>(R.id.buttonBack)
+        val buttonRegister = findViewById<Button>(R.id.buttonRegister)
 
-        var fuelTypeRegister = findViewById<AutoCompleteTextView>(R.id.fuelTypeRegister)
-        var vehicleTypeRegister = findViewById<AutoCompleteTextView>(R.id.vehicleTypeRegister)
+        val fuelTypeRegister = findViewById<AutoCompleteTextView>(R.id.fuelTypeRegister)
+        val vehicleTypeRegister = findViewById<AutoCompleteTextView>(R.id.vehicleTypeRegister)
 
-        var typeOfVehicle = arrayOf("Sedan", "Combi", "Hatchback", "Coupe", "Седан", "Комби", "Хечбек", "Купе", "Друг", "Other")
-        var adapter = ArrayAdapter(this , android.R.layout.simple_list_item_1,typeOfVehicle)
+        val typeOfVehicle = arrayOf("Sedan", "Combi", "Hatchback", "Coupe", "Седан", "Комби", "Хечбек", "Купе", "Друг", "Other")
+        val adapter = ArrayAdapter(this , android.R.layout.simple_list_item_1,typeOfVehicle)
         vehicleTypeRegister.threshold=0
         vehicleTypeRegister.setAdapter(adapter)
         
-        var typeOfFuel = arrayOf("Diesel", "Petrol", "Petrol/Gas", "Methane", "Дизел", "Бензин", "Бензин/Газ", "Метан")
-        var adapterFuel = ArrayAdapter(this, android.R.layout.simple_list_item_1, typeOfFuel)
+        val typeOfFuel = arrayOf("Diesel", "Petrol", "Petrol/Gas", "Methane", "Дизел", "Бензин", "Бензин/Газ", "Метан")
+        val adapterFuel = ArrayAdapter(this, android.R.layout.simple_list_item_1, typeOfFuel)
         fuelTypeRegister.threshold=1
         fuelTypeRegister.setAdapter(adapterFuel)
 
