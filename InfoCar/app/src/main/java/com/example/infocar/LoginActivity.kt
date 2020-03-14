@@ -10,11 +10,6 @@ import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
 
-    lateinit var emailLogin : EditText
-    lateinit var passwordLogin : EditText
-    lateinit var loginBtn : Button
-    lateinit var registerBtn : Button
-    lateinit var forgottenPass : TextView
     lateinit var mProgressBar: ProgressDialog
 
     lateinit var mAuth : FirebaseAuth
@@ -25,11 +20,11 @@ class LoginActivity : AppCompatActivity() {
 
         mAuth = FirebaseAuth.getInstance()
 
-        emailLogin = findViewById(R.id.emailLogin)
-        passwordLogin = findViewById(R.id.passwordLogin)
-        loginBtn = findViewById(R.id.loginBtn)
-        registerBtn = findViewById(R.id.registerBtn)
-        forgottenPass = findViewById(R.id.forgottenPass)
+        val emailLogin = findViewById<EditText>(R.id.emailLogin)
+        val passwordLogin = findViewById<EditText>(R.id.passwordLogin)
+        val loginBtn = findViewById<Button>(R.id.loginBtn)
+        val registerBtn = findViewById<Button>(R.id.registerBtn)
+        val forgottenPass = findViewById<TextView>(R.id.forgottenPass)
         mProgressBar = ProgressDialog(this)
 
         loginBtn.setOnClickListener {
