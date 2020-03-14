@@ -16,10 +16,6 @@ import com.google.firebase.auth.FirebaseAuth
 
 class ForgottenPasswordActivity : AppCompatActivity() {
 
-    lateinit var forgottenPassSending : Button
-    lateinit var forgottenPassEmail : EditText
-    lateinit var forgottenPassBack : Button
-
     lateinit var mAuth : FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,9 +23,9 @@ class ForgottenPasswordActivity : AppCompatActivity() {
         setContentView(R.layout.activity_forgotten_password)
         mAuth = FirebaseAuth.getInstance()
 
-        forgottenPassSending = findViewById(R.id.forgottenPassSending)
-        forgottenPassEmail = findViewById(R.id.forgottenPassEmail)
-        forgottenPassBack = findViewById(R.id.forgottenPassBack)
+        val forgottenPassSending = findViewById<Button>(R.id.forgottenPassSending)
+        val forgottenPassEmail = findViewById<EditText>(R.id.forgottenPassEmail)
+        val forgottenPassBack = findViewById<Button>(R.id.forgottenPassBack)
 
         forgottenPassSending.setOnClickListener {
             val email = forgottenPassEmail.text.toString().trim()
