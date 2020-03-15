@@ -34,5 +34,6 @@
         so we can send you an email with a new password.</string>
     <string name="send">Send</string>
     <string name="RegisterVehicle">Register Vehicle</string>
+    <string name="profile">Your Profile</string>
 
 </resources>

@@ -7,6 +7,15 @@
     android:orientation="horizontal"
     tools:context=".ProfileActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/profile"
+        android:textAlignment="center"
+        android:textColor="@color/colorYellow"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
+
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
