@@ -11,11 +11,19 @@ import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.UserProfileChangeRequest
+import com.google.firebase.firestore.FirebaseFirestore
+
 
 class RegisterActivity : AppCompatActivity() {
 
     lateinit var mProgressBar: ProgressDialog
     lateinit var mAuth : FirebaseAuth
+    lateinit var firebaseUser : FirebaseUser
+    lateinit var DBinstance : FirebaseFirestore
+    lateinit var emailRegister : EditText
+    lateinit var passwordRegister : EditText
 
  // TODO validate ConfirmPassword... or remove confirm password..
 
@@ -24,10 +32,11 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(R.layout.activity_register)
 
         mAuth = FirebaseAuth.getInstance()
+        DBinstance = FirebaseFirestore.getInstance()
         mProgressBar = ProgressDialog(this)
 
-        val emailRegister = findViewById<EditText>(R.id.emailRegister)
-        val passwordRegister = findViewById<EditText>(R.id.passwordRegister)
+        emailRegister = findViewById(R.id.emailRegister)
+        passwordRegister = findViewById(R.id.passwordRegister)
         //confPasswordRegister = findViewById(R.id.confPasswordRegister)
         val buttonRegister = findViewById<Button>(R.id.buttonRegister)
         val buttonBack = findViewById<Button>(R.id.buttonBack)
@@ -36,26 +45,44 @@ class RegisterActivity : AppCompatActivity() {
         buttonRegister.setOnClickListener {
             val email = emailRegister.text.toString().trim()
             val password = passwordRegister.text.toString().trim()
-//            val confirmPassword = confPasswordRegister.text.toString().trim()
 
-            if (TextUtils.isEmpty(email)){
-                emailRegister.error = "Please enter a valid e-mail."
-                return@setOnClickListener
-            }
-            if (TextUtils.isEmpty(password)){
-                passwordRegister.error = "Password must be minimum 6 symbols"
-                return@setOnClickListener
-            }
-            /*if (TextUtils.isEmpty(confirmPassword)){
-                confPasswordRegister.error = "Required."
-                return@setOnClickListener
-            }
+            if (validateForm()) {
+                this.mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this) { task ->
+                        if (task.isSuccessful) {
+                            val firebaseUser = this.mAuth.currentUser
 
-            if (!confirmPassword.equals(password)){
-                confPasswordRegister.error = "Password doesn't match."
-            }*/
+                                if(firebaseUser != null){
+                                    val profileUpdates = UserProfileChangeRequest.Builder()
+                                        .setDisplayName(email)
+                                        .build()
 
-            validateForm(email, password)
+                                    firebaseUser.updateProfile(profileUpdates).addOnCompleteListener(this){task1 ->
+                                }
+                            }
+
+                         DBinstance = FirebaseFirestore.getInstance()
+                            User
+                        } else {
+                            Toast.makeText(this, "Error in Sign up", Toast.LENGTH_SHORT).show()
+                        }
+                        mProgressBar.dismiss()
+                    }
+
+            }
+            /*mProgressBar.setMessage("Please wait")
+            mProgressBar.show()  // TODO dont forget about this.
+            mAuth.createUserWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(this) { task ->
+                        if (task.isSuccessful) {
+
+                            val intent = Intent(applicationContext, AddCarActivity::class.java)
+                            startActivity(intent)
+                            finish()
+                        } else {
+                            Toast.makeText(this, "Error in Sign up", Toast.LENGTH_SHORT).show()
+                        }
+                        mProgressBar.dismiss()
+                    }*/
         }
 
         buttonBack.setOnClickListener {
@@ -65,19 +92,16 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 
-    private fun  validateForm(email : String, password : String){
-        mProgressBar.setMessage("Please wait")
-        mProgressBar.show()
+    private fun  validateForm() : Boolean{
+        val email = emailRegister.text.toString()
+        val password = passwordRegister.text.toString()
 
-        mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this){task ->
-            if (task.isSuccessful){
-                val intent = Intent(applicationContext, AddCarActivity::class.java)
-                startActivity(intent)
-                finish()
-            } else {
-                Toast.makeText(this, "Error in Sign up", Toast.LENGTH_SHORT).show()
-            }
-            mProgressBar.dismiss()
+        if (TextUtils.isEmpty(email)){
+            emailRegister.error = "Please enter a valid e-mail."
         }
+        if (TextUtils.isEmpty(password)){
+            passwordRegister.error = "Password must be minimum 6 symbols"
+        }
+        return true
     }
 }
