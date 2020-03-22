@@ -1,5 +1,4 @@
 package com.example.infocar
-
 import android.app.ProgressDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -15,7 +14,6 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.firestore.FirebaseFirestore
 
-
 class RegisterActivity : AppCompatActivity() {
 
     lateinit var mProgressBar: ProgressDialog
@@ -24,6 +22,8 @@ class RegisterActivity : AppCompatActivity() {
     lateinit var DBinstance : FirebaseFirestore
     lateinit var emailRegister : EditText
     lateinit var passwordRegister : EditText
+
+    lateinit var dbUser : User
 
  // TODO validate ConfirmPassword... or remove confirm password..
 
@@ -61,7 +61,8 @@ class RegisterActivity : AppCompatActivity() {
                             }
 
                          DBinstance = FirebaseFirestore.getInstance()
-                            User
+                            dbUser = User()
+                            /*dbUser.setName()*/
                         } else {
                             Toast.makeText(this, "Error in Sign up", Toast.LENGTH_SHORT).show()
                         }
