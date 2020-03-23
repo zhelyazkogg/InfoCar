@@ -60,9 +60,9 @@ class RegisterActivity : AppCompatActivity() {
                                 }
                             }
 
-                         DBinstance = FirebaseFirestore.getInstance()
-                            dbUser = User()
-                            /*dbUser.setName()*/
+                       /*  DBinstance = FirebaseFirestore.getInstance()
+                            dbUser = User(null)
+                            *//*dbUser.setName()*/
                         } else {
                             Toast.makeText(this, "Error in Sign up", Toast.LENGTH_SHORT).show()
                         }
