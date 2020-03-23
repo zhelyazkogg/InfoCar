@@ -10,6 +10,7 @@ class User {
     var id: String? = null
     var email: String? = null
     var date: Date? = null
+    var done: Boolean? = false
 
    /* private val id = ""
     private val email = ""
