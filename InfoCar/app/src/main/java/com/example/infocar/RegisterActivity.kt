@@ -1,4 +1,5 @@
 package com.example.infocar
+
 import android.app.ProgressDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -13,17 +14,19 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class RegisterActivity : AppCompatActivity() {
 
     lateinit var mProgressBar: ProgressDialog
-    lateinit var mAuth : FirebaseAuth
-    lateinit var firebaseUser : FirebaseUser
-    lateinit var DBinstance : FirebaseFirestore
     lateinit var emailRegister : EditText
     lateinit var passwordRegister : EditText
 
-    lateinit var dbUser : User
+    lateinit var mAuth : FirebaseAuth
+    lateinit var firebaseUser : FirebaseUser
+    lateinit var DBinstance : FirebaseFirestore
+    lateinit var database : DatabaseReference
 
  // TODO validate ConfirmPassword... or remove confirm password..
 
@@ -34,6 +37,7 @@ class RegisterActivity : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
         DBinstance = FirebaseFirestore.getInstance()
         mProgressBar = ProgressDialog(this)
+        database = FirebaseDatabase.getInstance().reference
 
         emailRegister = findViewById(R.id.emailRegister)
         passwordRegister = findViewById(R.id.passwordRegister)
