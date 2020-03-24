@@ -90,11 +90,18 @@ class RegisterActivity : AppCompatActivity() {
                     }*/
         }
 
+
+
         buttonBack.setOnClickListener {
             val LoginActivity = Intent(applicationContext, LoginActivity::class.java)
             startActivity(LoginActivity)
             finish()
         }
+    }
+    fun addUser(){
+        val user = User.create()
+
+        user.email = txtNewTaskDesc.text.toString()
     }
 
     private fun  validateForm() : Boolean{
