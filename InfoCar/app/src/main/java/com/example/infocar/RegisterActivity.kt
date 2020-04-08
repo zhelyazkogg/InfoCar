@@ -101,7 +101,7 @@ class RegisterActivity : AppCompatActivity() {
     fun addUser(){
         val user = User.create()
 
-        user.email = txtNewTaskDesc.text.toString()
+     //   user.email = txtNewTaskDesc.text.toString()
     }
 
     private fun  validateForm() : Boolean{
