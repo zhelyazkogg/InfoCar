@@ -52,8 +52,8 @@ class RegisterActivity : AppCompatActivity() {
 
             if (validateForm()) {
                 this.mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this) { task ->
-                        if (task.isSuccessful) {
-                            val firebaseUser = this.mAuth.currentUser
+                    if (task.isSuccessful) {
+                        /* val firebaseUser = this.mAuth.currentUser
 
                                 if(firebaseUser != null){
                                     val profileUpdates = UserProfileChangeRequest.Builder()
@@ -61,34 +61,32 @@ class RegisterActivity : AppCompatActivity() {
                                         .build()
 
                                     firebaseUser.updateProfile(profileUpdates).addOnCompleteListener(this){task1 ->
-                                }
-                            }
+                                }*/
+                    }
 
-                       /*  DBinstance = FirebaseFirestore.getInstance()
+                    /*  DBinstance = FirebaseFirestore.getInstance()
                             dbUser = User(null)
                             *//*dbUser.setName()*/
+                    mProgressBar.setMessage("Please wait")
+                    mProgressBar.show()  // TODO dont forget about this.
+                    mAuth.createUserWithEmailAndPassword(email, password)
+                        .addOnCompleteListener(this) { task ->
+                            if (task.isSuccessful) {
+
+                                val intent = Intent(applicationContext, AddCarActivity::class.java)
+                                startActivity(intent)
+                                finish()
+                            } else {
+                                Toast.makeText(this, "Error in Sign up", Toast.LENGTH_SHORT).show()
+                            }
+                            mProgressBar.dismiss()
+                        }
+                }
                         } else {
                             Toast.makeText(this, "Error in Sign up", Toast.LENGTH_SHORT).show()
                         }
                         mProgressBar.dismiss()
                     }
-
-            }
-            /*mProgressBar.setMessage("Please wait")
-            mProgressBar.show()  // TODO dont forget about this.
-            mAuth.createUserWithEmailAndPassword(email, password)
-                    .addOnCompleteListener(this) { task ->
-                        if (task.isSuccessful) {
-
-                            val intent = Intent(applicationContext, AddCarActivity::class.java)
-                            startActivity(intent)
-                            finish()
-                        } else {
-                            Toast.makeText(this, "Error in Sign up", Toast.LENGTH_SHORT).show()
-                        }
-                        mProgressBar.dismiss()
-                    }*/
-        }
 
 
 
