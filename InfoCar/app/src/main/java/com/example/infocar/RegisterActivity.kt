@@ -24,7 +24,7 @@ class RegisterActivity : AppCompatActivity() {
     lateinit var passwordRegister : EditText
 
     lateinit var mAuth : FirebaseAuth
-    lateinit var firebaseUser : FirebaseUser
+ //   lateinit var firebaseUser : FirebaseUser
     lateinit var DBinstance : FirebaseFirestore
     lateinit var database : DatabaseReference
 
@@ -70,22 +70,6 @@ class RegisterActivity : AppCompatActivity() {
             mProgressBar.dismiss()
 
         }
-               /* this.mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this) { task ->
-                    if (task.isSuccessful) {
-                        *//* val firebaseUser = this.mAuth.currentUser
-
-                                if(firebaseUser != null){
-                                    val profileUpdates = UserProfileChangeRequest.Builder()
-                                        .setDisplayName(email)
-                                        .build()
-
-                                    firebaseUser.updateProfile(profileUpdates).addOnCompleteListener(this){task1 ->
-                                }*//*
-                    }*/
-
-                    /*  DBinstance = FirebaseFirestore.getInstance()
-                            dbUser = User(null)
-                            *//*dbUser.setName()*/
 
         buttonBack.setOnClickListener {
             val LoginActivity = Intent(applicationContext, LoginActivity::class.java)
