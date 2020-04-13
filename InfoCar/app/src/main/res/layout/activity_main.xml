@@ -20,7 +20,7 @@
         tools:srcCompat="@drawable/ic_myprofile" />
 
     <ImageView
-        android:id="@+id/settings"
+        android:id="@+id/fuel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
@@ -29,7 +29,7 @@
         android:background="@color/colorYellow"
         tools:srcCompat="@drawable/ic_myprofile" />
     <ImageView
-        android:id="@+id/settings"
+        android:id="@+id/map"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
@@ -38,7 +38,7 @@
         android:background="@color/colorYellow"
         tools:srcCompat="@drawable/ic_myprofile" />
     <ImageView
-        android:id="@+id/settings"
+        android:id="@+id/law"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
@@ -47,7 +47,7 @@
         android:background="@color/colorYellow"
         tools:srcCompat="@drawable/ic_myprofile" />
     <ImageView
-        android:id="@+id/settings"
+        android:id="@+id/shop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
