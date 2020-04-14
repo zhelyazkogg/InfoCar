@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/myProfile"
+        android:id="@+id/myProfileActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -20,7 +20,7 @@
         tools:srcCompat="@drawable/ic_myprofile" />
 
     <ImageView
-        android:id="@+id/fuel"
+        android:id="@+id/fuelActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
@@ -29,7 +29,7 @@
         android:background="@color/colorYellow"
         tools:srcCompat="@drawable/ic_myprofile" />
     <ImageView
-        android:id="@+id/map"
+        android:id="@+id/mapActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
@@ -38,7 +38,7 @@
         android:background="@color/colorYellow"
         tools:srcCompat="@drawable/ic_myprofile" />
     <ImageView
-        android:id="@+id/law"
+        android:id="@+id/lawActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
@@ -47,7 +47,7 @@
         android:background="@color/colorYellow"
         tools:srcCompat="@drawable/ic_myprofile" />
     <ImageView
-        android:id="@+id/shop"
+        android:id="@+id/shopActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
@@ -56,7 +56,7 @@
         android:background="@color/colorYellow"
         tools:srcCompat="@drawable/ic_myprofile" />
     <ImageView
-        android:id="@+id/settings"
+        android:id="@+id/settingsActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
