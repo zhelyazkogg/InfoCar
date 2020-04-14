@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(ProfileActivity)
             finish()
         })
-
+/*
         myFuelActivity.setOnClickListener(View.OnClickListener { v ->
             val FuelActivity = Intent(applicationContext, FuelActivity::class.java)
             startActivity(FuelActivity)
@@ -54,5 +54,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(SettingsActivity)
             finish()
         })
+ */
     }
 }
