@@ -14,8 +14,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:background="@color/colorYellow"
         tools:srcCompat="@drawable/ic_myprofile" />
 
@@ -24,44 +26,54 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:background="@color/colorYellow"
-        tools:srcCompat="@drawable/ic_myprofile" />
+        tools:srcCompat="@drawable/ic_fuel" />
     <ImageView
         android:id="@+id/myMapActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:background="@color/colorYellow"
-        tools:srcCompat="@drawable/ic_myprofile" />
+        tools:srcCompat="@drawable/ic_map" />
     <ImageView
         android:id="@+id/myLawActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:background="@color/colorYellow"
-        tools:srcCompat="@drawable/ic_myprofile" />
+        tools:srcCompat="@drawable/ic_law" />
     <ImageView
         android:id="@+id/myShopActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:background="@color/colorYellow"
-        tools:srcCompat="@drawable/ic_myprofile" />
+        tools:srcCompat="@drawable/ic_myshop" />
     <ImageView
         android:id="@+id/mySettingsActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:background="@color/colorYellow"
-        tools:srcCompat="@drawable/ic_myprofile" />
+        tools:srcCompat="@drawable/ic_settings" />
 </LinearLayout>
