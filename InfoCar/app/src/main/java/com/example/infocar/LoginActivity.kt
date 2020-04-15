@@ -64,7 +64,7 @@ class LoginActivity : AppCompatActivity() {
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this){task ->
         if (task.isSuccessful){
             mProgressBar.dismiss()
-            val startIntent = Intent(applicationContext, ProfileActivity::class.java)
+            val startIntent = Intent(applicationContext, MainActivity::class.java)
             startActivity(startIntent)
             finish()
         } else {

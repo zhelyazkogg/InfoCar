@@ -35,5 +35,11 @@
     <string name="send">Send</string>
     <string name="RegisterVehicle">Register Vehicle</string>
     <string name="profile">Your Profile</string>
+    <string name="myProfile">My Profile</string>
+    <string name="trackFuel">Fuel Prices</string>
+    <string name="nearbyPetrolStations">Nearby Petrol Station</string>
+    <string name="lawsAndFines">Law and Fines</string>
+    <string name="carShopsAndMechanics">Car shops and mechanics</string>
+    <string name="settings">Settings</string>
 
 </resources>
