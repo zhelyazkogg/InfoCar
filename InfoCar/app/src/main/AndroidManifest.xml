@@ -9,11 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FuelActivity"></activity>
+        <activity android:name=".FuelActivity"/>
         <activity android:name=".LawActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".AddCarActivity" />
-        <activity android:name=".EditActivity" />
         <activity android:name=".ForgottenPasswordActivity" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".ProfileActivity" />
