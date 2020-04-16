@@ -36,13 +36,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(MapActivity)
             finish()
         })
-
+*/
         myLawActivity.setOnClickListener(View.OnClickListener { v ->
             val LawActivity = Intent(applicationContext, LawActivity::class.java)
             startActivity(LawActivity)
             finish()
         })
-
+/*
         myShopActivity.setOnClickListener(View.OnClickListener { v ->
             val ShopActivity = Intent(applicationContext, ShopActivity::class.java)
             startActivity(ShopActivity)
