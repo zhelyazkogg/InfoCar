@@ -46,7 +46,6 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="20dp"
         android:paddingTop="10dp"
-        android:paddingBottom="10dp"
         android:background="@drawable/ic_fuel" />
 
         <TextView
@@ -54,8 +53,8 @@
             android:layout_height="wrap_content"
             android:text="@string/fuelExpense"
             android:layout_gravity="bottom"
-            android:textSize="15sp"
-            android:textColor="@color/colorYellow"/>
+            android:textColor="@color/colorYellow"
+            android:textSize="20sp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -78,9 +77,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/nearbyPetrolStations"
-            android:layout_marginTop="40dp"
-            android:textSize="20sp"
-            android:textColor="@color/colorYellow"/>
+            android:layout_gravity="bottom"
+            android:textColor="@color/colorYellow"
+            android:textSize="20sp"/>
 </LinearLayout>
 
     <LinearLayout
@@ -103,8 +102,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/lawsAndFines"
-            android:layout_marginTop="40dp"
             android:textSize="20sp"
+            android:layout_gravity="bottom"
             android:textColor="@color/colorYellow"/>
 
     </LinearLayout>
@@ -128,8 +127,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/carShopsAndMechanics"
-            android:layout_marginTop="40dp"
             android:textSize="20sp"
+            android:layout_gravity="bottom"
             android:textColor="@color/colorYellow"/>
     </LinearLayout>
 
@@ -152,7 +151,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/settings"
-            android:layout_marginTop="40dp"
+            android:layout_gravity="bottom"
             android:textSize="20sp"
             android:textColor="@color/colorYellow"/>
     </LinearLayout>
