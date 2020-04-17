@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,12 +15,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val myProfileActivity = findViewById<ImageView>(R.id.myProfileActivity)
-        val myFuelActivity = findViewById<ImageView>(R.id.myFuelActivity)
-        val myMapActivity = findViewById<ImageView>(R.id.myMapActivity)
-        val myLawActivity = findViewById<ImageView>(R.id.myLawActivity)
-        val myShopActivity = findViewById<ImageView>(R.id.myShopActivity)
-        val mySettingsActivity = findViewById<ImageView>(R.id.mySettingsActivity)
+        val myProfile = findViewById<TextView>(R.id.myProfileActivity)
+        val myFuelActivity = findViewById<TextView>(R.id.myFuelActivity)
+        val myMapActivity = findViewById<TextView>(R.id.myMapActivity)
+        val myLawActivity = findViewById<TextView>(R.id.myLawActivity)
+        val myShopActivity = findViewById<TextView>(R.id.myShopActivity)
+        val mySettingsActivity = findViewById<TextView>(R.id.mySettingsActivity)
 
         myProfileActivity.setOnClickListener(View.OnClickListener { v ->
             val ProfileActivity = Intent(applicationContext, ProfileActivity::class.java)
