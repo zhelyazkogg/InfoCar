@@ -5,10 +5,14 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ProgressBar
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -77,11 +81,6 @@ class RegisterActivity : AppCompatActivity() {
 
         }
     }
-    fun addUser(){
-        val user = User.create()
-
-     //   user.email = txtNewTaskDesc.text.toString()
-    }
 
     private fun  validateForm() : Boolean{
         val email = emailRegister.text.toString()
@@ -95,4 +94,12 @@ class RegisterActivity : AppCompatActivity() {
         }
         return true
     }
+
+    private fun mkUser(email: String): User {
+        val username = mkUsername(email)
+        return User(email = email)
+    }
+
+    private fun mkUsername(email: String) =
+        email.replace(" "," ")
 }
