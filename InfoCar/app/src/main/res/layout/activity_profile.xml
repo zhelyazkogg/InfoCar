@@ -13,29 +13,116 @@
         android:orientation="vertical"
         android:weightSum="10">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/brandCar"
+            android:textSize="20sp"
+            android:textColor="@color/colorYellow"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="10dp"
-                android:text="@string/profile"
-                android:textAlignment="center"
-                android:textColor="@color/colorYellow"
-                android:textSize="24sp"
-                android:textStyle="bold" />
-
-        </RelativeLayout>
+        <EditText
+            android:id="@+id/brandFirebase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/settings"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/modelCar"
+            android:textSize="20sp"
             android:textColor="@color/colorYellow"/>
+
+        <EditText
+            android:id="@+id/modelFirebase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="10dp"
+            android:textSize="20sp"
+            android:text="@string/vehicleType"
+            android:textColor="@color/colorYellow"/>
+
+        <EditText
+            android:id="@+id/vehicleTypeFirebase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="10dp"
+            android:textSize="20sp"
+            android:text="@string/fuelType"
+            android:textColor="@color/colorYellow"/>
+        <EditText
+            android:id="@+id/fuelFirebase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="10dp"
+            android:textSize="20sp"
+            android:text="@string/engineRegister"
+            android:textColor="@color/colorYellow"/>
+
+        <EditText
+            android:id="@+id/engineFirebase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="10dp"
+            android:textSize="20sp"
+            android:text="@string/yoursSince"
+            android:textColor="@color/colorYellow"/>
+
+        <EditText
+            android:id="@+id/yoursSinceFirebase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="10dp"
+            android:textSize="20sp"
+            android:text="@string/kmVehicle"
+            android:textColor="@color/colorYellow"/>
+
+        <EditText
+            android:id="@+id/kmFirebase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="10dp"
+            android:textSize="20sp"
+            android:text="@string/licensePlate"
+            android:textColor="@color/colorYellow"/>
+
+        <EditText
+            android:id="@+id/licensePlateFirebase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 </RelativeLayout>
 <!--
