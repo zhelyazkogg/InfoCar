@@ -1,9 +1,12 @@
-package com.example.infocar
+package models
 
 import com.google.type.Date
 
-class User {
-    companion object Factory {
+data class User (
+    val id: String="",
+    val email: String=""
+)
+   /*{ companion object Factory {
         fun create(): User = User()
     }
 
@@ -19,11 +22,10 @@ class User {
     var engineVolume: String? = null
     var dateOfRegister: String? = null
     var kmPassed: String? = null
-    var licensePlateNumber: String? = null
+    var licensePlateNumber: String? = null*/
 
    /* private val id = ""
     private val email = ""
     private val phone = ""
-    private var date = ""*/
-
-}
+    private var date = ""
+    }*/
