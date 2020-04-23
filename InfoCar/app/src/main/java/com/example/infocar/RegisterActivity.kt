@@ -56,9 +56,9 @@ class RegisterActivity : AppCompatActivity() {
             if (validateForm()) {
                 mAuth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this) { task ->
-                        val user = mkUser(email)
-                        var reference = mDatabase.child("users").child(it.result.user.uid)
-                        reference.setValue(user)
+                       // val user = mkUser(email)
+                       // var reference = mDatabase.child("users").child(it.result.user.uid)
+                       // reference.setValue(user)
                         if (task.isSuccessful) {
                             val intent = Intent(applicationContext, AddCarActivity::class.java)
                             startActivity(intent)
