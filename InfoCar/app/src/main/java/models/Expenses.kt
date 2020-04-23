@@ -7,6 +7,6 @@ data class Expenses (
     val insuranceExpense: String="",
     val tiresExpense: String="",
     val carReviewExpense: String="",
-    val 
+    val carMaintenanceExpense: String=""
 
 )
