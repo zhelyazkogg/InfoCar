@@ -1,6 +1,4 @@
-package models
-
-import com.google.type.Date
+package com.example.infocar.models
 
 data class User (
     val id: String="",

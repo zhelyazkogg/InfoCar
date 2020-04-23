@@ -1,4 +1,4 @@
-package models
+package com.example.infocar.models
 
 data class CarInfo (
     val id: String="",

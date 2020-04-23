@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorDarkBlue"
-    tools:context=".ProfileActivity">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:weightSum="10">
+    tools:context=".ProfileActivity"
+    android:orientation="horizontal"
+    >
 
         <TextView
             android:layout_width="wrap_content"
@@ -63,6 +59,7 @@
             android:textSize="20sp"
             android:text="@string/fuelType"
             android:textColor="@color/colorYellow"/>
+
         <EditText
             android:id="@+id/fuelFirebase"
             android:layout_width="wrap_content"
@@ -123,8 +120,8 @@
             android:id="@+id/licensePlateFirebase"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-    </LinearLayout>
-</RelativeLayout>
+
+</LinearLayout>
 <!--
 
 

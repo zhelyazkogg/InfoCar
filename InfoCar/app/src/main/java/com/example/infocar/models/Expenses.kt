@@ -1,4 +1,4 @@
-package models
+package com.example.infocar.models
 
 data class Expenses (
     val id: String = "",
