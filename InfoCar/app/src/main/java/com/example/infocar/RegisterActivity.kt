@@ -21,7 +21,6 @@ class RegisterActivity : AppCompatActivity() {
     lateinit var passwordRegister : EditText
 
  //   lateinit var firebaseUser : FirebaseUser
-    lateinit var DBinstance : FirebaseFirestore
 
     private val TAG = "RegisterActivity"
     private lateinit var mAuth : FirebaseAuth
@@ -34,7 +33,6 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(R.layout.activity_register)
 
         mAuth = FirebaseAuth.getInstance()
-        DBinstance = FirebaseFirestore.getInstance()
         mProgressBar = ProgressDialog(this)
         mDatabase = FirebaseDatabase.getInstance().reference
 
@@ -52,9 +50,9 @@ class RegisterActivity : AppCompatActivity() {
             if (validateForm()) {
                 mAuth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this) { task ->
-                       // val user = mkUser(email)
-                       // var reference = mDatabase.child("users").child(it.result.user.uid)
-                       // reference.setValue(user)
+                        val user = mkUser(email)
+                        var reference = mDatabase.child("users").child(it.result.user.uid)
+                        reference.setValue(user)
                         if (task.isSuccessful) {
                             val intent = Intent(applicationContext, AddCarActivity::class.java)
                             startActivity(intent)

@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorDarkBlue"
     tools:context=".ProfileActivity"
-    android:orientation="horizontal"
-    >
+    android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
