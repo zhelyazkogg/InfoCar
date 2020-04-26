@@ -4,14 +4,22 @@ import android.app.ProgressDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Parcel
+import android.os.Parcelable
 import android.text.TextUtils
+import android.view.View
 import android.widget.*
 import com.google.firebase.auth.FirebaseAuth
 
-class AddCarActivity : AppCompatActivity() {
+class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
 
     lateinit var mProgressBar: ProgressDialog
-    lateinit var mAuth : FirebaseAuth
+    private val TAG="AddCarActivity"
+    private  lateinit var mAuth : FirebaseAuth
+
+    constructor(parcel: Parcel) : this() {
+
+    }
     // TODO Buttons for Confirm
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,17 +41,39 @@ class AddCarActivity : AppCompatActivity() {
         val fuelTypeRegister = findViewById<AutoCompleteTextView>(R.id.fuelTypeRegister)
         val vehicleTypeRegister = findViewById<AutoCompleteTextView>(R.id.vehicleTypeRegister)
 
-        val typeOfVehicle = arrayOf("Sedan", "Combi", "Hatchback", "Coupe", "Седан", "Комби", "Хечбек", "Купе", "Друг", "Other")
-        val adapter = ArrayAdapter(this , android.R.layout.simple_list_item_1,typeOfVehicle)
-        vehicleTypeRegister.threshold=0
+        val typeOfVehicle = arrayOf(
+            "Sedan",
+            "Combi",
+            "Hatchback",
+            "Coupe",
+            "Седан",
+            "Комби",
+            "Хечбек",
+            "Купе",
+            "Друг",
+            "Other"
+        )
+        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, typeOfVehicle)
+        vehicleTypeRegister.threshold = 0
         vehicleTypeRegister.setAdapter(adapter)
-        
-        val typeOfFuel = arrayOf("Diesel", "Petrol", "Petrol/Gas", "Methane", "Дизел", "Бензин", "Бензин/Газ", "Метан")
+
+        val typeOfFuel = arrayOf(
+            "Diesel",
+            "Petrol",
+            "Petrol/Gas",
+            "Gas/Petrol",
+            "Methane",
+            "Дизел",
+            "Бензин",
+            "Бензин/Газ",
+            "Газ/Бензин",
+            "Метан"
+        )
         val adapterFuel = ArrayAdapter(this, android.R.layout.simple_list_item_1, typeOfFuel)
-        fuelTypeRegister.threshold=1
+        fuelTypeRegister.threshold = 1
         fuelTypeRegister.setAdapter(adapterFuel)
 
-        buttonRegister.setOnClickListener {
+/*        buttonRegister.setOnClickListener {
             val brand = brandRegister.text.toString().trim()
             val model = modelRegister.text.toString().trim()
             val engine = engineRegister.text.toString().trim()
@@ -96,9 +126,9 @@ class AddCarActivity : AppCompatActivity() {
 
 
 
-            /*val ProfileActivity = Intent(applicationContext, ProfileActivity::class.java)
+            *//*val ProfileActivity = Intent(applicationContext, ProfileActivity::class.java)
             startActivity(ProfileActivity)
-            finish()*/
+            finish()*//*
         }
 
         buttonBack.setOnClickListener {
@@ -110,5 +140,10 @@ class AddCarActivity : AppCompatActivity() {
 
     private fun createVehicleLog(){
 
+        }*/
+    }
+
+    override fun onClick(v: View?) {
+        TODO("Not yet implemented")
     }
 }
