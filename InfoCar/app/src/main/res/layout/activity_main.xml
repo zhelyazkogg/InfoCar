@@ -51,7 +51,7 @@
             android:id="@+id/myFuelActivity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/fuelExpense"
+            android:text="@string/myExpenses"
             android:layout_gravity="bottom"
             android:textColor="@color/colorYellow"
             android:textSize="20sp"/>

@@ -41,5 +41,6 @@
     <string name="lawsAndFines">Law and Fines</string>
     <string name="carShopsAndMechanics">Car shops and mechanics</string>
     <string name="settings">Settings</string>
+    <string name="myExpenses">My Expenses</string>
 
 </resources>
