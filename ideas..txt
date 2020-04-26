@@ -1,0 +1,6 @@
+1. Bottom navigation menu with the options 
+- settings
+- home
+- my profile
+
+2. 
