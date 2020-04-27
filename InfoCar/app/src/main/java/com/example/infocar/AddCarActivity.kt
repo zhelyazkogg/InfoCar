@@ -9,6 +9,7 @@ import android.os.Parcelable
 import android.text.TextUtils
 import android.view.View
 import android.widget.*
+import com.example.infocar.models.CarInfo
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -21,10 +22,6 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
     private lateinit var mAuth: FirebaseAuth
     private lateinit var mDatabase: DatabaseReference
 
-    constructor(parcel: Parcel) : this() {
-
-    }
-    // TODO Buttons for Confirm
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,9 +45,9 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
 
     }
 
-    private fun UserCarInfo(){
+  /*  private fun UserCarInfo(carBrand): CarInfo{
 
-    }
+    }*/
 }
 
         /*val brandRegister = findViewById<EditText>(R.id.brandRegister)
