@@ -10,12 +10,16 @@ import android.text.TextUtils
 import android.view.View
 import android.widget.*
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import kotlinx.android.synthetic.main.activity_add_car.*
 
 class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
 
     lateinit var mProgressBar: ProgressDialog
-    private val TAG="AddCarActivity"
-    private  lateinit var mAuth : FirebaseAuth
+    private val TAG = "AddCarActivity"
+    private lateinit var mAuth: FirebaseAuth
+    private lateinit var mDatabase: DatabaseReference
 
     constructor(parcel: Parcel) : this() {
 
@@ -28,8 +32,28 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
 
         mAuth = FirebaseAuth.getInstance()
         mProgressBar = ProgressDialog(this)
+        mDatabase = FirebaseDatabase.getInstance().reference
+        buttonRegister.setOnClickListener(this)
+    }
 
-        val brandRegister = findViewById<EditText>(R.id.brandRegister)
+    override fun onClick(v: View?) {
+        when(v?.id){
+            R.id.buttonRegister ->{
+                onRegister()
+            }
+        }
+    }
+
+    private fun onRegister(){
+
+    }
+
+    private fun UserCarInfo(){
+
+    }
+}
+
+        /*val brandRegister = findViewById<EditText>(R.id.brandRegister)
         val modelRegister = findViewById<EditText>(R.id.modelRegister)
         val engineRegister = findViewById<EditText>(R.id.engineRegister)
         val yoursSinceRegister = findViewById<EditText>(R.id.yoursSinceRegister)
@@ -71,7 +95,7 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
         )
         val adapterFuel = ArrayAdapter(this, android.R.layout.simple_list_item_1, typeOfFuel)
         fuelTypeRegister.threshold = 1
-        fuelTypeRegister.setAdapter(adapterFuel)
+        fuelTypeRegister.setAdapter(adapterFuel)*/
 
 /*        buttonRegister.setOnClickListener {
             val brand = brandRegister.text.toString().trim()
@@ -141,9 +165,3 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
     private fun createVehicleLog(){
 
         }*/
-    }
-
-    override fun onClick(v: View?) {
-        TODO("Not yet implemented")
-    }
-}

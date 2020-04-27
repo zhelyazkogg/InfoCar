@@ -29,7 +29,57 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
         mDatabase = FirebaseDatabase.getInstance().reference
         buttonRegister.setOnClickListener(this)
 
-        /*  emailRegister = findViewById(R.id.emailRegister)
+    }
+    override fun onClick(v: View?) {
+        when(v?.id){
+            R.id.buttonRegister -> {
+                onRegister()
+            }
+        }
+    }
+
+    private fun onRegister(){
+        val email = emailRegister.text.toString()
+        val password = passwordRegister.text.toString()
+        val confPassword = confPasswordRegister.text.toString()
+
+        if(email.isEmpty() || password.isEmpty() || confPassword.isEmpty()){
+            Toast.makeText(this, "All fields are required", Toast.LENGTH_SHORT).show()
+        } else {
+            if(password == confPassword){
+                mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener{
+                    if(it.isSuccessful){
+                        val user = mkUser(email)
+                        val reference = mDatabase.child("users").child(it.result?.user!!.uid)
+                        reference.setValue(user).addOnCompleteListener {
+                            if (it.isSuccessful){
+                                Toast.makeText(this, "First Step of Registration Successful!", Toast.LENGTH_SHORT).show()
+                                startActivity(Intent(this, AddCarActivity::class.java))
+                                finish()
+                            } else {
+                                Toast.makeText(this, "Error in Sign up", Toast.LENGTH_SHORT).show()
+                            }
+                        }
+                    } else {
+                        Toast.makeText(this, "Error in Sign up", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            } else {
+                Toast.makeText(this, "Make sure both passwords match.", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+        private fun mkUser(email: String): User {
+            val username = mkUsername(email)
+            return User(email = email)
+        }
+
+        private fun mkUsername(email: String) =
+            email.replace(" ", " ")
+}
+
+/*  emailRegister = findViewById(R.id.emailRegister)
         passwordRegister = findViewById(R.id.passwordRegister)
         //confPasswordRegister = findViewById(R.id.confPasswordRegister)
         val buttonRegister = findViewById<Button>(R.id.buttonRegister)
@@ -84,52 +134,3 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
         }
         return true
         */
-    }
-    override fun onClick(v: View?) {
-        when(v?.id){
-            R.id.buttonRegister -> {
-                onRegister()
-            }
-        }
-    }
-
-    private fun onRegister(){
-        val email = emailRegister.text.toString()
-        val password = passwordRegister.text.toString()
-        val confPassword = confPasswordRegister.text.toString()
-
-        if(email.isEmpty() || password.isEmpty() || confPassword.isEmpty()){
-            Toast.makeText(this, "All fields are required", Toast.LENGTH_SHORT).show()
-        } else {
-            if(password == confPassword){
-                mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener{
-                    if(it.isSuccessful){
-                        val user = mkUser(email)
-                        val reference = mDatabase.child("users").child(it.result?.user!!.uid)
-                        reference.setValue(user).addOnCompleteListener {
-                            if (it.isSuccessful){
-                                Toast.makeText(this, "First Step of Registration Successful!", Toast.LENGTH_SHORT).show()
-                                startActivity(Intent(this, AddCarActivity::class.java))
-                                finish()
-                            } else {
-                                Toast.makeText(this, "Error in Sign up", Toast.LENGTH_SHORT).show()
-                            }
-                        }
-                    } else {
-                        Toast.makeText(this, "Error in Sign up", Toast.LENGTH_SHORT).show()
-                    }
-                }
-            } else {
-                Toast.makeText(this, "Make sure both passwords match.", Toast.LENGTH_SHORT).show()
-            }
-        }
-    }
-
-        private fun mkUser(email: String): User {
-            val username = mkUsername(email)
-            return User(email = email)
-        }
-
-        private fun mkUsername(email: String) =
-            email.replace(" ", " ")
-}
