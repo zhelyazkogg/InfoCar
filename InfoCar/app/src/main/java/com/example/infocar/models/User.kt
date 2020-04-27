@@ -2,8 +2,7 @@ package com.example.infocar.models
 
 data class User (
     val id: String="",
-    val email: String="",
-    val password: String=""
+    val email: String=""
 )
    /*{ companion object Factory {
         fun create(): User = User()

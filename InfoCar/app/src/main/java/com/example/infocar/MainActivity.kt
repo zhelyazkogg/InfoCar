@@ -7,14 +7,30 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+    private val TAG = "MainActivity"
+    private lateinit var mAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        mAuth = FirebaseAuth.getInstance()
+        /*logoutButton.setOnClickListener(this)*/
+
+
+        /*override fun onClick(v: View?) {
+        when (v?.id) {
+            R.id.loginBtn -> {
+                mAuth.signOut()
+                startActivity(Intent(this, LoginActivity::class.java))
+                finish()
+            }
+        }
+    }*/
         val myProfile = findViewById<TextView>(R.id.myProfileActivity)
         val myFuelActivity = findViewById<TextView>(R.id.myFuelActivity)
         val myMapActivity = findViewById<TextView>(R.id.myMapActivity)
@@ -27,26 +43,26 @@ class MainActivity : AppCompatActivity() {
             startActivity(ProfileActivity)
             finish()
         })
-/*
+
         myFuelActivity.setOnClickListener(View.OnClickListener { v ->
             val FuelActivity = Intent(applicationContext, FuelActivity::class.java)
             startActivity(FuelActivity)
             finish()
         })
-
+/*
         myMapActivity.setOnClickListener(View.OnClickListener { v ->
             val MapActivity = Intent(applicationContext, MapActivity::class.java)
             startActivity(MapActivity)
             finish()
-        })
-*/
+        })*/
+
         myLawActivity.setOnClickListener(View.OnClickListener { v ->
             val LawActivity = Intent(applicationContext, LawActivity::class.java)
             startActivity(LawActivity)
             finish()
         })
-/*
-        myShopActivity.setOnClickListener(View.OnClickListener { v ->
+
+        /* myShopActivity.setOnClickListener(View.OnClickListener { v ->
             val ShopActivity = Intent(applicationContext, ShopActivity::class.java)
             startActivity(ShopActivity)
             finish()
@@ -57,6 +73,14 @@ class MainActivity : AppCompatActivity() {
             startActivity(SettingsActivity)
             finish()
         })
- */
+    }*/
+        logoutButton.setOnClickListener(View.OnClickListener { v ->
+            val mainActivity = Intent(applicationContext, LoginActivity::class.java)
+            startActivity(mainActivity)
+            finish()
+        })
     }
 }
+
+
+

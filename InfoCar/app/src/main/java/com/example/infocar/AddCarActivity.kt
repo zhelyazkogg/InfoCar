@@ -15,7 +15,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_add_car.*
 
-class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
+class AddCarActivity() : AppCompatActivity() {
 
     lateinit var mProgressBar: ProgressDialog
     private val TAG = "AddCarActivity"
@@ -30,27 +30,8 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
         mAuth = FirebaseAuth.getInstance()
         mProgressBar = ProgressDialog(this)
         mDatabase = FirebaseDatabase.getInstance().reference
-        buttonRegister.setOnClickListener(this)
-    }
 
-    override fun onClick(v: View?) {
-        when(v?.id){
-            R.id.buttonRegister ->{
-                onRegister()
-            }
-        }
-    }
-
-    private fun onRegister(){
-
-    }
-
-  /*  private fun UserCarInfo(carBrand): CarInfo{
-
-    }*/
-}
-
-        /*val brandRegister = findViewById<EditText>(R.id.brandRegister)
+        val brandRegister = findViewById<EditText>(R.id.brandRegister)
         val modelRegister = findViewById<EditText>(R.id.modelRegister)
         val engineRegister = findViewById<EditText>(R.id.engineRegister)
         val yoursSinceRegister = findViewById<EditText>(R.id.yoursSinceRegister)
@@ -92,9 +73,9 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
         )
         val adapterFuel = ArrayAdapter(this, android.R.layout.simple_list_item_1, typeOfFuel)
         fuelTypeRegister.threshold = 1
-        fuelTypeRegister.setAdapter(adapterFuel)*/
+        fuelTypeRegister.setAdapter(adapterFuel)
 
-/*        buttonRegister.setOnClickListener {
+        buttonRegister.setOnClickListener {
             val brand = brandRegister.text.toString().trim()
             val model = modelRegister.text.toString().trim()
             val engine = engineRegister.text.toString().trim()
@@ -104,52 +85,51 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
             val fuel = fuelTypeRegister.text.toString().trim()
             val vehicleType = vehicleTypeRegister.text.toString().trim()
 
-            if (TextUtils.isEmpty(brand)){
+            if (TextUtils.isEmpty(brand)) {
                 brandRegister.error = "Please enter your vehicle's brand."
                 return@setOnClickListener
             }
 
-            if (TextUtils.isEmpty(model)){
+            if (TextUtils.isEmpty(model)) {
                 modelRegister.error = "Please enter your vehicle's model."
                 return@setOnClickListener
             }
 
-            if (TextUtils.isEmpty(vehicleType)){
+            if (TextUtils.isEmpty(vehicleType)) {
                 vehicleTypeRegister.error = "Please enter your vehicle's car type."
                 return@setOnClickListener
             }
 
-            if (TextUtils.isEmpty(engine)){
+            if (TextUtils.isEmpty(engine)) {
                 engineRegister.error = "Please enter your vehicle's engine volume, " +
                         "plus the horsepowers."
                 return@setOnClickListener
             }
 
-            if (TextUtils.isEmpty(yourSince)){
+            if (TextUtils.isEmpty(yourSince)) {
                 yoursSinceRegister.error = "Please enter the date when you registered your vehicle."
                 return@setOnClickListener
             }
 
-            if (TextUtils.isEmpty(fuel)){
+            if (TextUtils.isEmpty(fuel)) {
                 fuelTypeRegister.error = "Please enter your vehicle's fuel type."
                 return@setOnClickListener
             }
 
-            if (TextUtils.isEmpty(kilometers)){
+            if (TextUtils.isEmpty(kilometers)) {
                 kmRegister.error = "Please enter the current KM on your vehicle."
                 return@setOnClickListener
             }
 
-            if (TextUtils.isEmpty(licensePlate)){
+            if (TextUtils.isEmpty(licensePlate)) {
                 licensePlateRegister.error = "Please enter your vehicles licence plate."
                 return@setOnClickListener
             }
 
 
-
-            *//*val ProfileActivity = Intent(applicationContext, ProfileActivity::class.java)
+            val ProfileActivity = Intent(applicationContext, ProfileActivity::class.java)
             startActivity(ProfileActivity)
-            finish()*//*
+            finish()
         }
 
         buttonBack.setOnClickListener {
@@ -158,7 +138,20 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
             finish()
         }
     }
+}
+    /*    buttonRegister.setOnClickListener(this)
+    }
 
-    private fun createVehicleLog(){
+    override fun onClick(v: View?) {
+        when(v?.id){
+            R.id.buttonRegister ->{
+                onRegisterStep2()
+            }
+        }
+    }
 
-        }*/
+    private fun onRegisterStep2(){
+
+    }
+*/
+

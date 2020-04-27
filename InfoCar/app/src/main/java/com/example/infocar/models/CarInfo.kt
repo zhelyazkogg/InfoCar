@@ -1,6 +1,7 @@
 package com.example.infocar.models
 
 data class CarInfo (
+    val id: String="",
     val carBrand: String="",
     val carModel: String="",
     val carType: String="",
