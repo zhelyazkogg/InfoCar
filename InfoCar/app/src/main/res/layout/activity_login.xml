@@ -66,8 +66,6 @@
         android:background="@drawable/rounded_button"
         android:text="@string/login" />
 
-
-
     <Button
         android:id="@+id/registerBtn"
         android:layout_width="match_parent"
