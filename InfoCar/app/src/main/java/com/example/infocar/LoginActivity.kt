@@ -29,7 +29,41 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
         loginBtn.setOnClickListener(this)
         registerBtn.setOnClickListener(this)
-       /* val emailLogin = findViewById<EditText>(R.id.emailLogin)
+    }
+
+    override fun onClick(v: View?) {
+        when(v?.id){
+            R.id.loginBtn -> {
+                val email = emailLogin.text.toString()
+                val password = passwordLogin.text.toString()
+
+                if (validateForm(email, password)){
+                    mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
+                        if (it.isSuccessful){
+                            startActivity(Intent(this, MainActivity::class.java))
+                            finish()
+                        } else{
+                            Toast.makeText(this, "incorrect email or password", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                } else {
+                    Toast.makeText(this, "Please enter email and/or password", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+
+        when(v?.id){
+            R.id.registerBtn -> {
+                startActivity(Intent(this, RegisterActivity::class.java))
+            }
+        }
+    }
+    private fun validateForm(email: String, password: String) =
+        email.isNotEmpty() && password.isNotEmpty()
+}
+
+
+/* val emailLogin = findViewById<EditText>(R.id.emailLogin)
         val passwordLogin = findViewById<EditText>(R.id.passwordLogin)
         val loginBtn = findViewById<Button>(R.id.loginBtn)
         val registerBtn = findViewById<Button>(R.id.registerBtn)
@@ -81,35 +115,3 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         }
             mProgressBar.dismiss()
         }*/
-    }
-
-    override fun onClick(v: View?) {
-        when(v?.id){
-            R.id.loginBtn -> {
-                val email = emailLogin.text.toString()
-                val password = passwordLogin.text.toString()
-
-                if (validateForm(email, password)){
-                    mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
-                        if (it.isSuccessful){
-                            startActivity(Intent(this, MainActivity::class.java))
-                            finish()
-                        } else{
-                            Toast.makeText(this, "incorrect email or password", Toast.LENGTH_SHORT).show()
-                        }
-                    }
-                } else {
-                    Toast.makeText(this, "Please enter email and/or password", Toast.LENGTH_SHORT).show()
-                }
-            }
-        }
-
-        when(v?.id){
-            R.id.registerBtn -> {
-                startActivity(Intent(this, RegisterActivity::class.java))
-            }
-        }
-    }
-    private fun validateForm(email: String, password: String) =
-        email.isNotEmpty() && password.isNotEmpty()
-}

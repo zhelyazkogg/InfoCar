@@ -10,7 +10,7 @@ import android.widget.TextView
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
     private val TAG = "MainActivity"
     private lateinit var mAuth: FirebaseAuth
 
@@ -19,19 +19,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         mAuth = FirebaseAuth.getInstance()
-        /*logoutButton.setOnClickListener(this)*/
-
-
-        /*override fun onClick(v: View?) {
-        when (v?.id) {
-            R.id.loginBtn -> {
-                mAuth.signOut()
-                startActivity(Intent(this, LoginActivity::class.java))
-                finish()
-            }
-        }
-    }*/
-        val myProfile = findViewById<TextView>(R.id.myProfileActivity)
+        logoutButton.setOnClickListener(this)
+    }
+    /*val myProfile = findViewById<TextView>(R.id.myProfileActivity)
         val myFuelActivity = findViewById<TextView>(R.id.myFuelActivity)
         val myMapActivity = findViewById<TextView>(R.id.myMapActivity)
         val myLawActivity = findViewById<TextView>(R.id.myLawActivity)
@@ -49,12 +39,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(FuelActivity)
             finish()
         })
-/*
+*//*
         myMapActivity.setOnClickListener(View.OnClickListener { v ->
             val MapActivity = Intent(applicationContext, MapActivity::class.java)
             startActivity(MapActivity)
             finish()
-        })*/
+        })*//*
 
         myLawActivity.setOnClickListener(View.OnClickListener { v ->
             val LawActivity = Intent(applicationContext, LawActivity::class.java)
@@ -62,7 +52,7 @@ class MainActivity : AppCompatActivity() {
             finish()
         })
 
-        /* myShopActivity.setOnClickListener(View.OnClickListener { v ->
+        *//* myShopActivity.setOnClickListener(View.OnClickListener { v ->
             val ShopActivity = Intent(applicationContext, ShopActivity::class.java)
             startActivity(ShopActivity)
             finish()
@@ -73,12 +63,22 @@ class MainActivity : AppCompatActivity() {
             startActivity(SettingsActivity)
             finish()
         })
-    }*/
+    }*//*
         logoutButton.setOnClickListener(View.OnClickListener { v ->
             val mainActivity = Intent(applicationContext, LoginActivity::class.java)
             startActivity(mainActivity)
             finish()
         })
+    }*/
+
+    override fun onClick(v: View?) {
+        when (v?.id) {
+            R.id.loginBtn -> {
+                mAuth.signOut()
+                startActivity(Intent(this, LoginActivity::class.java))
+                finish()
+            }
+        }
     }
 }
 

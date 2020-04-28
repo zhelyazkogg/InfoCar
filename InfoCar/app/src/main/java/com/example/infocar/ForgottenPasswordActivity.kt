@@ -33,7 +33,7 @@ class ForgottenPasswordActivity : AppCompatActivity() {
             if (TextUtils.isEmpty(email)){
                 forgottenPassEmail.error = "Required."
             } else {
-                mAuth!!.sendPasswordResetEmail(email)
+                mAuth.sendPasswordResetEmail(email)
                     .addOnCompleteListener{task ->
                         if (task.isSuccessful){
                            Toast.makeText(this@ForgottenPasswordActivity,
