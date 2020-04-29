@@ -38,13 +38,14 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
             finish()
         }
     }
-
+    
+    // Logout button doesn't erase the cache and doesn't logout.
     override fun onClick(v: View?) {
         when(v?.id){
             R.id.logoutButton ->{
                 mAuth.signOut()
                 startActivity(Intent(this, LoginActivity::class.java))
-                finish()    
+                finish()
             }
         }
     }
