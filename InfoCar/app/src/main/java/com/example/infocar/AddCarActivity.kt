@@ -15,7 +15,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_add_car.*
 
-class AddCarActivity() : AppCompatActivity() {
+class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
 
     lateinit var mProgressBar: ProgressDialog
     private val TAG = "AddCarActivity"
@@ -31,7 +31,34 @@ class AddCarActivity() : AppCompatActivity() {
         mProgressBar = ProgressDialog(this)
         mDatabase = FirebaseDatabase.getInstance().reference
 
-        val brandRegister = findViewById<EditText>(R.id.brandRegister)
+        buttonRegister.setOnClickListener(this)
+        buttonBack.setOnClickListener(this)
+    }
+
+    override fun onClick(v: View?) {
+        when(v?.id){
+            R.id.buttonRegister ->{
+                onRegisterStep2()
+            }
+        }
+
+        when(v?.id){
+            R.id.buttonBack ->{
+                startActivity(Intent(this, RegisterActivity::class.java))
+            }
+        }
+    }
+
+    private fun onRegisterStep2() {
+
+    }
+
+    private fun userDetails(){
+
+    }
+}
+
+        /*val brandRegister = findViewById<EditText>(R.id.brandRegister)
         val modelRegister = findViewById<EditText>(R.id.modelRegister)
         val engineRegister = findViewById<EditText>(R.id.engineRegister)
         val yoursSinceRegister = findViewById<EditText>(R.id.yoursSinceRegister)
@@ -136,22 +163,4 @@ class AddCarActivity() : AppCompatActivity() {
             val LoginActivity = Intent(applicationContext, LoginActivity::class.java)
             startActivity(LoginActivity)
             finish()
-        }
-    }
-}
-    /*    buttonRegister.setOnClickListener(this)
-    }
-
-    override fun onClick(v: View?) {
-        when(v?.id){
-            R.id.buttonRegister ->{
-                onRegisterStep2()
-            }
-        }
-    }
-
-    private fun onRegisterStep2(){
-
-    }
-*/
-
+        }*/

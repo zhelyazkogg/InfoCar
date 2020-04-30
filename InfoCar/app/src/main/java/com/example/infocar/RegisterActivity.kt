@@ -36,6 +36,12 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
                 onRegister()
             }
         }
+
+        when(v?.id){
+            R.id.buttonBack -> {
+                startActivity(Intent(this, LoginActivity::class.java))
+            }
+        }
     }
 
     private fun onRegister(){
