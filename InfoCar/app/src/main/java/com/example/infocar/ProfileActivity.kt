@@ -38,8 +38,8 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
             finish()
         }
     }
-    
-    // Logout button doesn't erase the cache and doesn't logout.
+
+    // Logout button doesn't erase the storage/cache and doesn't logout.
     override fun onClick(v: View?) {
         when(v?.id){
             R.id.logoutButton ->{
