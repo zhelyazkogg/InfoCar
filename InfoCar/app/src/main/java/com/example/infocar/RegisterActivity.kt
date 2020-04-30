@@ -28,6 +28,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
         mProgressBar = ProgressDialog(this)
         mDatabase = FirebaseDatabase.getInstance().reference
         buttonRegister.setOnClickListener(this)
+        buttonBack.setOnClickListener(this)
 
     }
     override fun onClick(v: View?) {

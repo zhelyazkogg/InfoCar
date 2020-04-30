@@ -53,12 +53,12 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
 
     }
 
-    private fun userDetails(carBrand: String, carModel: String,
+ /*   private fun userDetails(carBrand: String, carModel: String,
     carType: String, fuelType: String, engineVolume: String, dateOfRegester: String
     kilometersPassed: String, licensePlateNumber: String): CarInfo{
-        
+
         return(brand = carBrand)
-    }
+    }*/
 }
 
         /*val brandRegister = findViewById<EditText>(R.id.brandRegister)
