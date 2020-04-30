@@ -53,8 +53,11 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
 
     }
 
-    private fun userDetails(){
-
+    private fun userDetails(carBrand: String, carModel: String,
+    carType: String, fuelType: String, engineVolume: String, dateOfRegester: String
+    kilometersPassed: String, licensePlateNumber: String): CarInfo{
+        
+        return(brand = carBrand)
     }
 }
 
