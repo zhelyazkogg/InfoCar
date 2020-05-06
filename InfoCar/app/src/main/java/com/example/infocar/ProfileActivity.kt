@@ -8,6 +8,7 @@ import android.widget.EditText
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.activity_profile.*
 import kotlin.math.log
 
@@ -20,6 +21,7 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
+        mAuth = FirebaseAuth.getInstance()
         mDatabase = FirebaseDatabase.getInstance().reference
         logoutButton.setOnClickListener(this)
 /*
@@ -31,18 +33,12 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
         val yoursSinceFirebase = findViewById<EditText>(R.id.yoursSinceFirebase)
         val kmFirebase = findViewById<EditText>(R.id.kmFirebase)
         val licensePlateFirebase = findViewById<EditText>(R.id.licensePlateFirebase)*/
-
-        logoutButton.setOnClickListener{
-            val LoginActivity = Intent(applicationContext, LoginActivity::class.java)
-            startActivity(LoginActivity)
-            finish()
-        }
     }
 
     // Logout button doesn't erase the storage/cache and doesn't logout.
-    override fun onClick(v: View?) {
-        when(v?.id){
-            R.id.logoutButton ->{
+    override fun onClick(view: View) {
+        when(view.id){
+            R.id.logoutButton -> {
                 mAuth.signOut()
                 startActivity(Intent(this, LoginActivity::class.java))
                 finish()
