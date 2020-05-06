@@ -52,6 +52,9 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
 
         if(email.isEmpty() || password.isEmpty() || confPassword.isEmpty()){
             Toast.makeText(this, "All fields are required", Toast.LENGTH_SHORT).show()
+            if(password.isEmpty())
+                Toast.makeText(this, "Password must be atleast 6 characters", Toast.LENGTH_SHORT).show()
+
         } else {
             if(password == confPassword){
                 mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener{

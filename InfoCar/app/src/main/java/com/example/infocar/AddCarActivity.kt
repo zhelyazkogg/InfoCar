@@ -4,11 +4,7 @@ import android.app.ProgressDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Parcel
-import android.os.Parcelable
-import android.text.TextUtils
 import android.view.View
-import android.widget.*
 import com.example.infocar.models.CarInfo
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
@@ -19,6 +15,7 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
 
     lateinit var mProgressBar: ProgressDialog
     private val TAG = "AddCarActivity"
+    private lateinit var carInfo: CarInfo
     private lateinit var mAuth: FirebaseAuth
     private lateinit var mDatabase: DatabaseReference
 
@@ -33,12 +30,22 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
 
         buttonRegister.setOnClickListener(this)
         buttonBack.setOnClickListener(this)
+
+        fun currentUserReference(): DatabaseReference =
+            mDatabase.child("users").child(mAuth.currentUser!!.uid)
+
+        /*currentUserReference().addListenerForSingleValueEvent(
+            ValueListenerAdapter{
+                carInfo = it.asUser()!!
+                .setText(carInfo.)
+            }
+        )*/
     }
 
     override fun onClick(v: View?) {
         when(v?.id){
             R.id.buttonRegister ->{
-                onRegisterStep2()
+
             }
         }
 
@@ -49,9 +56,7 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
         }
     }
 
-    private fun onRegisterStep2() {
 
-    }
 
  /*   private fun userDetails(carBrand: String, carModel: String,
     carType: String, fuelType: String, engineVolume: String, dateOfRegester: String
