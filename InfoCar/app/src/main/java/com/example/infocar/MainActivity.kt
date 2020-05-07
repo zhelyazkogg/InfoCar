@@ -4,9 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -20,30 +17,44 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         mAuth = FirebaseAuth.getInstance()
 
-        /*val myProfileActivity = findViewById<TextView>(R.id.myProfileActivity)
-        val myFuelActivity = findViewById<TextView>(R.id.myFuelActivity)
-        val myMapActivity = findViewById<TextView>(R.id.myMapActivity)
-        val myLawActivity = findViewById<TextView>(R.id.myLawActivity)
-        val myShopActivity = findViewById<TextView>(R.id.myShopActivity)
-        val mySettingsActivity = findViewById<TextView>(R.id.mySettingsActivity)*/
-
         myProfileActivity.setOnClickListener(this)
         myFuelActivity.setOnClickListener(this)
         myMapActivity.setOnClickListener(this)
         myLawActivity.setOnClickListener(this)
         myShopActivity.setOnClickListener(this)
         mySettingsActivity.setOnClickListener(this)
-
     }
 
     override fun onClick(v: View) {
         when(v.id){
-            R.id.myProfileActivity
+            R.id.myProfileActivity ->{
+                startActivity(Intent(this, ProfileActivity::class.java))
+            }
+        }
+        when(v.id){
+            R.id.myFuelActivity -> {
+                startActivity(Intent(this, FuelActivity::class.java))
+            }
+        }
+        when(v.id){
+            R.id.myMapActivity -> {
+//                startActivity(Intent(this, MapActivity::class.java))
+            }
+        }
+        when(v.id){
+            R.id.myLawActivity -> {
+                startActivity(Intent(this, LawActivity::class.java))
+            }
+        }
+        when(v.id){
+            R.id.myShopActivity ->{
+//            startActivity(Intent(this, ShopActivity::class.java))
+            }
+        }
+        when(v.id){
+            R.id.mySettingsActivity -> {
+//            startActivity(Intent(this, SettingsActivity::class.java))
+            }
         }
     }
-
 }
-
-
-
-

@@ -45,7 +45,7 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when(v?.id){
             R.id.buttonRegister ->{
-
+                startActivity(Intent(this, MainActivity::class.java))
             }
         }
 

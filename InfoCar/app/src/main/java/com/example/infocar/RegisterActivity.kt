@@ -81,7 +81,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
     }
 
         private fun mkUser(email: String): User {
-            val username = mkUsername(email)
+            val email = mkUsername(email)
             return User(email = email)
         }
 
