@@ -24,6 +24,7 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
         mAuth = FirebaseAuth.getInstance()
         mDatabase = FirebaseDatabase.getInstance().reference
         logoutButton.setOnClickListener(this)
+
 /*
         val brandFirebase = findViewById<EditText>(R.id.brandFirebase)
         val modelFirebase = findViewById<EditText>(R.id.modelFirebase)
