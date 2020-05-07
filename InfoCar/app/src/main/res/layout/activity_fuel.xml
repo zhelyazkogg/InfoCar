@@ -7,6 +7,6 @@
     android:orientation="vertical"
     android:layout_gravity="center_vertical"
     android:background="@color/colorDarkBlue"
-    tools:context=".FuelActivity">
+    tools:context=".activities.FuelActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

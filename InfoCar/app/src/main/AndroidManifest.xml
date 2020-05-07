@@ -9,15 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FuelActivity"/>
-        <activity android:name=".LawActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".AddCarActivity" />
-        <activity android:name=".ForgottenPasswordActivity" />
+        <activity android:name=".activities.FuelActivity"/>
+        <activity android:name=".activities.LawActivity" />
+        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.AddCarActivity" />
+        <activity android:name=".activities.ForgottenPasswordActivity" />
 
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".activities.ProfileActivity" />
+        <activity android:name=".activities.RegisterActivity" />
+        <activity android:name=".activities.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

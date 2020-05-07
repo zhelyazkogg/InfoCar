@@ -43,5 +43,6 @@
     <string name="settings">Settings</string>
     <string name="myExpenses">My Expenses</string>
     <string name="logout">Logout</string>
+    <string name="user">User: </string>
 
 </resources>

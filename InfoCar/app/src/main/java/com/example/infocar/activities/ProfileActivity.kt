@@ -1,21 +1,24 @@
-package com.example.infocar
+package com.example.infocar.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.EditText
+import com.example.infocar.R
+import com.example.infocar.models.CarInfo
+import com.example.infocar.models.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.activity_profile.*
-import kotlin.math.log
 
 class ProfileActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var mAuth : FirebaseAuth
     private lateinit var mDatabase: DatabaseReference
+    private lateinit var uCarInfo: CarInfo
+    private lateinit var mUser: User
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +28,14 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
         mDatabase = FirebaseDatabase.getInstance().reference
         logoutButton.setOnClickListener(this)
 
+        fun currentUserReference(): DatabaseReference =
+            mDatabase.child("users").child(mAuth.currentUser!!.uid)
+        currentUserReference().addListenerForSingleValueEvent(
+            ValueListenerAdapter{
+            mUser = it.asUser()!!
+            emailOfUser.setText(mUser.email)
+
+        })
 /*
         val brandFirebase = findViewById<EditText>(R.id.brandFirebase)
         val modelFirebase = findViewById<EditText>(R.id.modelFirebase)

@@ -1,4 +1,4 @@
-package com.example.infocar
+package com.example.infocar.activities
 
 import android.app.ProgressDialog
 import android.content.Intent
@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.example.infocar.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -81,6 +82,8 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
     }
 
         private fun mkUser(email: String): User {
+            // val username = mkUsername(email)
+            // TODO ^ this was the old way we will see if it works or not
             val email = mkUsername(email)
             return User(email = email)
         }

@@ -8,7 +8,7 @@
     android:background="@color/colorDarkBlue"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    tools:context=".AddCarActivity">
+    tools:context=".activities.AddCarActivity">
 
     <TextView
         android:id="@+id/loginText"
