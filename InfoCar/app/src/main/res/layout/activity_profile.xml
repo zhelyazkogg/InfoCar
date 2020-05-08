@@ -8,8 +8,6 @@
     tools:context=".activities.ProfileActivity"
     android:orientation="vertical">
 
-        <!--TODO CREATE THE REST OF THE LINEARLAYOUTS IN HORZONTAL!!!-->
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
