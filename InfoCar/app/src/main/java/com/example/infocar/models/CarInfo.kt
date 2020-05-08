@@ -11,5 +11,5 @@ data class CarInfo (
     val dateOfRegester: String="",
     val kilometersPassed: String="",
     val licensePlateNumber: String="",
-    @Exclude val uid: String = ""
+    @Exclude val uid: String? = ""
 )

@@ -17,5 +17,5 @@ fun DataSnapshot.asUser(): User? =
 fun DataSnapshot.uCarInfo(): CarInfo? =
     getValue(CarInfo::class.java)?.copy(uid = key)
 
-fun DataSnapshot.uExpenses(): Expenses =
+fun DataSnapshot.uExpenses(): Expenses? =
     getValue(Expenses::class.java)?.copy(uid = key)

@@ -10,6 +10,6 @@ data class Expenses (
     val tiresExpense: String="",
     val carReviewExpense: String="",
     val carMaintenanceExpense: String="",
-    @Exclude val uid: String = ""
+    @Exclude val uid: String? = ""
 
 )
