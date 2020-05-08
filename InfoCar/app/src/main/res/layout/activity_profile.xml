@@ -7,12 +7,16 @@
     android:background="@color/colorDarkBlue"
     tools:context=".activities.ProfileActivity"
     android:orientation="vertical">
+
+        <!--TODO CREATE THE REST OF THE LINEARLAYOUTS IN HORZONTAL!!!-->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginStart="10dp"
             android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -24,16 +28,16 @@
             android:id="@+id/emailOfUser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="5dp"
             android:textSize="20sp"
             android:textColor="@color/colorYellow"/>
 
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -46,8 +50,12 @@
                 <TextView
                     android:id="@+id/brandFirebase"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorYellow" />
+        </LinearLayout>
+<!--Start of LL-->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -60,7 +68,8 @@
                     android:id="@+id/modelFirebase"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
-
+<!--// end of linearLayout
+        //start of LL-->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -73,7 +82,8 @@
                     android:id="@+id/vehicleTypeFirebase"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
-
+        <!--// end of linearLayout
+                //start of LL-->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -86,7 +96,8 @@
                     android:id="@+id/fuelFirebase"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
-
+        <!--// end of linearLayout
+                //start of LL-->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -99,7 +110,8 @@
                     android:id="@+id/engineFirebase"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
-
+        <!--// end of linearLayout
+        //start of LL-->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -112,7 +124,8 @@
                     android:id="@+id/yoursSinceFirebase"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
-
+        <!--// end of linearLayout
+                //start of LL-->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -125,7 +138,8 @@
                     android:id="@+id/kmFirebase"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
-
+        <!--// end of linearLayout
+                //start of LL-->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -138,7 +152,8 @@
                     android:id="@+id/licensePlateFirebase"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
-
+        <!--// end of linearLayout
+                //start of LL-->
                 <Button
                     android:id="@+id/logoutButton"
                     android:layout_width="match_parent"
@@ -149,7 +164,6 @@
                     android:layout_marginRight="30dp"
                     android:background="@drawable/rounded_button"
                     android:text="@string/logout" />
-        </LinearLayout>
 </LinearLayout>
 <!--
 <GridLayout
