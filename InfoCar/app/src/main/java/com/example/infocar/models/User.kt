@@ -1,8 +1,12 @@
 package com.example.infocar.models
 
+import com.google.firebase.database.Exclude
+
 data class User (
     val id: String="",
-    val email: String=""
+    val email: String="",
+    @Exclude val uid: String = ""
+
 )
    /*{ companion object Factory {
         fun create(): User = User()
