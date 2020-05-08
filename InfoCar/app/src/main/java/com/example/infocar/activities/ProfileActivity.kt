@@ -35,7 +35,6 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
             ValueListenerAdapter{
             mUser = it.asUser()!!
             emailOfUser.setText(mUser.email)
-
         })
 /*
         val brandFirebase = findViewById<EditText>(R.id.brandFirebase)
