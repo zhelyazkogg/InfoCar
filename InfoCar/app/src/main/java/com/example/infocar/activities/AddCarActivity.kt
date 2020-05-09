@@ -19,7 +19,6 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
 
     lateinit var mProgressBar: ProgressDialog
     private val TAG = "AddCarActivity"
-    private lateinit var carInfo: CarInfo
     private lateinit var mAuth: FirebaseAuth
     private lateinit var mDatabase: DatabaseReference
 
@@ -76,8 +75,7 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when(v?.id){
             R.id.buttonRegister ->{
-                startActivity(Intent(this, MainActivity::class.java))
-                /*onRegister()*/
+                onRegister()
             }
         }
 
@@ -100,8 +98,23 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
 
         if (brand.isEmpty() || model.isEmpty() || carType.isEmpty() || engineVolume.isEmpty()
             || vehicleRegister.isEmpty() || fuelType.isEmpty() || kilometers.isEmpty()
-            || plateNumber.isEmpty())
+            || plateNumber.isEmpty()) {
             Toast.makeText(this, "All fields are required", Toast.LENGTH_SHORT).show()
+        } else {
+            val carInfo = mkCarInfo(brand, model,
+                carType, fuelType, engineVolume, vehicleRegister,
+                kilometers, plateNumber)
+//            val carInfo = mkCarInfo()
+            val reference = mDatabase.child("carInfo").child(mAuth.currentUser!!.uid)
+            reference.setValue(carInfo).addOnCompleteListener {
+                if (it.isSuccessful){
+                    Toast.makeText(this, "Congratulations and Hello to InfoCar!", Toast.LENGTH_SHORT).show()
+                    finish()
+                } else {
+                    Toast.makeText(this, "Error in Sign up", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
             //saving data in documents
             //documents name -> CarInfo
             // mAuth.currentUser!!.uid това в момента е id-то на текущия юзър
@@ -109,6 +122,23 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
             // reference.setValue(carInfo)
 
     }
+
+    private fun mkCarInfo(carBrand: String, carModel: String,
+                          carType: String, fuelType: String, engineVolume: String, dateOfRegester: String,
+                          kilometersPassed: String, licensePlateNumber: String): CarInfo{
+
+        return mkCarInfo(carBrand, carModel,
+            carType, fuelType, engineVolume, dateOfRegester,
+            kilometersPassed, licensePlateNumber)
+    }
+
+
+
+
+
+
+
+
 
  /*   private fun userDetails(carBrand: String, carModel: String,
     carType: String, fuelType: String, engineVolume: String, dateOfRegester: String
