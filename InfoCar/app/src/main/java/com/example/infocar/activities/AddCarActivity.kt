@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import com.example.infocar.R
 import com.example.infocar.models.CarInfo
+import com.example.infocar.utils.ValueListenerAdapter
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -35,18 +36,14 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
         fun currentUserReference(): DatabaseReference =
             mDatabase.child("users").child(mAuth.currentUser!!.uid)
 
-        /*currentUserReference().addListenerForSingleValueEvent(
-            ValueListenerAdapter{
-                carInfo = it.asUser()!!
-                .setText(carInfo.)
-            }
-        )*/
+        )
     }
 
     override fun onClick(v: View?) {
         when(v?.id){
             R.id.buttonRegister ->{
                 startActivity(Intent(this, MainActivity::class.java))
+                /*onRegester()*/
             }
         }
 
