@@ -52,7 +52,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
         val confPassword = confPasswordRegister.text.toString()
 
         if(email.isEmpty() || password.isEmpty() || confPassword.isEmpty()){
-            Toast.makeText(this, "All fields are required", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "All fields are required", Toast.LENGTH_SHORT).show()
             if(password.isEmpty())
                 Toast.makeText(this, "Password must be atleast 6 characters", Toast.LENGTH_SHORT).show()
 
@@ -61,9 +61,9 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
                 mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener{
                     if(it.isSuccessful){
                         val user = mkUser(email)
-                        val reference = mDatabase.child("users").child(it.result?.user!!.uid)
-                        reference.setValue(user).addOnCompleteListener {
-                            if (it.isSuccessful){
+                                val reference = mDatabase.child("users").child(it.result?.user!!.uid)
+                                reference.setValue(user).addOnCompleteListener {
+                                    if (it.isSuccessful){
                                 Toast.makeText(this, "First Step of Registration Successful!", Toast.LENGTH_SHORT).show()
                                 startActivity(Intent(this, AddCarActivity::class.java))
                                 finish()
