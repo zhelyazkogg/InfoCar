@@ -61,9 +61,9 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
                 mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener{
                     if(it.isSuccessful){
                         val user = mkUser(email)
-                                val reference = mDatabase.child("users").child(it.result?.user!!.uid)
-                                reference.setValue(user).addOnCompleteListener {
-                                    if (it.isSuccessful){
+                        val reference = mDatabase.child("users").child(it.result?.user!!.uid)
+                        reference.setValue(user).addOnCompleteListener {
+                            if (it.isSuccessful){
                                 Toast.makeText(this, "First Step of Registration Successful!", Toast.LENGTH_SHORT).show()
                                 startActivity(Intent(this, AddCarActivity::class.java))
                                 finish()
@@ -82,8 +82,6 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
     }
 
         private fun mkUser(email: String): User {
-            // val username = mkUsername(email)
-            // TODO ^ this was the old way we will see if it works or not
             val email = mkUsername(email)
             return User(email = email)
         }

@@ -102,8 +102,12 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
             || vehicleRegister.isEmpty() || fuelType.isEmpty() || kilometers.isEmpty()
             || plateNumber.isEmpty())
             Toast.makeText(this, "All fields are required", Toast.LENGTH_SHORT).show()
+            //saving data in documents
+            //documents name -> CarInfo
+            // mAuth.currentUser!!.uid това в момента е id-то на текущия юзър
+            // val reference = mDatabase.child("carInfo").child(mAuth.currentUser!!.uid)
+            // reference.setValue(carInfo)
 
-                if (it.isSuccessful)
     }
 
  /*   private fun userDetails(carBrand: String, carModel: String,
