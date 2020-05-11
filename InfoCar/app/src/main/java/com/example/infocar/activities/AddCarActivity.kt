@@ -101,9 +101,7 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
             || plateNumber.isEmpty()) {
             Toast.makeText(this, "All fields are required", Toast.LENGTH_SHORT).show()
         } else {
-            val carInfo = mkCarInfo(brand, model,
-                carType, fuelType, engineVolume, vehicleRegister,
-                kilometers, plateNumber)
+            val carInfo = mkCarInfo()
 //            val carInfo = mkCarInfo()
             val reference = mDatabase.child("carInfo").child(mAuth.currentUser!!.uid)
             reference.setValue(carInfo).addOnCompleteListener {
@@ -123,13 +121,7 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
 
     }
 
-    private fun mkCarInfo(carBrand: String, carModel: String,
-                          carType: String, fuelType: String, engineVolume: String, dateOfRegester: String,
-                          kilometersPassed: String, licensePlateNumber: String): CarInfo{
-
-        return mkCarInfo(carBrand, carModel,
-            carType, fuelType, engineVolume, dateOfRegester,
-            kilometersPassed, licensePlateNumber)
+    private fun mkCarInfo(): CarInfo{
     }
 
 
