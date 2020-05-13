@@ -102,7 +102,6 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
             Toast.makeText(this, "All fields are required", Toast.LENGTH_SHORT).show()
         } else {
             val carInfo = mkCarInfo()
-//            val carInfo = mkCarInfo()
             val reference = mDatabase.child("carInfo").child(mAuth.currentUser!!.uid)
             reference.setValue(carInfo).addOnCompleteListener {
                 if (it.isSuccessful){
@@ -122,6 +121,7 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun mkCarInfo(): CarInfo{
+        return CarInfo()
     }
 
 
