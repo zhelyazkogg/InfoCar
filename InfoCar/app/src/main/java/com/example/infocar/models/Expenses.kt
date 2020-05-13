@@ -3,6 +3,7 @@ package com.example.infocar.models
 import com.google.firebase.database.Exclude
 
 data class Expenses (
+    val email: String = "",
     val id: String = "",
     val fuelExpense: String="",
     val partsExpense: String="",

@@ -36,8 +36,7 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
             mUser = it.asUser()!!
             emailOfUser.setText(mUser.email)
         })
-/*
-        val brandFirebase = findViewById<EditText>(R.id.brandFirebase)
+        /*val brandFirebase = findViewById<EditText>(R.id.brandFirebase)
         val modelFirebase = findViewById<EditText>(R.id.modelFirebase)
         val vehicleTypeFirebase = findViewById<EditText>(R.id.vehicleTypeFirebase)
         val fuelFirebase = findViewById<EditText>(R.id.fuelFirebase)
