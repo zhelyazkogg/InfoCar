@@ -14,8 +14,8 @@ fun Context.showToast(text: String, duration: Int = Toast.LENGTH_SHORT) {
 fun DataSnapshot.asUser(): User? =
     getValue(User::class.java)?.copy(uid = key)
 
-fun DataSnapshot.uCarInfo(): CarInfo? =
+fun DataSnapshot.asCarInfo(): CarInfo? =
     getValue(CarInfo::class.java)?.copy(uid = key)
 
-fun DataSnapshot.uExpenses(): Expenses? =
+fun DataSnapshot.asExpenses(): Expenses? =
     getValue(Expenses::class.java)?.copy(uid = key)

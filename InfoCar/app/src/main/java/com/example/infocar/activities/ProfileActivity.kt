@@ -17,7 +17,7 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var mAuth : FirebaseAuth
     private lateinit var mDatabase: DatabaseReference
-    private lateinit var uCarInfo: CarInfo
+    private lateinit var mCarInfo: CarInfo
     private lateinit var mUser: User
 
 
@@ -36,6 +36,21 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
             mUser = it.asUser()!!
             emailOfUser.setText(mUser.email)
         })
+        fun currentUserReference2(): DatabaseReference =
+            mDatabase.child("carInfo").child(mAuth.currentUser!!.uid)
+        currentUserReference2().addListenerForSingleValueEvent(
+            ValueListenerAdapter{
+             mCarInfo = it.asCarInfo()!!
+                
+                brandFirebase.setText(mCarInfo.carBrand)
+                modelFirebase.setText(mCarInfo.carModel)
+                vehicleTypeFirebase.setText(mCarInfo.carType)
+                fuelFirebase.setText(mCarInfo.fuelType)
+                engineFirebase.setText(mCarInfo.engineVolume)
+                yoursSinceFirebase.setText(mCarInfo.dateOfRegester)
+                kmFirebase.setText(mCarInfo.kilometersPassed)
+                licensePlateFirebase.setText(mCarInfo.licensePlateNumber)
+            })
         /*val brandFirebase = findViewById<EditText>(R.id.brandFirebase)
         val modelFirebase = findViewById<EditText>(R.id.modelFirebase)
         val vehicleTypeFirebase = findViewById<EditText>(R.id.vehicleTypeFirebase)
