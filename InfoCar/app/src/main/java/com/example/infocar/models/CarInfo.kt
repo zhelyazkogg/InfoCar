@@ -9,7 +9,7 @@ data class CarInfo (
     val carType: String="",
     val fuelType: String="",
     val engineVolume: String="",
-    val dateOfRegester: String="",
+    val dateOfRegister: String="",
     val kilometersPassed: String="",
     val licensePlateNumber: String="",
     @Exclude val uid: String? = ""
