@@ -27,32 +27,32 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View) {
-        when(v.id){
-            R.id.myProfileActivity ->{
+        when (v.id) {
+            R.id.myProfileActivity -> {
                 startActivity(Intent(this, ProfileActivity::class.java))
             }
         }
-        when(v.id){
+        when (v.id) {
             R.id.myFuelActivity -> {
                 startActivity(Intent(this, FuelActivity::class.java))
             }
         }
-        when(v.id){
+        when (v.id) {
             R.id.myMapActivity -> {
 //                startActivity(Intent(this, MapActivity::class.java))
             }
         }
-        when(v.id){
+        when (v.id) {
             R.id.myLawActivity -> {
                 startActivity(Intent(this, LawActivity::class.java))
             }
         }
-        when(v.id){
-            R.id.myShopActivity ->{
+        when (v.id) {
+            R.id.myShopActivity -> {
 //            startActivity(Intent(this, ShopActivity::class.java))
             }
         }
-        when(v.id){
+        when (v.id) {
             R.id.mySettingsActivity -> {
 //            startActivity(Intent(this, SettingsActivity::class.java))
             }

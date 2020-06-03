@@ -73,20 +73,20 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
-        when(v?.id){
-            R.id.buttonRegister ->{
+        when (v?.id) {
+            R.id.buttonRegister -> {
                 onRegister()
             }
         }
 
-        when(v?.id){
-            R.id.buttonBack ->{
+        when (v?.id) {
+            R.id.buttonBack -> {
                 startActivity(Intent(this, RegisterActivity::class.java))
             }
         }
     }
 
-    private fun onRegister(){
+    private fun onRegister() {
         val brand = brandRegister.text.toString()
         val model = modelRegister.text.toString()
         val carType = vehicleTypeRegister.text.toString()
@@ -98,14 +98,19 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
 
         if (brand.isEmpty() || model.isEmpty() || carType.isEmpty() || engineVolume.isEmpty()
             || vehicleRegister.isEmpty() || fuelType.isEmpty() || kilometers.isEmpty()
-            || plateNumber.isEmpty()) {
+            || plateNumber.isEmpty()
+        ) {
             Toast.makeText(this, "All fields are required", Toast.LENGTH_SHORT).show()
         } else {
             val carInfo = mkCarInfo()
             val reference = mDatabase.child("carInfo").child(mAuth.currentUser!!.uid)
             reference.setValue(carInfo).addOnCompleteListener {
-                if (it.isSuccessful){
-                    Toast.makeText(this, "Congratulations and Hello to InfoCar!", Toast.LENGTH_SHORT).show()
+                if (it.isSuccessful) {
+                    Toast.makeText(
+                        this,
+                        "Congratulations and Hello to InfoCar!",
+                        Toast.LENGTH_SHORT
+                    ).show()
                     startActivity(Intent(this, MainActivity::class.java))
                     finish()
                 } else {
@@ -113,108 +118,101 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
                 }
             }
         }
-            //saving data in documents
-            //documents name -> CarInfo
-            // mAuth.currentUser!!.uid това в момента е id-то на текущия юзър
-            // val reference = mDatabase.child("carInfo").child(mAuth.currentUser!!.uid)
-            // reference.setValue(carInfo)
+        //saving data in documents
+        //documents name -> CarInfo
+        // mAuth.currentUser!!.uid това в момента е id-то на текущия юзър
+        // val reference = mDatabase.child("carInfo").child(mAuth.currentUser!!.uid)
+        // reference.setValue(carInfo)
 
     }
 
-    private fun mkCarInfo(): CarInfo{
+    private fun mkCarInfo(): CarInfo {
 
         return CarInfo()
     }
 
 
+    /*   private fun userDetails(carBrand: String, carModel: String,
+       carType: String, fuelType: String, engineVolume: String, dateOfRegester: String
+       kilometersPassed: String, licensePlateNumber: String): CarInfo{
 
-
-
-
-
-
-
- /*   private fun userDetails(carBrand: String, carModel: String,
-    carType: String, fuelType: String, engineVolume: String, dateOfRegester: String
-    kilometersPassed: String, licensePlateNumber: String): CarInfo{
-
-        return(brand = carBrand)
-    }*/
+           return(brand = carBrand)
+       }*/
 }
 
-        /*val brandRegister = findViewById<EditText>(R.id.brandRegister)
-        val modelRegister = findViewById<EditText>(R.id.modelRegister)
-        val engineRegister = findViewById<EditText>(R.id.engineRegister)
-        val yoursSinceRegister = findViewById<EditText>(R.id.yoursSinceRegister)
-        val kmRegister = findViewById<EditText>(R.id.kmRegister)
-        val licensePlateRegister = findViewById<EditText>(R.id.licensePlateRegister)
-        val buttonBack = findViewById<Button>(R.id.buttonBack)
-        val buttonRegister = findViewById<Button>(R.id.buttonRegister)
+/*val brandRegister = findViewById<EditText>(R.id.brandRegister)
+val modelRegister = findViewById<EditText>(R.id.modelRegister)
+val engineRegister = findViewById<EditText>(R.id.engineRegister)
+val yoursSinceRegister = findViewById<EditText>(R.id.yoursSinceRegister)
+val kmRegister = findViewById<EditText>(R.id.kmRegister)
+val licensePlateRegister = findViewById<EditText>(R.id.licensePlateRegister)
+val buttonBack = findViewById<Button>(R.id.buttonBack)
+val buttonRegister = findViewById<Button>(R.id.buttonRegister)
 
-        val fuelTypeRegister = findViewById<AutoCompleteTextView>(R.id.fuelTypeRegister)
-        val vehicleTypeRegister = findViewById<AutoCompleteTextView>(R.id.vehicleTypeRegister)
-
-
-
-        buttonRegister.setOnClickListener {
-            val brand = brandRegister.text.toString().trim()
-            val model = modelRegister.text.toString().trim()
-            val engine = engineRegister.text.toString().trim()
-            val yourSince = yoursSinceRegister.text.toString().trim()
-            val kilometers = kmRegister.text.toString().trim()
-            val licensePlate = licensePlateRegister.text.toString().trim()
-            val fuel = fuelTypeRegister.text.toString().trim()
-            val vehicleType = vehicleTypeRegister.text.toString().trim()
-
-            if (TextUtils.isEmpty(brand)) {
-                brandRegister.error = "Please enter your vehicle's brand."
-                return@setOnClickListener
-            }
-
-            if (TextUtils.isEmpty(model)) {
-                modelRegister.error = "Please enter your vehicle's model."
-                return@setOnClickListener
-            }
-
-            if (TextUtils.isEmpty(vehicleType)) {
-                vehicleTypeRegister.error = "Please enter your vehicle's car type."
-                return@setOnClickListener
-            }
-
-            if (TextUtils.isEmpty(engine)) {
-                engineRegister.error = "Please enter your vehicle's engine volume, " +
-                        "plus the horsepowers."
-                return@setOnClickListener
-            }
-
-            if (TextUtils.isEmpty(yourSince)) {
-                yoursSinceRegister.error = "Please enter the date when you registered your vehicle."
-                return@setOnClickListener
-            }
-
-            if (TextUtils.isEmpty(fuel)) {
-                fuelTypeRegister.error = "Please enter your vehicle's fuel type."
-                return@setOnClickListener
-            }
-
-            if (TextUtils.isEmpty(kilometers)) {
-                kmRegister.error = "Please enter the current KM on your vehicle."
-                return@setOnClickListener
-            }
-
-            if (TextUtils.isEmpty(licensePlate)) {
-                licensePlateRegister.error = "Please enter your vehicles licence plate."
-                return@setOnClickListener
-            }
+val fuelTypeRegister = findViewById<AutoCompleteTextView>(R.id.fuelTypeRegister)
+val vehicleTypeRegister = findViewById<AutoCompleteTextView>(R.id.vehicleTypeRegister)
 
 
-            val ProfileActivity = Intent(applicationContext, ProfileActivity::class.java)
-            startActivity(ProfileActivity)
-            finish()
-        }
 
-        buttonBack.setOnClickListener {
-            val LoginActivity = Intent(applicationContext, LoginActivity::class.java)
-            startActivity(LoginActivity)
-            finish()
-        }*/
+buttonRegister.setOnClickListener {
+    val brand = brandRegister.text.toString().trim()
+    val model = modelRegister.text.toString().trim()
+    val engine = engineRegister.text.toString().trim()
+    val yourSince = yoursSinceRegister.text.toString().trim()
+    val kilometers = kmRegister.text.toString().trim()
+    val licensePlate = licensePlateRegister.text.toString().trim()
+    val fuel = fuelTypeRegister.text.toString().trim()
+    val vehicleType = vehicleTypeRegister.text.toString().trim()
+
+    if (TextUtils.isEmpty(brand)) {
+        brandRegister.error = "Please enter your vehicle's brand."
+        return@setOnClickListener
+    }
+
+    if (TextUtils.isEmpty(model)) {
+        modelRegister.error = "Please enter your vehicle's model."
+        return@setOnClickListener
+    }
+
+    if (TextUtils.isEmpty(vehicleType)) {
+        vehicleTypeRegister.error = "Please enter your vehicle's car type."
+        return@setOnClickListener
+    }
+
+    if (TextUtils.isEmpty(engine)) {
+        engineRegister.error = "Please enter your vehicle's engine volume, " +
+                "plus the horsepowers."
+        return@setOnClickListener
+    }
+
+    if (TextUtils.isEmpty(yourSince)) {
+        yoursSinceRegister.error = "Please enter the date when you registered your vehicle."
+        return@setOnClickListener
+    }
+
+    if (TextUtils.isEmpty(fuel)) {
+        fuelTypeRegister.error = "Please enter your vehicle's fuel type."
+        return@setOnClickListener
+    }
+
+    if (TextUtils.isEmpty(kilometers)) {
+        kmRegister.error = "Please enter the current KM on your vehicle."
+        return@setOnClickListener
+    }
+
+    if (TextUtils.isEmpty(licensePlate)) {
+        licensePlateRegister.error = "Please enter your vehicles licence plate."
+        return@setOnClickListener
+    }
+
+
+    val ProfileActivity = Intent(applicationContext, ProfileActivity::class.java)
+    startActivity(ProfileActivity)
+    finish()
+}
+
+buttonBack.setOnClickListener {
+    val LoginActivity = Intent(applicationContext, LoginActivity::class.java)
+    startActivity(LoginActivity)
+    finish()
+}*/

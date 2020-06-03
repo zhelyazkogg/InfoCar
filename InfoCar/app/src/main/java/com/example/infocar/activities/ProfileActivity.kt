@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.activity_profile.*
 
 class ProfileActivity : AppCompatActivity(), View.OnClickListener {
 
-    private lateinit var mAuth : FirebaseAuth
+    private lateinit var mAuth: FirebaseAuth
     private lateinit var mDatabase: DatabaseReference
     private lateinit var mCarInfo: CarInfo
     private lateinit var mUser: User
@@ -32,9 +32,9 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
         fun currentUserReference(): DatabaseReference =
             mDatabase.child("users").child(mAuth.currentUser!!.uid)
         currentUserReference().addListenerForSingleValueEvent(
-            ValueListenerAdapter{
-            mCarInfo = it.asCarInfo()!!
-            mUser = it.asUser()!!
+            ValueListenerAdapter {
+                mCarInfo = it.asCarInfo()!!
+                mUser = it.asUser()!!
                 emailOfUser.text = mUser.email
                 brandFirebase.text = mCarInfo.carBrand
                 modelFirebase.text = mCarInfo.carModel
@@ -44,13 +44,13 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
                 yoursSinceFirebase.text = mCarInfo.dateOfRegister
                 kmFirebase.text = mCarInfo.kilometersPassed
                 licensePlateFirebase.text = mCarInfo.licensePlateNumber
-        })
-       /* fun currentUserReference2(): DatabaseReference =
-            mDatabase.child("carInfo").child(mAuth.currentUser!!.uid)
-        currentUserReference2().addListenerForSingleValueEvent(
-            ValueListenerAdapter {
-                mCarInfo = it.asCarInfo()!!
-            })*/
+            })
+        /* fun currentUserReference2(): DatabaseReference =
+             mDatabase.child("carInfo").child(mAuth.currentUser!!.uid)
+         currentUserReference2().addListenerForSingleValueEvent(
+             ValueListenerAdapter {
+                 mCarInfo = it.asCarInfo()!!
+             })*/
 
 
         /*val brandFirebase = findViewById<EditText>(R.id.brandFirebase)
@@ -65,7 +65,7 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
 
     // Logout button doesn't erase the storage/cache and doesn't logout.
     override fun onClick(view: View) {
-        when(view.id){
+        when (view.id) {
             R.id.logoutButton -> {
                 mAuth.signOut()
                 startActivity(Intent(this, LoginActivity::class.java))

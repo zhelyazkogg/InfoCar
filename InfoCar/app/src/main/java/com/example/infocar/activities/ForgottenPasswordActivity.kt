@@ -12,7 +12,7 @@ import com.google.firebase.auth.FirebaseAuth
 
 class ForgottenPasswordActivity : AppCompatActivity() {
 
-    lateinit var mAuth : FirebaseAuth
+    lateinit var mAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,17 +26,21 @@ class ForgottenPasswordActivity : AppCompatActivity() {
         forgottenPassSending.setOnClickListener {
             val email = forgottenPassEmail.text.toString().trim()
 
-            if (TextUtils.isEmpty(email)){
+            if (TextUtils.isEmpty(email)) {
                 forgottenPassEmail.error = "Required."
             } else {
                 mAuth.sendPasswordResetEmail(email)
-                    .addOnCompleteListener{task ->
-                        if (task.isSuccessful){
-                           Toast.makeText(this@ForgottenPasswordActivity,
-                               "Check email to reset your password",Toast.LENGTH_SHORT).show()
+                    .addOnCompleteListener { task ->
+                        if (task.isSuccessful) {
+                            Toast.makeText(
+                                this@ForgottenPasswordActivity,
+                                "Check email to reset your password", Toast.LENGTH_SHORT
+                            ).show()
                         } else {
-                            Toast.makeText(this@ForgottenPasswordActivity,
-                               "Failed to send requested password email", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(
+                                this@ForgottenPasswordActivity,
+                                "Failed to send requested password email", Toast.LENGTH_SHORT
+                            ).show()
                         }
                     }
             }

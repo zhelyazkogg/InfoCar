@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
     android:background="@color/colorDarkBlue"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context=".activities.RegisterActivity">
 
@@ -23,41 +23,41 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
         android:layout_marginTop="5dp"
-        android:hint="@string/email"
+        android:layout_marginRight="30dp"
+        android:backgroundTint="@color/colorYellow"
         android:ems="10"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
         android:textColor="@color/colorWhite"
-        android:backgroundTint="@color/colorYellow"
-        android:textColorHint="@color/colorWhite"/>
+        android:textColorHint="@color/colorWhite" />
 
     <EditText
         android:id="@+id/passwordRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
         android:layout_marginTop="5dp"
+        android:layout_marginRight="30dp"
+        android:backgroundTint="@color/colorYellow"
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
         android:textColor="@color/colorWhite"
-        android:backgroundTint="@color/colorYellow"
         android:textColorHint="@color/colorWhite" />
 
-       <EditText
+    <EditText
         android:id="@+id/confPasswordRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
         android:layout_marginTop="5dp"
+        android:layout_marginRight="30dp"
+        android:backgroundTint="@color/colorYellow"
         android:ems="10"
         android:hint="@string/confPassword"
         android:inputType="textPassword"
         android:textColor="@color/colorWhite"
-        android:backgroundTint="@color/colorYellow"
         android:textColorHint="@color/colorWhite" />
 
     <Button

@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:layout_gravity="center_vertical"
     android:background="@color/colorDarkBlue"
+    android:orientation="vertical"
     tools:context=".activities.MainActivity">
 
     <LinearLayout
@@ -27,8 +27,8 @@
             android:id="@+id/myProfileActivity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/myProfile"
             android:layout_gravity="bottom"
+            android:text="@string/myProfile"
             android:textColor="@color/colorYellow"
             android:textSize="20sp" />
     </LinearLayout>
@@ -39,22 +39,22 @@
         android:orientation="horizontal">
 
         <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="20dp"
-        android:paddingTop="10dp"
-        android:background="@drawable/ic_fuel" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/ic_fuel"
+            android:paddingTop="10dp" />
 
         <TextView
             android:id="@+id/myFuelActivity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/myExpenses"
             android:layout_gravity="bottom"
+            android:text="@string/myExpenses"
             android:textColor="@color/colorYellow"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -65,46 +65,46 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
             android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="20dp"
+            android:background="@drawable/ic_map"
             android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-        android:background="@drawable/ic_map" />
+            android:paddingBottom="10dp" />
 
         <TextView
             android:id="@+id/myMapActivity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/nearbyPetrolStations"
             android:layout_gravity="bottom"
+            android:text="@string/nearbyPetrolStations"
             android:textColor="@color/colorYellow"
-            android:textSize="20sp"/>
-</LinearLayout>
+            android:textSize="20sp" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="20dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:background="@drawable/ic_law" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/ic_law"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp" />
 
         <TextView
             android:id="@+id/myLawActivity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/lawsAndFines"
-            android:textSize="20sp"
             android:layout_gravity="bottom"
-            android:textColor="@color/colorYellow"/>
+            android:text="@string/lawsAndFines"
+            android:textColor="@color/colorYellow"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
@@ -113,24 +113,24 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="20dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:background="@drawable/ic_myshop" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/ic_myshop"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp" />
 
         <TextView
             android:id="@+id/myShopActivity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/carShopsAndMechanics"
-            android:textSize="20sp"
             android:layout_gravity="bottom"
-            android:textColor="@color/colorYellow"/>
+            android:text="@string/carShopsAndMechanics"
+            android:textColor="@color/colorYellow"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -138,24 +138,24 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="20dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:background="@drawable/ic_settings" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/ic_settings"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp" />
 
         <TextView
             android:id="@+id/mySettingsActivity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/settings"
             android:layout_gravity="bottom"
-            android:textSize="20sp"
-            android:textColor="@color/colorYellow"/>
+            android:text="@string/settings"
+            android:textColor="@color/colorYellow"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
