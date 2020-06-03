@@ -122,7 +122,7 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun mkCarInfo(): CarInfo{
-        
+
         return CarInfo()
     }
 

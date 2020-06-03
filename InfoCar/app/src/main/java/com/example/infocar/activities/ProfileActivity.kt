@@ -35,15 +35,15 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
             ValueListenerAdapter{
             mCarInfo = it.asCarInfo()!!
             mUser = it.asUser()!!
-                emailOfUser.setText(mUser.email)
-                brandFirebase.setText(mCarInfo.carBrand)
-                modelFirebase.setText(mCarInfo.carModel)
-                vehicleTypeFirebase.setText(mCarInfo.carType)
-                fuelFirebase.setText(mCarInfo.fuelType)
-                engineFirebase.setText(mCarInfo.engineVolume)
-                yoursSinceFirebase.setText(mCarInfo.dateOfRegister)
-                kmFirebase.setText(mCarInfo.kilometersPassed)
-                licensePlateFirebase.setText(mCarInfo.licensePlateNumber)
+                emailOfUser.text = mUser.email
+                brandFirebase.text = mCarInfo.carBrand
+                modelFirebase.text = mCarInfo.carModel
+                vehicleTypeFirebase.text = mCarInfo.carType
+                fuelFirebase.text = mCarInfo.fuelType
+                engineFirebase.text = mCarInfo.engineVolume
+                yoursSinceFirebase.text = mCarInfo.dateOfRegister
+                kmFirebase.text = mCarInfo.kilometersPassed
+                licensePlateFirebase.text = mCarInfo.licensePlateNumber
         })
        /* fun currentUserReference2(): DatabaseReference =
             mDatabase.child("carInfo").child(mAuth.currentUser!!.uid)
