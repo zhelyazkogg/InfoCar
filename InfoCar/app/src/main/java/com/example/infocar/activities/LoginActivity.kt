@@ -14,7 +14,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
     private val TAG = "LoginActivity"
     lateinit var mProgressBar: ProgressDialog
-    private lateinit var mAuth : FirebaseAuth
+    private lateinit var mAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,7 +22,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
         mAuth = FirebaseAuth.getInstance()
 
-        if (mAuth.currentUser != null){
+        if (mAuth.currentUser != null) {
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
@@ -32,32 +32,35 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
-        when(v?.id){
+        when (v?.id) {
             R.id.loginBtn -> {
                 val email = emailLogin.text.toString()
                 val password = passwordLogin.text.toString()
 
-                if (validateForm(email, password)){
+                if (validateForm(email, password)) {
                     mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
-                        if (it.isSuccessful){
+                        if (it.isSuccessful) {
                             startActivity(Intent(this, MainActivity::class.java))
                             finish()
-                        } else{
-                            Toast.makeText(this, "incorrect email or password", Toast.LENGTH_SHORT).show()
+                        } else {
+                            Toast.makeText(this, "incorrect email or password", Toast.LENGTH_SHORT)
+                                .show()
                         }
                     }
                 } else {
-                    Toast.makeText(this, "Please enter email and/or password", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Please enter email and/or password", Toast.LENGTH_SHORT)
+                        .show()
                 }
             }
         }
 
-        when(v?.id){
+        when (v?.id) {
             R.id.registerBtn -> {
                 startActivity(Intent(this, RegisterActivity::class.java))
             }
         }
     }
+
     private fun validateForm(email: String, password: String) =
         email.isNotEmpty() && password.isNotEmpty()
 }

@@ -96,9 +96,9 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
         val kilometers = kmRegister.text.toString()
         val plateNumber = licensePlateRegister.text.toString()
 
-        if (brand.isEmpty() || model.isEmpty() || carType.isEmpty() || engineVolume.isEmpty()
-            || vehicleRegister.isEmpty() || fuelType.isEmpty() || kilometers.isEmpty()
-            || plateNumber.isEmpty()
+        if (brand.isNotEmpty() || model.isNotEmpty() || carType.isNotEmpty() || engineVolume.isNotEmpty()
+            || vehicleRegister.isNotEmpty() || fuelType.isNotEmpty() || kilometers.isNotEmpty()
+            || plateNumber.isNotEmpty()
         ) {
             Toast.makeText(this, "All fields are required", Toast.LENGTH_SHORT).show()
         } else {
