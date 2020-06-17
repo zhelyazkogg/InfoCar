@@ -107,9 +107,7 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
             reference.setValue(carInfo).addOnCompleteListener {
                 if (it.isSuccessful) {
                     Toast.makeText(
-                        this,
-                        "Congratulations and Hello to InfoCar!",
-                        Toast.LENGTH_SHORT
+                        this, "Congratulations and Hello to InfoCar!", Toast.LENGTH_SHORT
                     ).show()
                     startActivity(Intent(this, MainActivity::class.java))
                     finish()
