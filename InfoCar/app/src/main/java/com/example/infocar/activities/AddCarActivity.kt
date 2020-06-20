@@ -38,10 +38,12 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
             "Sedan",
             "Combi",
             "Hatchback",
+            "Compact",
             "Coupe",
             "Седан",
             "Комби",
             "Хечбек",
+            "Компакт",
             "Купе",
             "Друг",
             "Other"
@@ -67,9 +69,7 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
         fuelTypeRegister.setAdapter(adapterFuel)
 
         /*fun currentUserReference(): DatabaseReference =
-            mDatabase.child("users").child(mAuth.currentUser!!.uid)
-
-        )*/
+            mDatabase.child("users").child(mAuth.currentUser!!.uid)*/
     }
 
     override fun onClick(v: View?) {
