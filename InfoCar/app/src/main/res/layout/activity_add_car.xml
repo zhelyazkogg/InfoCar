@@ -127,6 +127,7 @@
         android:layout_marginRight="30dp"
         android:backgroundTint="@color/colorYellow"
         android:hint="@string/fuelType"
+        android:inputType="text"
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/colorWhite" />
 

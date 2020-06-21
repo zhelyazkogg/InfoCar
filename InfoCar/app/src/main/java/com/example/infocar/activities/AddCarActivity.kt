@@ -104,7 +104,7 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
         } else {
             val carInfo = mkCarInfo()
             val reference = mDatabase.child("carInfo").child(mAuth.currentUser!!.uid)
-            reference.setValue(carInfo).addOnCompleteListener {
+            reference.setValue(mkCarInfo()).addOnCompleteListener {
                 if (it.isSuccessful) {
                     Toast.makeText(
                         this, "Congratulations and Hello to InfoCar!", Toast.LENGTH_SHORT
