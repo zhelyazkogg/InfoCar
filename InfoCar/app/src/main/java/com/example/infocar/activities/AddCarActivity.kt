@@ -133,7 +133,6 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
     /*   private fun userDetails(carBrand: String, carModel: String,
        carType: String, fuelType: String, engineVolume: String, dateOfRegester: String
        kilometersPassed: String, licensePlateNumber: String): CarInfo{
-
            return(brand = carBrand)
        }*/
 }
@@ -146,12 +145,8 @@ val kmRegister = findViewById<EditText>(R.id.kmRegister)
 val licensePlateRegister = findViewById<EditText>(R.id.licensePlateRegister)
 val buttonBack = findViewById<Button>(R.id.buttonBack)
 val buttonRegister = findViewById<Button>(R.id.buttonRegister)
-
 val fuelTypeRegister = findViewById<AutoCompleteTextView>(R.id.fuelTypeRegister)
 val vehicleTypeRegister = findViewById<AutoCompleteTextView>(R.id.vehicleTypeRegister)
-
-
-
 buttonRegister.setOnClickListener {
     val brand = brandRegister.text.toString().trim()
     val model = modelRegister.text.toString().trim()
@@ -161,54 +156,43 @@ buttonRegister.setOnClickListener {
     val licensePlate = licensePlateRegister.text.toString().trim()
     val fuel = fuelTypeRegister.text.toString().trim()
     val vehicleType = vehicleTypeRegister.text.toString().trim()
-
     if (TextUtils.isEmpty(brand)) {
         brandRegister.error = "Please enter your vehicle's brand."
         return@setOnClickListener
     }
-
     if (TextUtils.isEmpty(model)) {
         modelRegister.error = "Please enter your vehicle's model."
         return@setOnClickListener
     }
-
     if (TextUtils.isEmpty(vehicleType)) {
         vehicleTypeRegister.error = "Please enter your vehicle's car type."
         return@setOnClickListener
     }
-
     if (TextUtils.isEmpty(engine)) {
         engineRegister.error = "Please enter your vehicle's engine volume, " +
                 "plus the horsepowers."
         return@setOnClickListener
     }
-
     if (TextUtils.isEmpty(yourSince)) {
         yoursSinceRegister.error = "Please enter the date when you registered your vehicle."
         return@setOnClickListener
     }
-
     if (TextUtils.isEmpty(fuel)) {
         fuelTypeRegister.error = "Please enter your vehicle's fuel type."
         return@setOnClickListener
     }
-
     if (TextUtils.isEmpty(kilometers)) {
         kmRegister.error = "Please enter the current KM on your vehicle."
         return@setOnClickListener
     }
-
     if (TextUtils.isEmpty(licensePlate)) {
         licensePlateRegister.error = "Please enter your vehicles licence plate."
         return@setOnClickListener
     }
-
-
     val ProfileActivity = Intent(applicationContext, ProfileActivity::class.java)
     startActivity(ProfileActivity)
     finish()
 }
-
 buttonBack.setOnClickListener {
     val LoginActivity = Intent(applicationContext, LoginActivity::class.java)
     startActivity(LoginActivity)

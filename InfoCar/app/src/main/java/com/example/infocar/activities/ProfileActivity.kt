@@ -63,7 +63,6 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
         val licensePlateFirebase = findViewById<EditText>(R.id.licensePlateFirebase)*/
     }
 
-    // Logout button doesn't erase the storage/cache and doesn't logout.
     override fun onClick(view: View) {
         when (view.id) {
             R.id.logoutButton -> {
