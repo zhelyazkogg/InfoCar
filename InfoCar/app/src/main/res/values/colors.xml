@@ -4,7 +4,6 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorOrange">#FF8B00</color>
-    <color name="colorGraphite">#1F1C1C</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlack">#000000</color>
     <color name="colorGrey">#474444</color>
@@ -18,13 +17,18 @@
     <color name="colorDarkPurple">#320A28</color>
     <color name="colorEggShell">#F0EBD8</color>
     <color name="colorDarkBlue">#06182B</color>
-    <color name="colorYellow">#F0CE00</color>
 
 <!--colors for a new design maybe-->
     <color name="coolRed"> #e83d61  </color>
     <color name="coolDarkGreen">#102b3e</color>
     <color name="coolGray">#ced8e1</color>
     <color name="coolGreen">#1cc8a0</color>
+    <!--colors for a new design maybe-->
+
+    <!--colors for a new design maybe-->
+    <color name="colorGraphite"> #20242a  </color>
+    <color name="colorYellow">#fed32c</color>
+    <color name="colorLightGray">#2b3038</color>
     <!--colors for a new design maybe-->
 
 </resources>

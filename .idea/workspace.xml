@@ -7,9 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42cdb7c1-9dc2-469e-814a-7a2b089a61ed" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/InfoCar.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/InfoCar.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfoCar/app/src/main/java/com/example/infocar/activities/AddCarActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/InfoCar/app/src/main/java/com/example/infocar/activities/AddCarActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InfoCar/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/InfoCar/.idea/codeStyles/Project.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,5 +60,9 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="196" y="82" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1590759616085" />
+    <state x="465" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1598967991147">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="465" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1598967991147" />
   </component>
 </project>
