@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorDarkBlue"
+    android:background="@color/colorGraphite"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context=".activities.AddCarActivity">
 
     <TextView
-        android:id="@+id/loginText"
+        android:id="@+id/RegisterText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
         android:text="@string/RegisterVehicle"
-        android:textColor="@color/colorYellow"
+        android:textColor="@color/colorDirtyWhite"
         android:textSize="30sp"
         android:textStyle="bold" />
 
@@ -27,11 +27,11 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="30dp"
-        android:backgroundTint="@color/colorYellow"
+        android:backgroundTint="@color/colorLightGray"
         android:ems="10"
         android:hint="@string/brandCar"
         android:inputType="text"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/colorDirtyWhite"
         android:textColorHint="@color/colorWhite" />
 
     <EditText
@@ -41,11 +41,11 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="30dp"
-        android:backgroundTint="@color/colorYellow"
+        android:backgroundTint="@color/colorLightGray"
         android:ems="10"
         android:hint="@string/modelCar"
         android:inputType="text"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/colorDirtyWhite"
         android:textColorHint="@color/colorWhite" />
 
     <!--    <EditText
@@ -70,10 +70,10 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="30dp"
-        android:backgroundTint="@color/colorYellow"
+        android:backgroundTint="@color/colorLightGray"
         android:hint="@string/vehicleType"
         android:inputType="text"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/colorDirtyWhite"
         android:textColorHint="@color/colorWhite" />
 
     <EditText
@@ -83,11 +83,11 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="30dp"
-        android:backgroundTint="@color/colorYellow"
+        android:backgroundTint="@color/colorLightGray"
         android:ems="10"
         android:hint="@string/engineRegister"
         android:inputType="text"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/colorDirtyWhite"
         android:textColorHint="@color/colorWhite" />
 
     <EditText
@@ -97,11 +97,11 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="30dp"
-        android:backgroundTint="@color/colorYellow"
+        android:backgroundTint="@color/colorLightGray"
         android:ems="10"
         android:hint="@string/yoursSince"
         android:inputType="datetime"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/colorDirtyWhite"
         android:textColorHint="@color/colorWhite" />
 
     <!--<EditText
@@ -125,10 +125,10 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="30dp"
-        android:backgroundTint="@color/colorYellow"
+        android:backgroundTint="@color/colorLightGray"
         android:hint="@string/fuelType"
         android:inputType="text"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/colorDirtyWhite"
         android:textColorHint="@color/colorWhite" />
 
     <EditText
@@ -138,11 +138,11 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="30dp"
-        android:backgroundTint="@color/colorYellow"
+        android:backgroundTint="@color/colorLightGray"
         android:ems="10"
         android:hint="@string/kmVehicle"
         android:inputType="number"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/colorDirtyWhite"
         android:textColorHint="@color/colorWhite" />
 
     <EditText
@@ -152,11 +152,11 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="30dp"
-        android:backgroundTint="@color/colorYellow"
+        android:backgroundTint="@color/colorLightGray"
         android:ems="10"
         android:hint="@string/licensePlate"
         android:inputType="textCapCharacters"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/colorDirtyWhite"
         android:textColorHint="@color/colorWhite" />
 
     <Button

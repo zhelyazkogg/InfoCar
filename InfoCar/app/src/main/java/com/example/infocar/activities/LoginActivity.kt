@@ -29,6 +29,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
         loginBtn.setOnClickListener(this)
         registerBtn.setOnClickListener(this)
+        forgottenPass.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -57,6 +58,12 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         when (v?.id) {
             R.id.registerBtn -> {
                 startActivity(Intent(this, RegisterActivity::class.java))
+            }
+        }
+
+        when(v?.id){
+            R.id.forgottenPass ->{
+                startActivity(Intent(this,ForgottenPasswordActivity::class.java))
             }
         }
     }
