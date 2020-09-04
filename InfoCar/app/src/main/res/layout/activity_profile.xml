@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/user"
-            android:textColor="@color/colorYellow"
+            android:textColor="@color/colorLightGrayWords"
             android:textSize="20sp" />
 
         <TextView
@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:textColor="@color/colorYellow"
+            android:textColor="@color/colorDirtyWhite"
             android:textSize="20sp" />
 
     </LinearLayout>
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="@string/brandCar"
-            android:textColor="@color/colorYellow"
+            android:textColor="@color/colorLightGrayWords"
             android:textSize="20sp" />
 
         <TextView
@@ -50,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:textColor="@color/colorYellow"
+            android:textColor="@color/colorDirtyWhite"
             android:textSize="20sp" />
     </LinearLayout>
 
@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="@string/modelCar"
-            android:textColor="@color/colorYellow"
+            android:textColor="@color/colorLightGrayWords"
             android:textSize="20sp" />
 
         <TextView
@@ -73,7 +73,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:textColor="@color/colorYellow"
+            android:textColor="@color/colorDirtyWhite"
             android:textSize="20sp" />
     </LinearLayout>
 
@@ -88,7 +88,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="@string/vehicleType"
-            android:textColor="@color/colorYellow"
+            android:textColor="@color/colorLightGrayWords"
             android:textSize="20sp" />
 
         <TextView
@@ -96,7 +96,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:textColor="@color/colorYellow"
+            android:textColor="@color/colorDirtyWhite"
             android:textSize="20sp" />
     </LinearLayout>
 
@@ -111,7 +111,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="@string/fuelType"
-            android:textColor="@color/colorYellow"
+            android:textColor="@color/colorLightGrayWords"
             android:textSize="20sp" />
 
         <TextView
@@ -119,7 +119,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:textColor="@color/colorYellow"
+            android:textColor="@color/colorDirtyWhite"
             android:textSize="20sp" />
     </LinearLayout>
 
@@ -134,7 +134,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="@string/engineRegister"
-            android:textColor="@color/colorYellow"
+            android:textColor="@color/colorLightGrayWords"
             android:textSize="20sp" />
 
         <TextView
@@ -142,7 +142,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:textColor="@color/colorYellow"
+            android:textColor="@color/colorDirtyWhite"
             android:textSize="20sp" />
     </LinearLayout>
 
@@ -157,7 +157,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="@string/yoursSince"
-            android:textColor="@color/colorYellow"
+            android:textColor="@color/colorLightGrayWords"
             android:textSize="20sp" />
 
         <TextView
@@ -165,7 +165,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:textColor="@color/colorYellow"
+            android:textColor="@color/colorDirtyWhite"
             android:textSize="20sp" />
     </LinearLayout>
 
@@ -180,7 +180,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="@string/kmVehicle"
-            android:textColor="@color/colorYellow"
+            android:textColor="@color/colorLightGrayWords"
             android:textSize="20sp" />
 
         <TextView
@@ -188,7 +188,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:textColor="@color/colorYellow"
+            android:textColor="@color/colorDirtyWhite"
             android:textSize="20sp" />
     </LinearLayout>
 
@@ -203,7 +203,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="@string/licensePlate"
-            android:textColor="@color/colorYellow"
+            android:textColor="@color/colorLightGrayWords"
             android:textSize="20sp" />
 
         <TextView
@@ -211,7 +211,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:textColor="@color/colorYellow"
+            android:textColor="@color/colorDirtyWhite"
             android:textSize="20sp" />
     </LinearLayout>
 
@@ -224,6 +224,17 @@
         android:layout_marginRight="30dp"
         android:background="@drawable/rounded_button"
         android:text="@string/logout" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/rounded_button"
+        android:text="@string/back" />
 </LinearLayout><!--
 <GridLayout
 android:layout_width="match_parent"

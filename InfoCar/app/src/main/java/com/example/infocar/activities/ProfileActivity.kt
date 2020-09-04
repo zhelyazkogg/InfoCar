@@ -28,6 +28,7 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
         mAuth = FirebaseAuth.getInstance()
         mDatabase = FirebaseDatabase.getInstance().reference
         logoutButton.setOnClickListener(this)
+        buttonBack.setOnClickListener(this)
 
         fun currentUserReference(): DatabaseReference =
             mDatabase.child("users").child(mAuth.currentUser!!.uid)
@@ -69,6 +70,11 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
                 mAuth.signOut()
                 startActivity(Intent(this, LoginActivity::class.java))
                 finish()
+            }
+        }
+        when(view?.id){
+            R.id.buttonBack -> {
+                startActivity(Intent(this, LoginActivity::class.java))
             }
         }
     }
