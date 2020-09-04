@@ -14,7 +14,7 @@
         android:layout_marginTop="75dp"
         android:layout_marginBottom="10dp"
         android:text="@string/register"
-        android:textColor="@color/colorDirtyWhite"
+        android:textColor="@color/colorWhite"
         android:textSize="30sp"
         android:textStyle="bold" />
 

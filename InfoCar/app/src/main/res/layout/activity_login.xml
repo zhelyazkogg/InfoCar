@@ -15,7 +15,7 @@
         android:layout_marginTop="180dp"
         android:layout_marginBottom="10dp"
         android:text="@string/login"
-        android:textColor="@color/colorDirtyWhite"
+        android:textColor="@color/colorWhite"
         android:textSize="30sp"
         android:textStyle="bold" />
 
@@ -53,7 +53,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:text="@string/forgottenPass"
-        android:textColor="@color/colorDirtyWhite" />
+        android:textColor="@color/colorWhite" />
 
     <Button
         android:id="@+id/loginBtn"
