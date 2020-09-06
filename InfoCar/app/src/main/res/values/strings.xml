@@ -34,7 +34,7 @@
         so we can send you an email with a new password.</string>
     <string name="send">Send</string>
     <string name="RegisterVehicle">Register Vehicle</string>
-    <string name="profile">Your Profile</string>
+    <string name="profile">Profile</string>
     <string name="myProfile">My Profile</string>
     <string name="trackFuel">Fuel Prices</string>
     <string name="nearbyPetrolStations">Nearby Petrol Station</string>
@@ -44,5 +44,6 @@
     <string name="myExpenses">My Expenses</string>
     <string name="logout">Logout</string>
     <string name="user">User: </string>
+    <string name="home">Home</string>
 
 </resources>
