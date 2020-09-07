@@ -36,7 +36,7 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
 
         val typeOfVehicle = arrayOf(
             "Sedan",
-            "Combi",
+            "Wagon",
             "Hatchback",
             "Compact",
             "Coupe",
@@ -53,11 +53,13 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
         vehicleTypeRegister.setAdapter(adapter)
 
         val typeOfFuel = arrayOf(
+            "Electric",
             "Diesel",
             "Petrol",
-            "Petrol/Gas",
-            "Gas/Petrol",
+            "Petrol/Natural Gas",
+            "Natural Gas/Petrol",
             "Methane",
+            "Ток",
             "Дизел",
             "Бензин",
             "Бензин/Газ",
@@ -102,9 +104,9 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
         ) {
             Toast.makeText(this, "All fields are required", Toast.LENGTH_SHORT).show()
         } else {
-            val carInfo = mkCarInfo()
+            val carInfo = mkCarInfo(brand)
             val reference = mDatabase.child("carInfo").child(mAuth.currentUser!!.uid)
-            reference.setValue(mkCarInfo()).addOnCompleteListener {
+            reference.setValue(mkCarInfo(brand)).addOnCompleteListener {
                 if (it.isSuccessful) {
                     Toast.makeText(
                         this, "Congratulations and Hello to InfoCar!", Toast.LENGTH_SHORT
@@ -124,10 +126,13 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
 
     }
 
-    private fun mkCarInfo(): CarInfo {
-
-        return CarInfo()
+    private fun mkCarInfo(carBrand: String): CarInfo {
+        val carBrand = mkCarBrand(carBrand)
+        return CarInfo(carBrand = carBrand)
     }
+
+    private fun mkCarBrand(carBrand: String) =
+        carBrand.replace(" ", " ")
 
 
     /*   private fun userDetails(carBrand: String, carModel: String,
