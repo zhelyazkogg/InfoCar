@@ -29,8 +29,8 @@
         android:ems="10"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
-        android:textColor="@color/colorDirtyWhite"
-        android:textColorHint="@color/colorWhite" />
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorDirtyWhite" />
 
     <EditText
         android:id="@+id/passwordRegister"
@@ -43,8 +43,8 @@
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
-        android:textColor="@color/colorDirtyWhite"
-        android:textColorHint="@color/colorWhite" />
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorDirtyWhite" />
 
     <EditText
         android:id="@+id/confPasswordRegister"
@@ -57,8 +57,8 @@
         android:ems="10"
         android:hint="@string/confPassword"
         android:inputType="textPassword"
-        android:textColor="@color/colorDirtyWhite"
-        android:textColorHint="@color/colorWhite" />
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorDirtyWhite" />
 
     <Button
         android:id="@+id/buttonRegister"

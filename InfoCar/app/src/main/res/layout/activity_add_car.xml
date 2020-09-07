@@ -31,8 +31,8 @@
         android:ems="10"
         android:hint="@string/brandCar"
         android:inputType="text"
-        android:textColor="@color/colorDirtyWhite"
-        android:textColorHint="@color/colorWhite" />
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorDirtyWhite" />
 
     <EditText
         android:id="@+id/modelRegister"
@@ -45,8 +45,8 @@
         android:ems="10"
         android:hint="@string/modelCar"
         android:inputType="text"
-        android:textColor="@color/colorDirtyWhite"
-        android:textColorHint="@color/colorWhite" />
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorDirtyWhite" />
 
     <!--    <EditText
             android:id="@+id/vehicleTypeRegister"
@@ -73,8 +73,8 @@
         android:backgroundTint="@color/colorLightGray"
         android:hint="@string/vehicleType"
         android:inputType="text"
-        android:textColor="@color/colorDirtyWhite"
-        android:textColorHint="@color/colorWhite" />
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorDirtyWhite" />
 
     <EditText
         android:id="@+id/engineRegister"
@@ -87,8 +87,8 @@
         android:ems="10"
         android:hint="@string/engineRegister"
         android:inputType="text"
-        android:textColor="@color/colorDirtyWhite"
-        android:textColorHint="@color/colorWhite" />
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorDirtyWhite" />
 
     <EditText
         android:id="@+id/yoursSinceRegister"
@@ -101,8 +101,8 @@
         android:ems="10"
         android:hint="@string/yoursSince"
         android:inputType="datetime"
-        android:textColor="@color/colorDirtyWhite"
-        android:textColorHint="@color/colorWhite" />
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorDirtyWhite" />
 
     <!--<EditText
         android:id="@+id/fuelTypeRegister"
@@ -128,8 +128,8 @@
         android:backgroundTint="@color/colorLightGray"
         android:hint="@string/fuelType"
         android:inputType="text"
-        android:textColor="@color/colorDirtyWhite"
-        android:textColorHint="@color/colorWhite" />
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorDirtyWhite" />
 
     <EditText
         android:id="@+id/kmRegister"
@@ -142,8 +142,8 @@
         android:ems="10"
         android:hint="@string/kmVehicle"
         android:inputType="number"
-        android:textColor="@color/colorDirtyWhite"
-        android:textColorHint="@color/colorWhite" />
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorDirtyWhite" />
 
     <EditText
         android:id="@+id/licensePlateRegister"
@@ -156,8 +156,8 @@
         android:ems="10"
         android:hint="@string/licensePlate"
         android:inputType="textCapCharacters"
-        android:textColor="@color/colorDirtyWhite"
-        android:textColorHint="@color/colorWhite" />
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorDirtyWhite" />
 
     <Button
         android:id="@+id/buttonRegister"
