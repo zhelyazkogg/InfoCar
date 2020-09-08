@@ -16,7 +16,7 @@
     <string name="yoursSince">Yours Since: </string>
     <string name="kmVehicle">Kilometers on Vehicle: </string>
     <string name="licensePlate">License Plate Number: </string>
-    <string name="fuelType">Fuel Type</string>
+    <string name="fuelType">Fuel Type: </string>
     <string name="insurance">Insurance</string>
     <string name="from">From</string>
     <string name="to">To</string>

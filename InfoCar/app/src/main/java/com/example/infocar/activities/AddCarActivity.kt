@@ -56,13 +56,11 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
             "Diesel",
             "Petrol",
             "Petrol/Natural Gas",
-            "Natural Gas/Petrol",
             "Methane",
             "Ток",
             "Дизел",
             "Бензин",
             "Бензин/Газ",
-            "Газ/Бензин",
             "Метан"
         )
         val adapterFuel = ArrayAdapter(this, android.R.layout.simple_list_item_1, typeOfFuel)
@@ -91,9 +89,9 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
         val brand = brandRegister.text.toString()
         val model = modelRegister.text.toString()
         val carType = vehicleTypeRegister.text.toString()
+        val fuelType = fuelTypeRegister.text.toString()
         val engineVolume = engineRegister.text.toString()
         val vehicleRegister = yoursSinceRegister.text.toString()
-        val fuelType = fuelTypeRegister.text.toString()
         val kilometers = kmRegister.text.toString()
         val plateNumber = licensePlateRegister.text.toString()
 
@@ -104,8 +102,8 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
             Toast.makeText(this, "All fields are required", Toast.LENGTH_SHORT).show()
         } else {
             val carInfo = CarInfo(
-                brand, model, carType, engineVolume, vehicleRegister,
-                fuelType, kilometers, plateNumber
+                brand, model, carType, fuelType, engineVolume, vehicleRegister,
+                kilometers, plateNumber
             )
             mDatabase.child("carInfo").child(mAuth.currentUser!!.uid).setValue(carInfo)
                 .addOnSuccessListener {

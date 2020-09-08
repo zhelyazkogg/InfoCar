@@ -76,6 +76,34 @@
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/colorDirtyWhite" />
 
+    <AutoCompleteTextView
+        android:id="@+id/fuelTypeRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:backgroundTint="@color/colorLightGray"
+        android:hint="@string/fuelType"
+        android:inputType="text"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorDirtyWhite" />
+
+
+    <!--<EditText
+        android:id="@+id/fuelTypeRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/fuelType"
+        android:inputType="textAutoComplete"
+        android:textColor="@color/colorWhite"
+        android:backgroundTint="@color/colorYellow"
+        android:textColorHint="@color/colorWhite" />-->
+
     <EditText
         android:id="@+id/engineRegister"
         android:layout_width="match_parent"
@@ -101,33 +129,6 @@
         android:ems="10"
         android:hint="@string/yoursSince"
         android:inputType="datetime"
-        android:textColor="@color/colorWhite"
-        android:textColorHint="@color/colorDirtyWhite" />
-
-    <!--<EditText
-        android:id="@+id/fuelTypeRegister"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:hint="@string/fuelType"
-        android:inputType="textAutoComplete"
-        android:textColor="@color/colorWhite"
-        android:backgroundTint="@color/colorYellow"
-        android:textColorHint="@color/colorWhite" />-->
-
-    <AutoCompleteTextView
-        android:id="@+id/fuelTypeRegister"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="30dp"
-        android:backgroundTint="@color/colorLightGray"
-        android:hint="@string/fuelType"
-        android:inputType="text"
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/colorDirtyWhite" />
 
