@@ -1,7 +1,9 @@
 package com.example.infocar.models
 
 import com.google.firebase.database.Exclude
+import com.google.firebase.database.IgnoreExtraProperties
 
+@IgnoreExtraProperties
 data class Expenses (
     val email: String = "",
     val id: String = "",
@@ -10,7 +12,7 @@ data class Expenses (
     val insuranceExpense: String="",
     val tiresExpense: String="",
     val carReviewExpense: String="",
-    val carMaintenanceExpense: String="",
-    @Exclude val uid: String? = ""
+    val carMaintenanceExpense: String=""
+//    @Exclude val uid: String? = ""
 
 )

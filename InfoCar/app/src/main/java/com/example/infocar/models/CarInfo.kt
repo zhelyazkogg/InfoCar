@@ -12,6 +12,6 @@ data class CarInfo (
     var engineVolume: String="",
     var dateOfRegister: String="",
     var kilometersPassed: String="",
-    var licensePlateNumber: String="",
-    @Exclude val uid: String? = ""
+    var licensePlateNumber: String=""
+//    @Exclude val uid: String? = ""
 )
