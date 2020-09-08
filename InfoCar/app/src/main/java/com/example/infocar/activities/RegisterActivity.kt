@@ -32,39 +32,45 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
         buttonBack.setOnClickListener(this)
 
     }
+
     override fun onClick(v: View?) {
-        when(v?.id){
+        when (v?.id) {
             R.id.buttonRegister -> {
                 onRegister()
             }
         }
 
-        when(v?.id){
+        when (v?.id) {
             R.id.buttonBack -> {
                 startActivity(Intent(this, LoginActivity::class.java))
             }
         }
     }
 
-    private fun onRegister(){
+    private fun onRegister() {
         val email = emailRegister.text.toString()
         val password = passwordRegister.text.toString()
         val confPassword = confPasswordRegister.text.toString()
 
-        if(email.isEmpty() || password.isEmpty() || confPassword.isEmpty()){
-                Toast.makeText(this, "All fields are required", Toast.LENGTH_SHORT).show()
-            if(password.isEmpty())
-                Toast.makeText(this, "Password must be atleast 6 characters", Toast.LENGTH_SHORT).show()
+        if (email.isEmpty() || password.isEmpty() || confPassword.isEmpty()) {
+            Toast.makeText(this, "All fields are required", Toast.LENGTH_SHORT).show()
+            if (password.isEmpty())
+                Toast.makeText(this, "Password must be atleast 6 characters", Toast.LENGTH_SHORT)
+                    .show()
 
         } else {
-            if(password == confPassword){
-                mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener{
-                    if(it.isSuccessful){
+            if (password == confPassword) {
+                mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
+                    if (it.isSuccessful) {
                         val user = mkUser(email)
                         val reference = mDatabase.child("users").child(it.result?.user!!.uid)
                         reference.setValue(user).addOnCompleteListener {
-                            if (it.isSuccessful){
-                                Toast.makeText(this, "First Step of Registration Successful!", Toast.LENGTH_SHORT).show()
+                            if (it.isSuccessful) {
+                                Toast.makeText(
+                                    this,
+                                    "First Step of Registration Successful!",
+                                    Toast.LENGTH_SHORT
+                                ).show()
                                 startActivity(Intent(this, AddCarActivity::class.java))
                                 finish()
                             } else {
@@ -81,11 +87,11 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
-        private fun mkUser(email: String): User {
-            val email = mkUsername(email)
-            return User(email = email)
-        }
+    private fun mkUser(email: String): User {
+        val email = mkUsername(email)
+        return User(email = email)
+    }
 
-        private fun mkUsername(email: String) =
-            email.replace(" ", " ")
+    private fun mkUsername(email: String) =
+        email.replace(" ", " ")
 }

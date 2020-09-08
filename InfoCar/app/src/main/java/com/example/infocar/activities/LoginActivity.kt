@@ -61,9 +61,9 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
 
-        when(v?.id){
-            R.id.forgottenPass ->{
-                startActivity(Intent(this,ForgottenPasswordActivity::class.java))
+        when (v?.id) {
+            R.id.forgottenPass -> {
+                startActivity(Intent(this, ForgottenPasswordActivity::class.java))
             }
         }
     }
