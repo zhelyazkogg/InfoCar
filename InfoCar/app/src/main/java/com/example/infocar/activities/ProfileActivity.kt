@@ -3,6 +3,7 @@ package com.example.infocar.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.ContactsContract
 import android.view.View
 import com.example.infocar.R
 import com.example.infocar.models.CarInfo
@@ -34,9 +35,15 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
             mDatabase.child("users").child(mAuth.currentUser!!.uid)
         currentUserReference().addListenerForSingleValueEvent(
             ValueListenerAdapter {
-                mCarInfo = it.asCarInfo()!!
                 mUser = it.asUser()!!
                 emailOfUser.text = mUser.email
+            })
+
+        fun currentUserVehicleReference(): DatabaseReference =
+            mDatabase.child("carInfo").child(mAuth.currentUser!!.uid)
+        currentUserVehicleReference().addListenerForSingleValueEvent(
+            ValueListenerAdapter {
+                mCarInfo = it.asCarInfo()!!
                 brandFirebase.text = mCarInfo.carBrand
                 modelFirebase.text = mCarInfo.carModel
                 vehicleTypeFirebase.text = mCarInfo.carType
@@ -45,23 +52,8 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
                 yoursSinceFirebase.text = mCarInfo.dateOfRegister
                 kmFirebase.text = mCarInfo.kilometersPassed
                 licensePlateFirebase.text = mCarInfo.licensePlateNumber
-            })
-        /* fun currentUserReference2(): DatabaseReference =
-             mDatabase.child("carInfo").child(mAuth.currentUser!!.uid)
-         currentUserReference2().addListenerForSingleValueEvent(
-             ValueListenerAdapter {
-                 mCarInfo = it.asCarInfo()!!
-             })*/
-
-
-        /*val brandFirebase = findViewById<EditText>(R.id.brandFirebase)
-        val modelFirebase = findViewById<EditText>(R.id.modelFirebase)
-        val vehicleTypeFirebase = findViewById<EditText>(R.id.vehicleTypeFirebase)
-        val fuelFirebase = findViewById<EditText>(R.id.fuelFirebase)
-        val engineFirebase = findViewById<EditText>(R.id.engineFirebase)
-        val yoursSinceFirebase = findViewById<EditText>(R.id.yoursSinceFirebase)
-        val kmFirebase = findViewById<EditText>(R.id.kmFirebase)
-        val licensePlateFirebase = findViewById<EditText>(R.id.licensePlateFirebase)*/
+            }
+        )
     }
 
     override fun onClick(view: View) {
@@ -72,10 +64,27 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
                 finish()
             }
         }
-        when(view?.id){
+        when (view.id) {
             R.id.buttonBack -> {
                 startActivity(Intent(this, LoginActivity::class.java))
             }
         }
     }
 }
+
+/* fun currentUserReference2(): DatabaseReference =
+     mDatabase.child("carInfo").child(mAuth.currentUser!!.uid)
+ currentUserReference2().addListenerForSingleValueEvent(
+     ValueListenerAdapter {
+         mCarInfo = it.asCarInfo()!!
+     })*/
+
+
+/*val brandFirebase = findViewById<EditText>(R.id.brandFirebase)
+val modelFirebase = findViewById<EditText>(R.id.modelFirebase)
+val vehicleTypeFirebase = findViewById<EditText>(R.id.vehicleTypeFirebase)
+val fuelFirebase = findViewById<EditText>(R.id.fuelFirebase)
+val engineFirebase = findViewById<EditText>(R.id.engineFirebase)
+val yoursSinceFirebase = findViewById<EditText>(R.id.yoursSinceFirebase)
+val kmFirebase = findViewById<EditText>(R.id.kmFirebase)
+val licensePlateFirebase = findViewById<EditText>(R.id.licensePlateFirebase)*/

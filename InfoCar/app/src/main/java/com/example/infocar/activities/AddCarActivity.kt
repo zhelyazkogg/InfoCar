@@ -9,7 +9,6 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.example.infocar.R
 import com.example.infocar.models.CarInfo
-import com.example.infocar.utils.ValueListenerAdapter
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -104,43 +103,30 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
         ) {
             Toast.makeText(this, "All fields are required", Toast.LENGTH_SHORT).show()
         } else {
-            val carInfo = mkCarInfo(brand)
-            val reference = mDatabase.child("carInfo").child(mAuth.currentUser!!.uid)
-            reference.setValue(mkCarInfo(brand)).addOnCompleteListener {
-                if (it.isSuccessful) {
+            val carInfo = CarInfo(
+                brand, model, carType, engineVolume, vehicleRegister,
+                fuelType, kilometers, plateNumber
+            )
+            mDatabase.child("carInfo").child(mAuth.currentUser!!.uid).setValue(carInfo)
+                .addOnSuccessListener {
                     Toast.makeText(
                         this, "Congratulations and Hello to InfoCar!", Toast.LENGTH_SHORT
                     ).show()
                     startActivity(Intent(this, MainActivity::class.java))
                     finish()
-                } else {
+                }
+                .addOnFailureListener {
                     Toast.makeText(this, "Error in Sign up", Toast.LENGTH_SHORT).show()
                 }
-            }
         }
-        //saving data in documents
-        //documents name -> CarInfo
-        // mAuth.currentUser!!.uid това в момента е id-то на текущия юзър
-        // val reference = mDatabase.child("carInfo").child(mAuth.currentUser!!.uid)
-        // reference.setValue(carInfo)
-
     }
-
-    private fun mkCarInfo(carBrand: String): CarInfo {
-        val carBrand = mkCarBrand(carBrand)
-        return CarInfo(carBrand = carBrand)
-    }
-
-    private fun mkCarBrand(carBrand: String) =
-        carBrand.replace(" ", " ")
-
-
-    /*   private fun userDetails(carBrand: String, carModel: String,
+}
+/*   private fun userDetails(carBrand: String, carModel: String,
        carType: String, fuelType: String, engineVolume: String, dateOfRegester: String
        kilometersPassed: String, licensePlateNumber: String): CarInfo{
            return(brand = carBrand)
-       }*/
-}
+       }*//*
+}*/
 
 /*val brandRegister = findViewById<EditText>(R.id.brandRegister)
 val modelRegister = findViewById<EditText>(R.id.modelRegister)
