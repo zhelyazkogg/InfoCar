@@ -71,20 +71,3 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 }
-
-/* fun currentUserReference2(): DatabaseReference =
-     mDatabase.child("carInfo").child(mAuth.currentUser!!.uid)
- currentUserReference2().addListenerForSingleValueEvent(
-     ValueListenerAdapter {
-         mCarInfo = it.asCarInfo()!!
-     })*/
-
-
-/*val brandFirebase = findViewById<EditText>(R.id.brandFirebase)
-val modelFirebase = findViewById<EditText>(R.id.modelFirebase)
-val vehicleTypeFirebase = findViewById<EditText>(R.id.vehicleTypeFirebase)
-val fuelFirebase = findViewById<EditText>(R.id.fuelFirebase)
-val engineFirebase = findViewById<EditText>(R.id.engineFirebase)
-val yoursSinceFirebase = findViewById<EditText>(R.id.yoursSinceFirebase)
-val kmFirebase = findViewById<EditText>(R.id.kmFirebase)
-val licensePlateFirebase = findViewById<EditText>(R.id.licensePlateFirebase)*/
