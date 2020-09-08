@@ -3,12 +3,13 @@ package com.example.infocar.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.ContactsContract
 import android.view.View
 import com.example.infocar.R
 import com.example.infocar.models.CarInfo
 import com.example.infocar.models.User
 import com.example.infocar.utils.ValueListenerAdapter
+import com.example.infocar.utils.asCarInfo
+import com.example.infocar.utils.asUser
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase

@@ -1,4 +1,4 @@
-package com.example.infocar.activities
+package com.example.infocar.utils
 
 import android.content.Context
 import android.widget.Toast
