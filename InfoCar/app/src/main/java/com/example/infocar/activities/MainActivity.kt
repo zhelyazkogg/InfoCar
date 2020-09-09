@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
         when (v.id) {
             R.id.mySettingsActivity -> {
-//            startActivity(Intent(this, SettingsActivity::class.java))
+            startActivity(Intent(this, SettingsActivity::class.java))
             }
         }
     }
