@@ -23,6 +23,7 @@ class SettingsActivity : AppCompatActivity(), View.OnClickListener {
 
         val changePassEmail = findViewById<EditText>(R.id.changePassEmail)
         btnBack.setOnClickListener(this)
+        logoutButton.setOnClickListener(this)
 
         changePassSendBtn.setOnClickListener {
             val email = changePassEmail.text.toString().trim()
@@ -50,6 +51,14 @@ class SettingsActivity : AppCompatActivity(), View.OnClickListener {
 
 
     override fun onClick(v: View?) {
+        when (v?.id) {
+            R.id.logoutButton -> {
+                mAuth.signOut()
+                startActivity(Intent(this, LoginActivity::class.java))
+                finish()
+            }
+        }
+
         when (v?.id) {
             R.id.btnBack -> {
                 startActivity(Intent(this, MainActivity::class.java))

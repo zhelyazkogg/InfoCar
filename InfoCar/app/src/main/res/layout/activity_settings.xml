@@ -15,8 +15,8 @@
         android:layout_marginTop="30dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:textAlignment="center"
         android:text="@string/changePassword"
+        android:textAlignment="center"
         android:textColor="@color/colorWhite"
         android:textSize="15sp" />
 
@@ -49,14 +49,24 @@
         android:id="@+id/deleteAccount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="15dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:text="@string/deleteAccount"
+        android:textAlignment="center"
         android:textColor="@color/coolRed"
         android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/rounded_button"
+        android:text="@string/logout" />
 
     <Button
         android:id="@+id/btnBack"
