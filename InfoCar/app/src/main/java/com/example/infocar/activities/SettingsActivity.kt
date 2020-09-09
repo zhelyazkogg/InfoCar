@@ -10,6 +10,7 @@ import android.widget.Toast
 import com.example.infocar.R
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_settings.*
+
 class SettingsActivity : AppCompatActivity(), View.OnClickListener {
 
     lateinit var mAuth: FirebaseAuth
@@ -23,28 +24,28 @@ class SettingsActivity : AppCompatActivity(), View.OnClickListener {
         val changePassEmail = findViewById<EditText>(R.id.changePassEmail)
         btnBack.setOnClickListener(this)
 
-            changePassSendBtn.setOnClickListener {
-                val email = changePassEmail.text.toString().trim()
+        changePassSendBtn.setOnClickListener {
+            val email = changePassEmail.text.toString().trim()
 
-                if (TextUtils.isEmpty(email)) {
-                    changePassEmail.error = "Write down the email with which you registered."
-                } else {
-                    mAuth.sendPasswordResetEmail(email)
-                        .addOnCompleteListener { task ->
-                            if (task.isSuccessful) {
-                                Toast.makeText(
-                                    this@SettingsActivity,
-                                    "Check email to reset your password", Toast.LENGTH_SHORT
-                                ).show()
-                            } else {
-                                Toast.makeText(
-                                    this@SettingsActivity,
-                                    "Failed to send requested password email", Toast.LENGTH_SHORT
-                                ).show()
-                            }
+            if (TextUtils.isEmpty(email)) {
+                changePassEmail.error = "Write down the email with which you registered."
+            } else {
+                mAuth.sendPasswordResetEmail(email)
+                    .addOnCompleteListener { task ->
+                        if (task.isSuccessful) {
+                            Toast.makeText(
+                                this@SettingsActivity,
+                                "Check email to reset your password", Toast.LENGTH_SHORT
+                            ).show()
+                        } else {
+                            Toast.makeText(
+                                this@SettingsActivity,
+                                "Failed to send requested password email", Toast.LENGTH_SHORT
+                            ).show()
                         }
-                }
+                    }
             }
+        }
     }
 
 
