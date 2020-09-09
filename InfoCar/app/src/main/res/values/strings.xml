@@ -8,6 +8,7 @@
     <string name="register">Register</string>
     <string name="continueRegister">Continue</string>
     <string name="forgottenPass">Forgotten Password?</string>
+    <string name="changePassword">Change Password</string>
     <string name="modelCar">Model: </string>
     <string name="brandCar">Brand: </string>
     <string name="vehicleType">Vehicle Type: </string>
@@ -45,7 +46,7 @@
     <string name="logout">Logout</string>
     <string name="user">User: </string>
     <string name="home">Home</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="deleteAccount">Delete Account</string>
 
 </resources>

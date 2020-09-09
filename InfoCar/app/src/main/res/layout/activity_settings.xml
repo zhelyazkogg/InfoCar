@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGraphite"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".activities.SettingsActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/changePassword"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/forgottenPassText"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite" />
+
+    <EditText
+        android:id="@+id/forgottenPassEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:backgroundTint="@color/colorLightGray"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/colorDirtyWhite"
+        android:textColorHint="@color/colorWhite" />
+
+    <Button
+        android:id="@+id/forgottenPassSending"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/rounded_button"
+        android:text="@string/send" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/deleteAccount"
+        android:textColor="@color/coolRed"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/forgottenPassBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/rounded_button"
+        android:text="@string/back" />
+
+</LinearLayout>
