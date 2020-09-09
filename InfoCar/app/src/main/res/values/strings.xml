@@ -48,5 +48,6 @@
     <string name="home">Home</string>
 
     <string name="deleteAccount">Delete Account</string>
+    <string name="notificationBtn">Create Notification</string>
 
 </resources>

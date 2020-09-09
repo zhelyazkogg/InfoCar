@@ -30,6 +30,7 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
         mAuth = FirebaseAuth.getInstance()
         mDatabase = FirebaseDatabase.getInstance().reference
         buttonBack.setOnClickListener(this)
+        notificationBtn.setOnClickListener(this)
 
         fun currentUserReference(): DatabaseReference =
             mDatabase.child("users").child(mAuth.currentUser!!.uid)
@@ -56,10 +57,16 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
         )
     }
 
-    override fun onClick(view: View) {
-        when (view.id) {
+    override fun onClick(v: View?) {
+        when (v?.id) {
             R.id.buttonBack -> {
                 startActivity(Intent(this, LoginActivity::class.java))
+            }
+        }
+
+        when(v?.id){
+            R.id.notificationBtn -> {
+//                startActivity(Intent(this, NotificationActivity::class.java))
             }
         }
     }
