@@ -36,7 +36,7 @@ class SettingsActivity : AppCompatActivity(), View.OnClickListener {
                         if (task.isSuccessful) {
                             Toast.makeText(
                                 this@SettingsActivity,
-                                "Check email to reset your password", Toast.LENGTH_SHORT
+                                "Check your email to reset your password", Toast.LENGTH_SHORT
                             ).show()
                         } else {
                             Toast.makeText(
