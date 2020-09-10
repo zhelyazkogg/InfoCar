@@ -64,9 +64,9 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
 
-        when(v?.id){
+        when (v?.id) {
             R.id.notificationBtn -> {
-//                startActivity(Intent(this, NotificationActivity::class.java))
+                startActivity(Intent(this, NotificationActivity::class.java))
             }
         }
     }

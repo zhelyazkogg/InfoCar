@@ -9,6 +9,8 @@ data class Reminders(
     val carHullInsurance: String = "", // автокаско на автомобила
     val carInspection: String = "", // преглед на автомобила
     val carTax: String = "", // данък на автомобила
+    val dateOfReminder: String = "", // дата за алармата
+
     @Exclude val uid: String = ""
 
 )

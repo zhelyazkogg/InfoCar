@@ -50,4 +50,8 @@
     <string name="deleteAccount">Delete Account</string>
     <string name="notificationBtn">Create Notification</string>
 
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="date">Date</string>
+
 </resources>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.infocar">
+    package="com.example.infocar" >
 
     <application
         android:allowBackup="true"
@@ -8,8 +8,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".activities.NotificationActivity"></activity>
+        android:theme="@style/AppTheme" >
+        <activity android:name=".activities.ExpensesActivity" >
+        </activity>
+        <activity android:name=".activities.NotificationActivity" />
         <activity android:name=".activities.SettingsActivity" />
         <activity android:name=".activities.FuelActivity" />
         <activity android:name=".activities.LawActivity" />
@@ -18,7 +20,7 @@
         <activity android:name=".activities.ForgottenPasswordActivity" />
         <activity android:name=".activities.ProfileActivity" />
         <activity android:name=".activities.RegisterActivity" />
-        <activity android:name=".activities.LoginActivity">
+        <activity android:name=".activities.LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
