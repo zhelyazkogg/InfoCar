@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.infocar.R
-import com.example.infocar.models.CarInfo
+import com.example.infocar.models.UserCarInfo
 import com.example.infocar.models.User
 import com.example.infocar.utils.ValueListenerAdapter
 import com.example.infocar.utils.asCarInfo
@@ -19,7 +19,7 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var mAuth: FirebaseAuth
     private lateinit var mDatabase: DatabaseReference
-    private lateinit var mCarInfo: CarInfo
+    private lateinit var mUserCarInfo: UserCarInfo
     private lateinit var mUser: User
 
 
@@ -41,18 +41,18 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
             })
 
         fun currentUserVehicleReference(): DatabaseReference =
-            mDatabase.child("carInfo").child(mAuth.currentUser!!.uid)
+            mDatabase.child("userCarInfo").child(mAuth.currentUser!!.uid)
         currentUserVehicleReference().addListenerForSingleValueEvent(
             ValueListenerAdapter {
-                mCarInfo = it.asCarInfo()!!
-                brandFirebase.text = mCarInfo.carBrand
-                modelFirebase.text = mCarInfo.carModel
-                vehicleTypeFirebase.text = mCarInfo.carType
-                fuelFirebase.text = mCarInfo.fuelType
-                engineFirebase.text = mCarInfo.engineVolume
-                yoursSinceFirebase.text = mCarInfo.dateOfRegister
-                kmFirebase.text = mCarInfo.kilometersPassed
-                licensePlateFirebase.text = mCarInfo.licensePlateNumber
+                mUserCarInfo = it.asCarInfo()!!
+                brandFirebase.text = mUserCarInfo.carBrand
+                modelFirebase.text = mUserCarInfo.carModel
+                vehicleTypeFirebase.text = mUserCarInfo.carType
+                fuelFirebase.text = mUserCarInfo.fuelType
+                engineFirebase.text = mUserCarInfo.engineVolume
+                yoursSinceFirebase.text = mUserCarInfo.dateOfRegister
+                kmFirebase.text = mUserCarInfo.kilometersPassed
+                licensePlateFirebase.text = mUserCarInfo.licensePlateNumber
             }
         )
     }

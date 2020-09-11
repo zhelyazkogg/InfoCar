@@ -19,23 +19,29 @@
         android:backgroundTint="@color/colorLightGray"
         android:ems="10"
         android:hint="@string/title"
-        android:inputType="textEmailAddress"
+        android:inputType="text"
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/colorDirtyWhite" />
 
     <CalendarView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:selectedWeekBackgroundColor="#FFFFFF"
-        android:unfocusedMonthDateColor="#FFFFFF"
-        android:weekNumberColor="#FFFFFF"
-        android:weekSeparatorLineColor="#FFFFFF" />
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp" />
 
     <EditText
         android:id="@+id/descriptionNotification"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:backgroundTint="@color/colorLightGray"
         android:ems="10"
+        android:hint="@string/description"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorDirtyWhite"
         android:gravity="start|top"
         android:inputType="textMultiLine" />
 

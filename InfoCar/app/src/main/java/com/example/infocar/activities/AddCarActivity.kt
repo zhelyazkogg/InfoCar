@@ -8,7 +8,7 @@ import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.example.infocar.R
-import com.example.infocar.models.CarInfo
+import com.example.infocar.models.UserCarInfo
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -101,11 +101,11 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
         ) {
             Toast.makeText(this, "All fields are required", Toast.LENGTH_SHORT).show()
         } else {
-            val carInfo = CarInfo(
+            val carInfo = UserCarInfo(
                 brand, model, carType, fuelType, engineVolume, vehicleRegister,
                 kilometers, plateNumber
             )
-            mDatabase.child("carInfo").child(mAuth.currentUser!!.uid).setValue(carInfo)
+            mDatabase.child("userCarInfo").child(mAuth.currentUser!!.uid).setValue(carInfo)
                 .addOnSuccessListener {
                     Toast.makeText(
                         this, "Congratulations and Hello to InfoCar!", Toast.LENGTH_SHORT

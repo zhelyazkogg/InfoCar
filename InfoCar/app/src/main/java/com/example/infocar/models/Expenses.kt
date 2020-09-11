@@ -5,8 +5,6 @@ import com.google.firebase.database.IgnoreExtraProperties
 
 @IgnoreExtraProperties
 data class Expenses(
-    val email: String = "",
-    val id: String = "",
     val fuelExpense: String = "",
     val partsExpense: String = "",
     val insuranceExpense: String = "",

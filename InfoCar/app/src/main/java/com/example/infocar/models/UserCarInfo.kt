@@ -4,7 +4,7 @@ import com.google.firebase.database.Exclude
 import com.google.firebase.database.IgnoreExtraProperties
 
 @IgnoreExtraProperties
-data class CarInfo(
+data class UserCarInfo(
     var carBrand: String = "",
     var carModel: String = "",
     var carType: String = "",
