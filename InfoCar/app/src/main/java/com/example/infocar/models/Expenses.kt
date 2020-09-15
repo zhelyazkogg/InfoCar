@@ -7,8 +7,8 @@ import java.util.*
 @IgnoreExtraProperties
 data class Expenses(
     val title: String = "",
-    val date: Date,
-    val amount: Int,
+    val date: String = "",
+    val amount: String = "",
     val description: String = "",
     @Exclude val uid: String? = ""
 )

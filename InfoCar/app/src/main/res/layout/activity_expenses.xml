@@ -39,7 +39,7 @@
         android:textColorHint="@color/colorDirtyWhite" />
 
     <EditText
-        android:id="@+id/kmRegister"
+        android:id="@+id/amountExpense"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -53,7 +53,7 @@
         android:textColorHint="@color/colorDirtyWhite" />
 
     <EditText
-        android:id="@+id/descriptionNotification"
+        android:id="@+id/descriptionExpense"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -67,15 +67,26 @@
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/colorDirtyWhite" />
 
-  <Button
-      android:id="@+id/addExpense"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center"
-      android:layout_marginLeft="30dp"
-      android:layout_marginTop="100dp"
-      android:layout_marginRight="30dp"
-      android:background="@drawable/rounded_button"
-      android:text="@string/add" />
+    <Button
+        android:id="@+id/addExpense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/rounded_button"
+        android:text="@string/add" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/rounded_button"
+        android:text="@string/back" />
 
 </LinearLayout>
