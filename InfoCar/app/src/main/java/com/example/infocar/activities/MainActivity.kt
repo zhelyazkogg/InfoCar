@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         mAuth = FirebaseAuth.getInstance()
 
         myProfileActivity.setOnClickListener(this)
-        myFuelActivity.setOnClickListener(this)
+        myExpensesActivity.setOnClickListener(this)
         myMapActivity.setOnClickListener(this)
         myLawActivity.setOnClickListener(this)
         myShopActivity.setOnClickListener(this)
@@ -33,8 +33,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
         when (v.id) {
-            R.id.myFuelActivity -> {
-                startActivity(Intent(this, FuelActivity::class.java))
+            R.id.myExpensesActivity -> {
+                startActivity(Intent(this, ExpensesActivity::class.java))
             }
         }
         when (v.id) {
