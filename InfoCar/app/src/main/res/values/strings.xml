@@ -56,4 +56,7 @@
     <string name="amount">Amount</string>
     <string name="add">Add</string>
 
+    <string name="englishLanguage">EN</string>
+    <string name="bulgarianLanguage">BG</string>
+
 </resources>

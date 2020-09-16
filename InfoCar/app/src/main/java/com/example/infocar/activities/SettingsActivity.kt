@@ -24,6 +24,8 @@ class SettingsActivity : AppCompatActivity(), View.OnClickListener {
         val changePassEmail = findViewById<EditText>(R.id.changePassEmail)
         btnBack.setOnClickListener(this)
         logoutButton.setOnClickListener(this)
+        englishBtn.setOnClickListener(this)
+        bulgarianBtn.setOnClickListener(this)
 
         changePassSendBtn.setOnClickListener {
             val email = changePassEmail.text.toString().trim()
@@ -49,6 +51,7 @@ class SettingsActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+    
 
     override fun onClick(v: View?) {
         when (v?.id) {
@@ -62,6 +65,17 @@ class SettingsActivity : AppCompatActivity(), View.OnClickListener {
         when (v?.id) {
             R.id.btnBack -> {
                 startActivity(Intent(this, MainActivity::class.java))
+            }
+        }
+
+        when (v?.id) {
+            R.id.englishBtn -> {
+//                englishLanguage()
+            }
+        }
+        when (v?.id) {
+            R.id.bulgarianBtn -> {
+//               bulgarianLanguage()
             }
         }
     }

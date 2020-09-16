@@ -58,6 +58,28 @@
         android:textColor="@color/coolRed"
         android:textSize="15sp" />
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/englishBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:text="@string/englishLanguage" />
+
+        <Button
+            android:id="@+id/bulgarianBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_button"
+            android:text="@string/bulgarianLanguage" />
+    </LinearLayout>
+
     <Button
         android:id="@+id/logoutButton"
         android:layout_width="match_parent"
