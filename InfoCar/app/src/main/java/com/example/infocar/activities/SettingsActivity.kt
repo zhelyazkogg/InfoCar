@@ -51,8 +51,6 @@ class SettingsActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
-    
-
     override fun onClick(v: View?) {
         when (v?.id) {
             R.id.logoutButton -> {

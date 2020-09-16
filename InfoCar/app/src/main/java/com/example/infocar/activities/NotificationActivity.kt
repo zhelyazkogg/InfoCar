@@ -35,20 +35,20 @@ class NotificationActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
-        when(v?.id){
+        when (v?.id) {
             R.id.addNotification -> {
                 onAddNotification()
             }
         }
 
-        when(v?.id){
+        when (v?.id) {
             R.id.buttonBack -> {
                 startActivity(Intent(this, ProfileActivity::class.java))
             }
         }
     }
 
-    private fun onAddNotification(){
+    private fun onAddNotification() {
         val title = titleNotification.text.toString()
         // val date = setDateNotification. нещо си
         val description = descriptionNotification.text.toString()

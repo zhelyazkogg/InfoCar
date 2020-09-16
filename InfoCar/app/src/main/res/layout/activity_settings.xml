@@ -74,8 +74,8 @@
             android:id="@+id/bulgarianBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
             android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
             android:background="@drawable/rounded_button"
             android:text="@string/bulgarianLanguage" />
     </LinearLayout>
