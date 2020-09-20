@@ -59,4 +59,7 @@
     <string name="englishLanguage">EN</string>
     <string name="bulgarianLanguage">BG</string>
 
+    <string name="addExpenses">Add Expense</string>
+    <string name="addNotification">Add Notification</string>
+
 </resources>
