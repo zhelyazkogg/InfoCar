@@ -66,9 +66,7 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
         val adapterFuel = ArrayAdapter(this, android.R.layout.simple_list_item_1, typeOfFuel)
         fuelTypeRegister.threshold = 1
         fuelTypeRegister.setAdapter(adapterFuel)
-
-        /*fun currentUserReference(): DatabaseReference =
-            mDatabase.child("users").child(mAuth.currentUser!!.uid)*/
+        
     }
 
     override fun onClick(v: View?) {
