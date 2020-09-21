@@ -8,10 +8,15 @@ import android.widget.Toast
 import com.example.infocar.R
 import com.example.infocar.models.User
 import com.example.infocar.models.UserCarInfo
+import com.example.infocar.utils.ValueListenerAdapter
+import com.example.infocar.utils.asCarInfo
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import kotlinx.android.synthetic.main.activity_profile.*
 import kotlinx.android.synthetic.main.activity_update_data.*
+import kotlinx.android.synthetic.main.activity_update_data.buttonBack
+import kotlinx.android.synthetic.main.activity_update_data.view.*
 
 class UpdateDataActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -33,7 +38,7 @@ class UpdateDataActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when (v?.id) {
             R.id.buttonUpdate -> {
-//                update()
+                updateInfo()
             }
         }
 
@@ -44,6 +49,38 @@ class UpdateDataActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+    private fun updateInfo() {
+        val brand = brandUpdate.text.toString()
+        val model = modelUpdate.text.toString()
+        val carType = vehicleTypeUpdate.text.toString()
+        val fuelType = fuelTypeUpdate.text.toString()
+        val engineVolume = engineUpdate.text.toString()
+        val yoursSince = yoursSinceUpdate.text.toString()
+        val kmUpdate = kmUpdate.text.toString()
+        val plateNumber = licensePlateUpdate.text.toString()
 
+        if (brand.isEmpty() || model.isEmpty() || carType.isEmpty() || engineVolume.isEmpty()
+            || yoursSince.isEmpty() || fuelType.isEmpty() || kmUpdate.isEmpty()
+            || plateNumber.isEmpty()
+        ) {
+            Toast.makeText(this, "All fields are required.", Toast.LENGTH_SHORT).show()
+        } else {
+            val carInfo = UserCarInfo(
+                brand, model, carType, fuelType, engineVolume, yoursSince,
+                kmUpdate, plateNumber
+            )
+            mDatabase.child("userCarInfo").child(mAuth.currentUser!!.uid).setValue(carInfo)
+                .addOnSuccessListener {
+                    Toast.makeText(
+                        this, "Successfully Updated!", Toast.LENGTH_SHORT
+                    ).show()
+                    startActivity(Intent(this, ProfileActivity::class.java))
+                    finish()
+                }
+                .addOnFailureListener {
+                    Toast.makeText(this, "Unsuccessful update.", Toast.LENGTH_SHORT).show()
+                }
+        }
+    }
 
 }

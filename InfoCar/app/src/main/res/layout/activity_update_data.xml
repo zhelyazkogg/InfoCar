@@ -40,7 +40,7 @@
         android:textSize="15sp" />
 
     <EditText
-        android:id="@+id/updateKmVehicle"
+        android:id="@+id/brandUpdate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -48,8 +48,97 @@
         android:layout_marginRight="30dp"
         android:backgroundTint="@color/colorLightGray"
         android:ems="10"
-        android:hint="@string/kmVehicle"
+        android:hint="@string/brandCar"
         android:inputType="text"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorDirtyWhite" />
+
+    <EditText
+        android:id="@+id/modelUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:backgroundTint="@color/colorLightGray"
+        android:ems="10"
+        android:hint="@string/modelCar"
+        android:inputType="text"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorDirtyWhite" />
+
+    <AutoCompleteTextView
+        android:id="@+id/vehicleTypeUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:backgroundTint="@color/colorLightGray"
+        android:hint="@string/vehicleType"
+        android:inputType="text"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorDirtyWhite" />
+
+    <AutoCompleteTextView
+        android:id="@+id/fuelTypeUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:backgroundTint="@color/colorLightGray"
+        android:hint="@string/fuelType"
+        android:inputType="text"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorDirtyWhite" />
+
+    <EditText
+        android:id="@+id/engineUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:backgroundTint="@color/colorLightGray"
+        android:ems="10"
+        android:hint="@string/engineRegister"
+        android:inputType="text"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorDirtyWhite" />
+
+    <EditText
+        android:id="@+id/yoursSinceUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:backgroundTint="@color/colorLightGray"
+        android:ems="10"
+        android:hint="@string/yoursSince"
+        android:inputType="datetime"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorDirtyWhite" />
+
+    <EditText
+        android:id="@+id/kmUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:backgroundTint="@color/colorLightGray"
+        android:ems="10"
+        android:hint="@string/kmVehicle"
+        android:inputType="number"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorDirtyWhite" />
+
+    <EditText
+        android:id="@+id/licensePlateUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:backgroundTint="@color/colorLightGray"
+        android:ems="10"
+        android:hint="@string/licensePlate"
+        android:inputType="textCapCharacters"
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/colorDirtyWhite" />
 
@@ -59,7 +148,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="30dp"
         android:background="@drawable/rounded_button"
         android:text="@string/update" />
@@ -76,7 +165,7 @@
         android:background="@drawable/rounded_button"
         android:text="@string/back" />
 
-    <TextView
+    <!--<TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -85,6 +174,6 @@
         android:textAlignment="center"
         android:textColor="@color/colorWhite"
         android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textStyle="bold" />-->
 
 </LinearLayout>
