@@ -29,10 +29,32 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/updateDataInfo"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/brandRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:backgroundTint="@color/colorLightGray"
+        android:ems="10"
+        android:hint="@string/kmVehicle"
+        android:inputType="text"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorDirtyWhite" />
 
     <Button
-        android:id="@+id/update"
+        android:id="@+id/buttonUpdate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

@@ -51,6 +51,9 @@
     <string name="notificationBtn">Create Notification</string>
     <string name="updateData">Update Data</string>
     <string name="update">Update</string>
+    <string name="updateDataInfo">In this page you can update the kilometers on your vehicle.
+        Just type the new number in the field below and press the Update button</string>
+
 
     <string name="title">Title</string>
     <string name="description">Description</string>
