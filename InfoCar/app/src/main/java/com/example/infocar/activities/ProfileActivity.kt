@@ -5,17 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.infocar.R
-import com.example.infocar.models.Expenses
 import com.example.infocar.models.UserCarInfo
 import com.example.infocar.models.User
 import com.example.infocar.utils.ValueListenerAdapter
 import com.example.infocar.utils.asCarInfo
-import com.example.infocar.utils.asExpenses
 import com.example.infocar.utils.asUser
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.main.activity_expenses.*
 import kotlinx.android.synthetic.main.activity_profile.*
 import kotlinx.android.synthetic.main.activity_profile.buttonBack
 
@@ -25,8 +22,6 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var mDatabase: DatabaseReference
     private lateinit var mUserCarInfo: UserCarInfo
     private lateinit var mUser: User
-    private lateinit var mUserExpenses: Expenses
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +30,6 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
         mAuth = FirebaseAuth.getInstance()
         mDatabase = FirebaseDatabase.getInstance().reference
         buttonBack.setOnClickListener(this)
-        notificationBtn.setOnClickListener(this)
         updateBtn.setOnClickListener(this)
 
         fun currentUserReference(): DatabaseReference =
@@ -70,11 +64,6 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
 
-        when (v?.id) {
-            R.id.notificationBtn -> {
-                startActivity(Intent(this, NotificationActivity::class.java))
-            }
-        }
         when (v?.id) {
             R.id.updateBtn -> {
                 startActivity(Intent(this, UpdateDataActivity::class.java))
