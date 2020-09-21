@@ -50,6 +50,7 @@
     <string name="deleteAccount">Delete Account</string>
     <string name="notificationBtn">Create Notification</string>
     <string name="updateData">Update Data</string>
+    <string name="update">Update</string>
 
     <string name="title">Title</string>
     <string name="description">Description</string>

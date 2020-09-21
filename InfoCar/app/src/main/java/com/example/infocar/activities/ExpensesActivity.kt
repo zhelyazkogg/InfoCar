@@ -53,7 +53,8 @@ class ExpensesActivity : AppCompatActivity(), View.OnClickListener {
         val description = descriptionExpense.text.toString()
 
         if (title.isEmpty() || date.isEmpty() || amount.isEmpty()) {
-            Toast.makeText(this, "Title, Date and Amount fields are required!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Title, Date and Amount fields are required!", Toast.LENGTH_SHORT)
+                .show()
         } else {
             val expenses = Expenses(title, date, amount, description)
 

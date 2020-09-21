@@ -31,6 +31,7 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
         mDatabase = FirebaseDatabase.getInstance().reference
         buttonBack.setOnClickListener(this)
         notificationBtn.setOnClickListener(this)
+        updateBtn.setOnClickListener(this)
 
         fun currentUserReference(): DatabaseReference =
             mDatabase.child("users").child(mAuth.currentUser!!.uid)
@@ -67,6 +68,11 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
         when (v?.id) {
             R.id.notificationBtn -> {
                 startActivity(Intent(this, NotificationActivity::class.java))
+            }
+        }
+        when (v?.id) {
+            R.id.updateBtn -> {
+                startActivity(Intent(this, UpdateDataActivity::class.java))
             }
         }
     }
