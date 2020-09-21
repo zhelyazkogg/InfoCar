@@ -40,7 +40,7 @@
         android:textSize="15sp" />
 
     <EditText
-        android:id="@+id/brandRegister"
+        android:id="@+id/updateKmVehicle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -75,5 +75,16 @@
         android:layout_marginRight="30dp"
         android:background="@drawable/rounded_button"
         android:text="@string/back" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/underMaintenance"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
 </LinearLayout>

@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import com.example.infocar.R
 import com.example.infocar.models.User
 import com.example.infocar.models.UserCarInfo
@@ -17,7 +18,6 @@ class UpdateDataActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var mAuth: FirebaseAuth
     private lateinit var mDatabase: DatabaseReference
     private lateinit var mUserCarInfo: UserCarInfo
-    private lateinit var mUser: User
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +31,7 @@ class UpdateDataActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
-        when(v?.id){
+        when (v?.id) {
             R.id.buttonUpdate -> {
 //                update()
             }
@@ -43,4 +43,7 @@ class UpdateDataActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
     }
+
+
+
 }

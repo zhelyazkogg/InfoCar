@@ -8,17 +8,22 @@ import android.view.View
 import android.widget.Toast
 import com.example.infocar.R
 import com.example.infocar.models.Expenses
+import com.example.infocar.utils.ValueListenerAdapter
+import com.example.infocar.utils.asCarInfo
+import com.example.infocar.utils.asExpenses
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_expenses.*
+import kotlinx.android.synthetic.main.activity_expenses.buttonBack
+import kotlinx.android.synthetic.main.activity_profile.*
 
 class ExpensesActivity : AppCompatActivity(), View.OnClickListener {
 
     lateinit var mProgressBar: ProgressDialog
-    private val TAG = "ExpensesActivity"
     private lateinit var mAuth: FirebaseAuth
     private lateinit var mDatabase: DatabaseReference
+    private lateinit var mUserExpenses: Expenses
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +35,19 @@ class ExpensesActivity : AppCompatActivity(), View.OnClickListener {
 
         addExpense.setOnClickListener(this)
         buttonBack.setOnClickListener(this)
+
+        fun currentUserExpensesReference(): DatabaseReference =
+            mDatabase.child("userExpenses").child(mAuth.currentUser!!.uid)
+        currentUserExpensesReference().addListenerForSingleValueEvent(
+            ValueListenerAdapter {
+                mUserExpenses = it.asExpenses()!!
+                expenseTitle.text = mUserExpenses.title
+                expenseDate.text = mUserExpenses.date
+                expenseAmount.text = mUserExpenses.amount
+                expenseDescription.text = mUserExpenses.description
+            }
+        )
+
     }
 
     override fun onClick(v: View?) {
