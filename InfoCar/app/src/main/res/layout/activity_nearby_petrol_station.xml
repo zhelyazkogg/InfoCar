@@ -7,7 +7,7 @@
     android:layout_gravity="center_vertical"
     android:background="@color/colorGraphite"
     android:orientation="vertical"
-    tools:context=".activities.LawActivity">
+    tools:context=".activities.NearbyPetrolStation">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:text="@string/lawsAndFines"
+            android:text="@string/nearbyPetrolStations"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
             android:textSize="30sp"

@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
         when (v.id) {
             R.id.myMapActivity -> {
-//                startActivity(Intent(this, MapActivity::class.java))
+                startActivity(Intent(this, NearbyPetrolStation::class.java))
             }
         }
         when (v.id) {
