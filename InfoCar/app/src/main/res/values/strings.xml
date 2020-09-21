@@ -64,4 +64,6 @@
     <string name="addExpenses">Add Expense</string>
     <string name="addNotification">Add Notification</string>
 
+    <string name="underMaintenance">THIS PAGE IS CURRENTLY UNDER MAINTENANCE.</string>
+
 </resources>
