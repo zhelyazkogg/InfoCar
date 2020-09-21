@@ -69,4 +69,100 @@
 
     <string name="underMaintenance">THIS PAGE IS CURRENTLY UNDER MAINTENANCE.</string>
 
+    <string name="mechanicsHelpGuide">While this page is being updated to show more information about the surrounding area filled with car shops and mechanics,
+        we decided to give you 5 DIY car maintenance tips that you can handle alone.</string>
+    <string name="numberOneTip">1. AIR FILTER\n\n
+        Tools You Need: None\n
+        Time to Complete: 10 minutes\n
+        Estimated Cost: 10-20BGN\n\n
+    You need a new air filter for your car every 12 months or 10 000km, whichever comes first.
+        You can pay a mechanic and give up your car for a day, or you can replace your air filter at home in about ten minutes.\n\n
+    1. First, find your filter under the hood of your car. It’s in a black rectangular box with metal clips on the side.
+        Check your owner’s manual if you don’t see it as soon as you pop the hood.\n
+    2. Open up the casing, and check out how the air filter fits inside it. Make a note of which way the filter faces.\n
+    3. Remove the old air filter, and insert the new one exactly how the old one sat.\n
+    4. Remember to close the metal clips when you’re done.\n\n</string>
+
+    <string name="numberTwoTip">2. WINDSHIELD WIPERS\n\n
+    Tools You Need: None\n
+Time to Complete: 10 minutes\n
+Estimated Cost: 15 - 30BGN depends on the quality of the wipers\n\n
+    I laugh when I visit my local auto parts store and see that they’re having a sale on wiper blades, offering free installation.
+        The free installation only applies if I buy the most expensive blades in the store, so I started changing them on my own.
+        You’ll need new wiper blades after about six months or a year of use.
+        You probably tend to go a little longer before asking your mechanic to change them,
+        but you shouldn’t deal with the danger of streaking while you put off an inconvenient trip to the auto shop.
+        Wiper blade setup differs quite a bit from car to car, so you may have to follow a few different steps according to your owner’s manual.
+        Basically, the process is similar to changing your air filter:\n\n
+    1. Lift the blades, as if you were washing your windshield by hand, and remove the old blades.\n
+    2. Pay attention to how the old blades connect to the metal arms.\n
+    3. On most models, you’ll see a tab on the underside of the wiper. Push the tab to remove the old blade.\n
+    4. Attach the new blades, being careful not to bend the wiper arms or scratch your windshield.
+        Line everything up and make sure the new ones are secure and tight.\n\n</string>
+
+    <string name="numberThreeTip">3. OIL AND OIL FILTER\n\n
+    Tools You Need: Ratchet, oil filter wrench, oil pan, funnel\n
+    Time to Complete: 30 to 45 minutes\n
+    Estimated Cost: 50-60BGN\n\n
+    Experts say you should change your oil every 7 000km, but with better products and cars operating more efficiently,
+        I think you can get away with changing it every 10 000lm.
+        Whichever benchmark you decide to use, you can save time and money by handling the change yourself.
+        Before you start, keep in mind these precautions:\n\n
+        1. Never change your oil when your engine is hot. Park, wait for it to cool, and then get started.
+        Driving around the block to heat the car and loosen the oil can result in a more effective drain,
+        which is good news, but you must let the engine cool before going to work.\n
+        2. You’ll have to jack up your car, so make sure you’re comfortable safely handling a jack.\n\n
+        Now that you’ve covered safety first, it’s time to get a little dirty.\n\n
+        1. Get under your car and locate the vehicle’s oil pan. It shouldn’t be hard to find.\n
+        2. Unscrew the drain plug and drain all of the old oil into your oil pan.\n
+        3. Once all of the oil is drained, replace the drain plug.\n
+        4. Go back to your engine and remove the old oil filter with your oil filter wrench. (Be careful, because the oil filter contains some old oil as well).\n
+        5. Lubricate the rubber gasket on the new oil filter with some new motor oil.\n
+        6. Fill the new oil filter about two-thirds of the way with new oil.\n
+        7. Screw in the new oil filter. Hand-tighten it only.\n
+        8. Fill the engine with new oil, using your funnel.\n
+        9. With a dip-stick, double check your oil level to be sure you’ve added enough.\n
+        10. Discard the old oil filter and recycle the old oil (most gas stations will take it).\n
+    </string>
+
+    <string name="numberFourTip">4. BATTERY MAINTENANCE\n\n
+    Tools You Need: Wrenches, corrosion-removal fluid, wire brush, rags\n
+    Time to Complete: 20 minutes\n
+    Estimated Cost: 15-20BGN\n\n
+    The key to keeping your car running smoothly and efficiently is a good battery connection.
+        Just a few specks of crunchy white residue on the posts can keep your car from starting.
+        A simple visual check of the condition of your battery will tell you when you need to perform this process.\n\n
+    1. Remove your battery terminals, which should be a fairly straightforward process.
+        Make sure you always remove the negative cable first. If they’re stuck, use a flathead screwdriver to pry them loose.\n
+2. Clean the posts. Some say Coca-Cola will work, and it does, but I suggest using a more professional product from your local auto parts store.
+    Keep in mind that most of these solutions are nothing more than baking soda and water, so if you’re feeling extremely frugal, feel free to create your own cleaner.
+    Generously apply the fluid to the posts, and clean vigorously with your wire brush.\n
+    3. Rinse the cleaning fluid with a little water.\n
+    4. Dry the posts with rags.\n
+    5. Replace battery terminals.\n\n
+    A dead battery can be one of the most frustrating car problems, because it’s usually so simple to avoid the trouble.
+    Especially if you’ve had the same battery for a few years, pop your hood every few months and take a look at the battery to see if it needs a simple cleaning.\n\n</string>
+
+    <string name="numberFiveTip">5. RADIATOR FLUSH
+    Tools You Need: Phillips-head screwdriver or wrench, rags, radiator flush solution, coolant, funnel, used coolant receptacle\n
+    Time to Complete: 30 minutes\n
+    Estimated Cost: 30BGN\n\n
+    Your car’s radiator and cooling system need to be clean to work efficiently and effectively.
+    With normal wear and tear, your car’s radiator builds up deposits that can disrupt the cooling system.
+    A radiator flush is a quick and inexpensive way to keep your system in shape.
+    Consult your owner’s manual to find out if you need to flush the radiator yearly or every two years.\n\n
+    1. Make sure your car is completely cool before you begin.\n
+    2. Check your owner’s manual to find the radiator’s drain plug. Put your used coolant receptacle in place, unscrew the drain plug, and let the old coolant drain completely. \n
+    3. Replace the drain plug and remove the radiator cap.\n
+    4. Use the funnel to add the radiator flush cleaning solution and then fill the rest of the radiator with water.\n
+    5. Replace the radiator cap. \n
+    6. Start the car, and let it run until it gets to its normal operating temperature.\n
+    7. Turn on your heater to its hottest position, and let the car run for 10 minutes.\n
+    8. Turn the car off and wait for the engine to cool completely.\n
+    9. Drain the contents of the radiator.\n
+    10. Refill the radiator with fresh coolant.\n
+    11. Be sure to dispose of the old coolant safely, by bringing it to an auto parts store, gas station, or mechanic.
+    Old coolant is fatal, but its sweet taste can be enticing to pets.\n\n
+    Working with coolant is a step toward more advanced DIY auto projects. Temperature can be a dangerous issue when you’re working on your car, so make sure you give your engine plenty of time to cool before you start and before you drain the radiator. Don’t rush this job, and always err on the side of caution.\n\n</string>
+
 </resources>

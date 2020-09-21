@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         myLawActivity.setOnClickListener(this)
         myShopActivity.setOnClickListener(this)
         mySettingsActivity.setOnClickListener(this)
+        myShopActivity.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
@@ -49,7 +50,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
         when (v.id) {
             R.id.myShopActivity -> {
-//            startActivity(Intent(this, ShopActivity::class.java))
+            startActivity(Intent(this, CarShopAndMechanics::class.java))
             }
         }
         when (v.id) {
