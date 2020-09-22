@@ -55,10 +55,11 @@
         Just type the new data you wish to update in the field and press the Update button below.</string>
 
 
-    <string name="title">Title</string>
-    <string name="description">Description</string>
-    <string name="date">Date</string>
+    <string name="title">Title </string>
+    <string name="description">Description </string>
+    <string name="date">Date </string>
     <string name="amount">Amount</string>
+    <string name="amountBGN">Amount BGN </string>
     <string name="add">Add</string>
 
     <string name="englishLanguage">EN</string>

@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.example.infocar.R
+import com.example.infocar.models.Expenses
 import com.example.infocar.models.UserCarInfo
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
@@ -66,7 +67,7 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
         val adapterFuel = ArrayAdapter(this, android.R.layout.simple_list_item_1, typeOfFuel)
         fuelTypeRegister.threshold = 1
         fuelTypeRegister.setAdapter(adapterFuel)
-        
+
     }
 
     override fun onClick(v: View?) {
@@ -103,6 +104,7 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
                 brand, model, carType, fuelType, engineVolume, vehicleRegister,
                 kilometers, plateNumber
             )
+            val addExpense = Expenses(title = "0", date = "0", amount = "0", description = "0")
             mDatabase.child("userCarInfo").child(mAuth.currentUser!!.uid).setValue(carInfo)
                 .addOnSuccessListener {
                     Toast.makeText(
@@ -114,6 +116,9 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
                 .addOnFailureListener {
                     Toast.makeText(this, "Error in Sign up", Toast.LENGTH_SHORT).show()
                 }
+            mDatabase.child("userExpenses").child(mAuth.currentUser!!.uid).setValue(addExpense).addOnSuccessListener {
+                startActivity(Intent(this,MainActivity::class.java))
+            }
         }
     }
 }

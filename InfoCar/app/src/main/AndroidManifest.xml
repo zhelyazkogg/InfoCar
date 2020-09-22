@@ -4,12 +4,12 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/info_car_launcher_logo_two"
+        android:icon="@mipmap/ic_launcher_logo_info_car_round"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/info_car_launcher_logo_two"
+        android:roundIcon="@mipmap/ic_launcher_logo_info_car_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.NearbyPetrolStation"></activity>
+        <activity android:name=".activities.NearbyPetrolStation"/>
         <activity android:name=".activities.CarShopAndMechanics" />
         <activity android:name=".activities.UpdateDataActivity" />
         <activity android:name=".activities.ExpensesActivity" />

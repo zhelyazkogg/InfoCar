@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.core.view.get
+import androidx.core.view.isEmpty
 import com.example.infocar.R
 import com.example.infocar.models.Expenses
 import com.example.infocar.utils.ValueListenerAdapter
@@ -14,8 +16,10 @@ import com.example.infocar.utils.asExpenses
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.activity_expenses.*
 import kotlinx.android.synthetic.main.activity_expenses.buttonBack
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_profile.*
 
 class ExpensesActivity : AppCompatActivity(), View.OnClickListener {
@@ -45,23 +49,7 @@ class ExpensesActivity : AppCompatActivity(), View.OnClickListener {
                 expenseDate.text = mUserExpenses.date
                 expenseAmount.text = mUserExpenses.amount
                 expenseDescription.text = mUserExpenses.description
-            }
-        )
-
-    }
-
-    override fun onClick(v: View?) {
-        when (v?.id) {
-            R.id.addExpense -> {
-                onAddExpense()
-            }
-        }
-
-        when (v?.id) {
-            R.id.buttonBack -> {
-                startActivity(Intent(this, MainActivity::class.java))
-            }
-        }
+            })
     }
 
     private fun onAddExpense() {
@@ -81,7 +69,7 @@ class ExpensesActivity : AppCompatActivity(), View.OnClickListener {
                     Toast.makeText(
                         this, "Expense added", Toast.LENGTH_SHORT
                     ).show()
-                    startActivity(Intent(this, ProfileActivity::class.java))
+                    startActivity(Intent(this, ExpensesActivity::class.java))
                     finish()
                 }
                 .addOnFailureListener {
@@ -89,6 +77,20 @@ class ExpensesActivity : AppCompatActivity(), View.OnClickListener {
                         this, "Failed to add expense", Toast.LENGTH_SHORT
                     ).show()
                 }
+        }
+    }
+
+    override fun onClick(v: View?) {
+        when (v?.id) {
+            R.id.addExpense -> {
+                onAddExpense()
+            }
+        }
+
+        when (v?.id) {
+            R.id.buttonBack -> {
+                startActivity(Intent(this, MainActivity::class.java))
+            }
         }
     }
 }

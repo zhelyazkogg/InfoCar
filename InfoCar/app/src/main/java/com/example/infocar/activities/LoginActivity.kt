@@ -30,6 +30,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         loginBtn.setOnClickListener(this)
         registerBtn.setOnClickListener(this)
         forgottenPass.setOnClickListener(this)
+
     }
 
     override fun onClick(v: View?) {
