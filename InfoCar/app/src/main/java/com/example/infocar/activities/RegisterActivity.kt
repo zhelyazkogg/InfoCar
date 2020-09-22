@@ -51,7 +51,6 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
         val email = emailRegister.text.toString()
         val password = passwordRegister.text.toString()
         val confPassword = confPasswordRegister.text.toString()
-        val lenghtOfPassword: Int = 6
 
         if (email.isEmpty() || password.isEmpty() || confPassword.isEmpty()) {
             Toast.makeText(this, "All fields are required", Toast.LENGTH_SHORT).show()
