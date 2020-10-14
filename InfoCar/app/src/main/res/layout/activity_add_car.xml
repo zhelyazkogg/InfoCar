@@ -48,21 +48,6 @@
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/colorDirtyWhite" />
 
-    <!--    <EditText
-            android:id="@+id/vehicleTypeRegister"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="10dp"
-            android:inputType="textAutoComplete"
-
-            android:hint="@string/vehicleType"
-            android:textColor="@color/colorWhite"
-            android:backgroundTint="@color/colorYellow"
-            android:textColorHint="@color/colorWhite"
-            />-->
-
     <AutoCompleteTextView
         android:id="@+id/vehicleTypeRegister"
         android:layout_width="match_parent"
@@ -89,20 +74,6 @@
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/colorDirtyWhite" />
 
-
-    <!--<EditText
-        android:id="@+id/fuelTypeRegister"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:hint="@string/fuelType"
-        android:inputType="textAutoComplete"
-        android:textColor="@color/colorWhite"
-        android:backgroundTint="@color/colorYellow"
-        android:textColorHint="@color/colorWhite" />-->
 
     <EditText
         android:id="@+id/engineRegister"
