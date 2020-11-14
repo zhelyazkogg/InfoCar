@@ -83,6 +83,10 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
             }
         }
     }
+//
+//    private fun onRegister(){
+//
+//    }
 
     private fun onRegister() {
         val brand = brandRegister.text.toString()
@@ -116,9 +120,10 @@ class AddCarActivity() : AppCompatActivity(), View.OnClickListener {
                 .addOnFailureListener {
                     Toast.makeText(this, "Error in Sign up", Toast.LENGTH_SHORT).show()
                 }
-            mDatabase.child("userExpenses").child(mAuth.currentUser!!.uid).setValue(addExpense).addOnSuccessListener {
-                startActivity(Intent(this,MainActivity::class.java))
-            }
+            mDatabase.child("userExpenses").child(mAuth.currentUser!!.uid).setValue(addExpense)
+                .addOnSuccessListener {
+                    startActivity(Intent(this, MainActivity::class.java))
+                }
         }
     }
 }
