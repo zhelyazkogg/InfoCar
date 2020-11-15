@@ -11,6 +11,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.example.infocar.models.User
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_add_car.buttonRegister
 import kotlinx.android.synthetic.main.activity_register.*
 
@@ -20,12 +21,14 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
     private val TAG = "RegisterActivity"
     private lateinit var mAuth: FirebaseAuth
     private lateinit var mDatabase: DatabaseReference
+    private lateinit var mFirestore: FirebaseFirestore;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
         mAuth = FirebaseAuth.getInstance()
+        mFirestore = FirebaseFirestore.getInstance();
         mProgressBar = ProgressDialog(this)
         mDatabase = FirebaseDatabase.getInstance().reference
         buttonRegister.setOnClickListener(this)
