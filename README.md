@@ -6,4 +6,3 @@ The app is not finished.\
 I have used the Firebase Authentication and Realtime Database for this project, but now I see that a better practice would have been to use the Could Firestore. I have to rewrite the project a little bit because of that, I think.\ 
 This project, like I said, is my first project built in Kotlin and it was my Final Year Project at my university and I had ran out of time and didn't have the chance to complete my UI/UX design.\
 \
-In the next couple of weeks, maybe months, I will try to complete this project. 
